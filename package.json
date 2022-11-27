@@ -4,11 +4,20 @@
   "description": "React library provides multiple types buttons (Alpha version)",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nachorsanz/react-dynamic-buttons.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs"
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:watch": "tsc --watch",
+    "build:watch:esm": "tsc --watch",
+    "build:watch:cjs": "tsc --module commonjs --outDir dist/cjs --watch",
+    "prepublish": "npm run build"
+
   },
   "author": "Nacho Rodriguez Sanz",
   "license": "MIT",
