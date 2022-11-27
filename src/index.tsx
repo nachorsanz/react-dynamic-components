@@ -4,7 +4,7 @@ import StyledButton from './StyledButton'
 export interface ButtonProps extends
   React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   size: 'small' | 'medium' | 'large'
-  onClick?: () => void
+  onClick: () => void
   disabled?: boolean
   type: 'button' | 'submit' | 'reset'
   styles?: React.CSSProperties
@@ -15,8 +15,6 @@ export interface ButtonProps extends
 }
 
 export const ReactDynamicButtons: React.FC<ButtonProps> = ({ children, size, styles, onClick, disabled = false, type, bgColor, border, textColor }) => {
- 
-
 
   const _style: React.CSSProperties = styles || {};
 
