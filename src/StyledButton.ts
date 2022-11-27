@@ -10,7 +10,7 @@ const StyledButton = styled.button`
   ${(props) =>
     props.textColor &&
     `& {
-    color: ${props.color};
+    color: ${props.textColor};
   }`};
   ${(props) =>
     props.bgColor &&
