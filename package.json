@@ -14,10 +14,13 @@
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "build:watch": "tsc --watch",
-    "build:watch:esm": "tsc --watch",
+    "build:watch:esm": "tsc --watch ",
     "build:watch:cjs": "tsc --module commonjs --outDir dist/cjs --watch",
-    "prepublish": "npm run build"
-
+    "prepublish": "npm run build",
+    "publish": "npm publish",
+    "dev": "npm run build:watch:esm & npm run build:watch:cjs & npm run storybook",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Nacho Rodriguez Sanz",
   "license": "MIT",
@@ -27,23 +30,35 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack4": "^6.5.13",
+    "@storybook/manager-webpack4": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "babel-loader": "^8.3.0",
     "eslint": "^8.28.0",
     "eslint-config-standard-with-typescript": "^23.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.5.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-storybook": "^0.6.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6",
     "typescript": "^4.9.3"
   },
   "dependencies": {
- 
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "styled-components": "^5.3.6"
   },
   "keywords": [

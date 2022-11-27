@@ -8,7 +8,7 @@ const StyledButton = styled.button `
   border: 0px;
   ${(props) => props.textColor &&
     `& {
-    color: ${props.color};
+    color: ${props.textColor};
   }`};
   ${(props) => props.bgColor &&
     `& {

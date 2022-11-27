@@ -1,6 +1,6 @@
 import React from 'react';
 import StyledButton from './StyledButton';
-export const ReactDynamicButtons = ({ children, size, styles, onClick, disabled = false, type, bgColor, border, textColor }) => {
+const ReactDynamicButtons = ({ children, size, styles, onClick, disabled = false, type, bgColor, border, textColor }) => {
     const _style = styles || {};
     switch (size) {
         case 'small':
@@ -19,4 +19,5 @@ export const ReactDynamicButtons = ({ children, size, styles, onClick, disabled 
     _style.padding = '5px 10px';
     return (React.createElement(StyledButton, { style: _style, onClick: onClick, type: type, disabled: disabled, bgColor: bgColor, border: border, textColor: textColor }, children));
 };
+export default ReactDynamicButtons;
 //# sourceMappingURL=index.js.map

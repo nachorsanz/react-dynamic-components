@@ -9,4 +9,5 @@ export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAtt
     bgColor?: string;
     textColor?: string;
 }
-export declare const ReactDynamicButtons: React.FC<ButtonProps>;
+declare const ReactDynamicButtons: React.FC<ButtonProps>;
+export default ReactDynamicButtons;

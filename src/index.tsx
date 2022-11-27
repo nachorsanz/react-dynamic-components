@@ -13,8 +13,7 @@ export interface ButtonProps extends
   textColor?: string  
 
 }
-
-export const ReactDynamicButtons: React.FC<ButtonProps> = ({ children, size, styles, onClick, disabled = false, type, bgColor, border, textColor }) => {
+ const ReactDynamicButtons: React.FC<ButtonProps> = ({ children, size, styles, onClick, disabled = false, type, bgColor, border, textColor }) => {
 
   const _style: React.CSSProperties = styles || {};
 
@@ -49,3 +48,5 @@ export const ReactDynamicButtons: React.FC<ButtonProps> = ({ children, size, sty
     </StyledButton>
   )
 }
+
+export default ReactDynamicButtons

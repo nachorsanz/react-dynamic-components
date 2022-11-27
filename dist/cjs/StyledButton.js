@@ -13,7 +13,7 @@ const StyledButton = styled_components_1.default.button `
   border: 0px;
   ${(props) => props.textColor &&
     `& {
-    color: ${props.color};
+    color: ${props.textColor};
   }`};
   ${(props) => props.bgColor &&
     `& {
