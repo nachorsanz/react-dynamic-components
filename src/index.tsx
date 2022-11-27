@@ -1,33 +1,53 @@
 import React from 'react'
+import StyledButton from './StyledButton'
 
 export interface ButtonProps extends
   React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'danger'
+  size: 'small' | 'medium' | 'large'
+  onClick?: () => void
+  disabled?: boolean
+  type: 'button' | 'submit' | 'reset'
+  styles?: React.CSSProperties
+  border?: string
+  bgColor?: string 
+  textColor?: string  
+
 }
 
-export const ReactDynamicButtons: React.FC<ButtonProps> = ({ variant = 'primary', ...props }) => {
-  const {children, style} = props;
+export const ReactDynamicButtons: React.FC<ButtonProps> = ({ children, size, styles, onClick, disabled = false, type, bgColor, border, textColor }) => {
+ 
 
-  const _style: React.CSSProperties = style || {};
 
-  switch(variant) {
-    case 'primary':
-      _style.backgroundColor = "#006E7F";
-      _style.color = '#fff';
+  const _style: React.CSSProperties = styles || {};
+
+  switch(size) {
+    case 'small':
+        _style.fontSize = '12px';
+        _style.padding = '5px 10px';
+
       break;
-    case 'secondary':
-      _style.backgroundColor = "#F8CB2E";
-      _style.color = '#000';
+    case 'medium':
+        _style.fontSize = '14px';
+        _style.padding = '10px 15px';
       break;
-    case 'danger':
-      _style.backgroundColor = "#B22727";
-      _style.color = '#fff';
+    case 'large':
+        _style.fontSize = '16px';
+        _style.padding = '15px 20px';
       break;
   }
 
   _style.padding = '5px 10px';
 
   return (
-    <button style={_style} {...props}>{children}</button>
+    <StyledButton 
+    style={_style}  
+    onClick={onClick} 
+    type={type} 
+    disabled={disabled} 
+    bgColor={bgColor}
+    border={border}
+    textColor={textColor}
+    >{children}
+    </StyledButton>
   )
 }
