@@ -1,6 +1,6 @@
 {
   "name": "react-dynamic-buttons",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "React library provides multiple types buttons (Alpha version)",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -29,6 +29,8 @@
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6"
   },
+
+
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@storybook/addon-actions": "^6.5.13",
@@ -61,9 +63,7 @@
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6"
   },
-  "publishConfig": {
-    "@nachorsanz:registry": "https://npm.pkg.github.com"
-  },
+
   "keywords": [
     "react",
     "typescript",
