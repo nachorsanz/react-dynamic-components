@@ -8,9 +8,7 @@
     "type": "git",
     "url": "https://github.com/nachorsanz/react-dynamic-buttons.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/nachorsanz"
-  },
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist && npm run build:esm && npm run build:cjs",
