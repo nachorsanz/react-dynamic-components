@@ -1,6 +1,6 @@
 {
-  "name": "@nachorsanz/react-dynamic-buttons",
-  "version": "0.0.12",
+  "name": "react-dynamic-buttons",
+  "version": "0.0.13",
   "description": "React library provides multiple types buttons (Alpha version)",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -55,7 +55,7 @@
     "typescript": "^4.9.3"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/nachorsanz"
   },
   "dependencies": {
     "react": "^18.2.0",
