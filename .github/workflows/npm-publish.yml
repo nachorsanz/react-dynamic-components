@@ -4,12 +4,10 @@
 name: Publish to NPM
 
 on:
-  release:
-    types: [ "created" ]
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "develop" ]
 
 jobs:
 
