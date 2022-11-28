@@ -1,12 +1,15 @@
 {
   "name": "react-dynamic-buttons",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "React library provides multiple types buttons (Alpha version)",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/nachorsanz/react-dynamic-buttons.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/nachorsanz"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
