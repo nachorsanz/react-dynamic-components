@@ -48,6 +48,10 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
+
+ publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
     - name: Publish to NPM
     steps:
       - uses: actions/checkout@v3
