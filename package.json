@@ -16,8 +16,6 @@
     "build:watch": "tsc --watch",
     "build:watch:esm": "tsc --watch ",
     "build:watch:cjs": "tsc --module commonjs --outDir dist/cjs --watch",
-    "prepublish": "npm run build",
-    "publish": "npm publish",
     "dev": "npm run build:watch:esm & npm run build:watch:cjs & npm run storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
