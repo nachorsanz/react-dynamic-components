@@ -27,7 +27,7 @@
     <a href="https://github.com/nachorsanz/react-dynamic-buttons"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://react-dynamic-buttons-csvc86yns-nachorsanz.vercel.app/">View Demo | WIP</a>
+    <a href="https://github.comnachorsanz/react-dynamic-buttons">View Demo | WIP</a>
     ·
     <a href="https://github.com/nachorsanz/react-dynamic-buttons/issues">Report Bug</a>
     ·
