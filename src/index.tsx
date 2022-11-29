@@ -8,12 +8,12 @@ export interface ButtonProps extends
   disabled?: boolean
   type: 'button' | 'submit' | 'reset'
   styles?: React.CSSProperties
-  border?: string
   bgColor?: string 
-  textColor?: string  
+  textColor?: string 
+  text?: string 
 
 }
- const ReactDynamicButtons: React.FC<ButtonProps> = ({ children, size, styles, onClick, disabled = false, type, bgColor, border, textColor }) => {
+ const ReactDynamicButtons: React.FC<ButtonProps> = ({ text, size, styles, onClick, disabled = false, type, bgColor, textColor }) => {
 
   const _style: React.CSSProperties = styles || {};
 
@@ -42,9 +42,8 @@ export interface ButtonProps extends
     type={type} 
     disabled={disabled} 
     bgColor={bgColor}
-    border={border}
     textColor={textColor}
-    >{children}
+    >{text}
     </StyledButton>
   )
 }
