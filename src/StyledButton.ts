@@ -17,12 +17,7 @@ const StyledButton = styled.button`
     `& {
     background-color: ${props.bgColor};
   }`};
-  ${(props) =>
-    props.border &&
-    `&::after {
-    border: ${props.border};
-  }
-`};
+
  
 `;
 

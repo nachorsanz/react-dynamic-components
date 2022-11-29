@@ -14,18 +14,13 @@ const Template: ComponentStory<typeof ReactDynamicButtons> = (args) => <ReactDyn
 export const ReactDynamicButtonsStory = Template.bind({});
 
 ReactDynamicButtonsStory.args = {
-  children: 'Button',
+  text: 'Button',
   size: 'small',
   onClick: () => {},
   disabled: false,
   type: 'button',
-  bgColor: 'red',
-  border: '1px solid red',
-  textColor: 'white',
-  styles: {
-    fontSize: '12px',
-    padding: '5px 10px',
-  }
-
+  textColor: '#000',
+  bgColor: "",
+  styles: undefined
 };
 

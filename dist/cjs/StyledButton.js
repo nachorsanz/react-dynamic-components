@@ -19,11 +19,7 @@ const StyledButton = styled_components_1.default.button `
     `& {
     background-color: ${props.bgColor};
   }`};
-  ${(props) => props.border &&
-    `&::after {
-    border: ${props.border};
-  }
-`};
+
  
 `;
 exports.default = StyledButton;

@@ -5,9 +5,9 @@ export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAtt
     disabled?: boolean;
     type: 'button' | 'submit' | 'reset';
     styles?: React.CSSProperties;
-    border?: string;
     bgColor?: string;
     textColor?: string;
+    text?: string;
 }
 declare const ReactDynamicButtons: React.FC<ButtonProps>;
 export default ReactDynamicButtons;

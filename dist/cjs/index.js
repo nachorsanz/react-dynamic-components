@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 const StyledButton_1 = __importDefault(require("./StyledButton"));
-const ReactDynamicButtons = ({ children, size, styles, onClick, disabled = false, type, bgColor, border, textColor }) => {
+const ReactDynamicButtons = ({ text, size, styles, onClick, disabled = false, type, bgColor, textColor }) => {
     const _style = styles || {};
     switch (size) {
         case 'small':
@@ -22,7 +22,7 @@ const ReactDynamicButtons = ({ children, size, styles, onClick, disabled = false
             break;
     }
     _style.padding = '5px 10px';
-    return (react_1.default.createElement(StyledButton_1.default, { style: _style, onClick: onClick, type: type, disabled: disabled, bgColor: bgColor, border: border, textColor: textColor }, children));
+    return (react_1.default.createElement(StyledButton_1.default, { style: _style, onClick: onClick, type: type, disabled: disabled, bgColor: bgColor, textColor: textColor }, text));
 };
 exports.default = ReactDynamicButtons;
 //# sourceMappingURL=index.js.map
