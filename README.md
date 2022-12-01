@@ -12,7 +12,6 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Commits][commits-shield]][commits-url]
 [![Issues][issues-shield]][issues-url]
-[![License][license-shield]][license-url]
 [![Package Version][version-shield]][version-url]
 [![MIT License][license-shield]][license-url]
 
@@ -81,6 +80,7 @@ Here's why:
 
 [![React][react.js]][react-url]
 [![StyledComponents][styledcomponents]][styledcomponents-url]
+[![Storybook][storybook]][storybook-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,7 +123,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [version-shield]: https://img.shields.io/github/package-json/v/nachorsanz/react-dynamic-buttons?style=for-the-badge
 [version-url]: https://github.com/nachorsanz/react-dynamic-buttons/blob/main/package.json
 [product-screenshot]: images/screenshot.png
-[styledcomponents]: https://img.shields.io/badge/StyledComponents-20232A?style=for-the-badge&logoColor=61DAFB
+[storybook]: https://img.shields.io/badge/Storybook-20232A?style=for-the-badge&logo=storybook&logoColor=FF4785
+[storybook-url]: https://storybook.js.org/
+[styledcomponents]: https://img.shields.io/badge/StyledComponents-20232A?style=for-the-badge&logo=styled-components&logoColor=DB7093
 [styledcomponents-url]: https://styled-components.com/
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
