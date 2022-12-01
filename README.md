@@ -9,6 +9,10 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
+[![Contributors][contributors-shield]][contributors-url]
+[![Commits][commits-shield]][commits-url]
+[![Issues][issues-shield]][issues-url]
+[![License][license-shield]][license-url]
 [![Package Version][version-shield]][version-url]
 [![MIT License][license-shield]][license-url]
 
@@ -75,8 +79,8 @@ Here's why:
 
 ### Built With
 
-- [![React][react.js]][react-url]
-- [![StyledComponents][styledcomponents]][styledcomponents-url]
+[![React][react.js]][react-url]
+[![StyledComponents][styledcomponents]][styledcomponents-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,15 +112,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/nachorsanz/react-dynamic-buttons?style=for-the-badge
 [contributors-url]: https://github.com/nachorsanz/react-dynamic-buttons/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/nachorsanz/react-dynamic-buttons//network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/nachorsanz/react-dynamic-buttons//stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[commits-shield]: https://img.shields.io/github/commit-activity/m/nachorsanz/react-dynamic-buttons?style=for-the-badge
+[commits-url]: https://github.com/bshgroup/product-app/commits/main
+[issues-shield]: https://img.shields.io/github/issues/nachorsanz/react-dynamic-buttons?style=for-the-badge
 [issues-url]: https://github.com/nachorsanz/react-dynamic-buttons/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/nachorsanz/react-dynamic-buttons?style=for-the-badge
 [license-url]: https://github.com/nachorsanz/react-dynamic-buttons/blob/main/LICENSE.txt
 [version-shield]: https://img.shields.io/github/package-json/v/nachorsanz/react-dynamic-buttons?style=for-the-badge
 [version-url]: https://github.com/nachorsanz/react-dynamic-buttons/blob/main/package.json
