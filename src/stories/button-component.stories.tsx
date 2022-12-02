@@ -5,7 +5,7 @@ import  ReactDynamicButtons  from '../index';
 
 
 export default {
-  title: 'npm/component/React Dynamic Buttons',
+  title: 'React Dynamic Buttons/Components/Button',
   component: ReactDynamicButtons,
  
   argTypes: {
