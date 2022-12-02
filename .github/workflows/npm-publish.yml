@@ -8,8 +8,8 @@ on:
     branches: [ "main" ] 
 
 jobs:
-  if: "!contains(github.event.head_commit.message, 'deploy')"
    build:
+  if: "!contains(github.event.head_commit.message, 'deploy')"
  
      runs-on: ubuntu-latest
  
