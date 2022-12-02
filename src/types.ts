@@ -21,8 +21,8 @@ export interface ButtonProps extends
   bgColor?: string 
   textColor?: string 
   text?: string
-  icon?: React.ReactNode
-  iconPosition?: 'left' | 'right'
+  icon?: string |null
+  iconPosition?: 'left' | 'right' | "none"
   className?: string
   children?: React.ReactNode
     

@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import  ReactDynamicButtons  from '../index';
+import { getAllIcons } from '../icons';
 
 
 export default {
@@ -12,13 +13,13 @@ export default {
     icon: {
       control: {
         type: 'select',
-        options: ['none', 'left', 'right'],
+        options: getAllIcons(),
       },
     },
     iconPosition: {
       control: {
         type: 'radio',
-        options: ['left', 'right'],
+        options: ['left', 'right', 'none'],
       },
     },
     size: {
@@ -60,6 +61,8 @@ ReactDynamicButtonsStory.args = {
   textColor: '#000',
   bgColor: "",
   styles: undefined,
-  variant: "primary"
+  variant: "primary",
+  icon: null,
+
 };
 
