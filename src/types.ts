@@ -6,7 +6,7 @@ import React from 'react'
 export type sizes = "small" | "medium" | "large"; 
 
 export type ButtonTypes  = 
-    "primary" | "secondary" | "tertiary" | "danger" | "success" | "warning" | "info" | "light" | "dark" | "link"
+    "primary" | "secondary" | "tertiary" | "danger" | "success" | "warning" | "info" | "light" | "dark" | "link" | null;
 
 
 

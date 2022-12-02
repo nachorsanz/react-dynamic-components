@@ -73,5 +73,8 @@ export const getVariantProps = (variant: string) => {
             backgroundColor: "transparent",
             textColor: "#007bff",
         };
+        case null:
+        return {};
+
     }
     }

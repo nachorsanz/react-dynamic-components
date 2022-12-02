@@ -32,7 +32,7 @@ export default {
     variant: {
       control: {
       type: 'radio',
-      options: [ "primary" , "secondary" , "tertiary" , "danger" , "success" , "warning" , "info" , "light" , "dark" , "link"],
+      options: [ "primary" , "secondary" , "tertiary" , "danger" , "success" , "warning" , "info" , "light" , "dark" , "link", "none"],
       }
     },
     option: {
@@ -61,7 +61,7 @@ ReactDynamicButtonsStory.args = {
   textColor: '#000',
   bgColor: "",
   styles: undefined,
-  variant: "primary",
+  variant: null,
   icon: null,
 
 };
