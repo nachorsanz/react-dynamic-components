@@ -5,9 +5,11 @@ name: Publish to NPM
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ] 
+    tags: [ "v*" ]
   pull_request:
     branches: [labeled]
+    tags: [ "v*" ]
 
 jobs:
 
