@@ -4,9 +4,9 @@ import { ButtonProps } from './types';
 import { getSizeProps, getVariantProps } from './utils';
 
 
- const ReactDynamicButtons: React.FC<ButtonProps> = ({ text, size = "medium", styles, onClick, disabled = false, type, bgColor, textColor, variant = "primary" }) => {
+ const ReactDynamicButtons: React.FC<ButtonProps> = ({ text, size = "medium", styles = null, onClick, disabled = false, type, bgColor, textColor, variant = "primary" }) => {
 
-  let _style: React.CSSProperties = styles || {};
+  let _style: React.CSSProperties = {};
 
   if (size){
     _style = { ..._style, ...getSizeProps(size) }
@@ -16,6 +16,9 @@ import { getSizeProps, getVariantProps } from './utils';
     _style = { ..._style, ...getVariantProps(variant) }
   }
  
+   if(styles){
+      _style = { ..._style, ...styles }
+   }
 
   return (
     <StyledButton 
