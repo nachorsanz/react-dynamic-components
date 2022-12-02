@@ -1,39 +1,21 @@
 import React from 'react'
 import StyledButton from './StyledButton'
+import { ButtonProps } from './types';
+import { getSizeProps, getVariantProps } from './utils';
 
-export interface ButtonProps extends
-  React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-  size: 'small' | 'medium' | 'large'
-  onClick: () => void
-  disabled?: boolean
-  type: 'button' | 'submit' | 'reset'
-  styles?: React.CSSProperties
-  bgColor?: string 
-  textColor?: string 
-  text?: string 
 
-}
- const ReactDynamicButtons: React.FC<ButtonProps> = ({ text, size, styles, onClick, disabled = false, type, bgColor, textColor }) => {
+ const ReactDynamicButtons: React.FC<ButtonProps> = ({ text, size = "medium", styles, onClick, disabled = false, type, bgColor, textColor, variant = "primary" }) => {
 
-  const _style: React.CSSProperties = styles || {};
+  let _style: React.CSSProperties = styles || {};
 
-  switch(size) {
-    case 'small':
-        _style.fontSize = '12px';
-        _style.padding = '5px 10px';
-
-      break;
-    case 'medium':
-        _style.fontSize = '14px';
-        _style.padding = '10px 15px';
-      break;
-    case 'large':
-        _style.fontSize = '16px';
-        _style.padding = '15px 20px';
-      break;
+  if (size){
+    _style = { ..._style, ...getSizeProps(size) }
   }
 
-  _style.padding = '5px 10px';
+  if(variant) {
+    _style = { ..._style, ...getVariantProps(variant) }
+  }
+ 
 
   return (
     <StyledButton 

@@ -15,12 +15,13 @@ export const ReactDynamicButtonsStory = Template.bind({});
 
 ReactDynamicButtonsStory.args = {
   text: 'Button',
-  size: 'small',
+  size: undefined,
   onClick: () => {},
   disabled: false,
-  type: 'button',
+  type: undefined,
   textColor: '#000',
   bgColor: "",
-  styles: undefined
+  styles: undefined,
+  variant: "primary"
 };
 
