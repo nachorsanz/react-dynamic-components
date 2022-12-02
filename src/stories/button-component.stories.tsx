@@ -8,17 +8,55 @@ export default {
   title: 'npm/component/React Dynamic Buttons',
   component: ReactDynamicButtons,
  
+  argTypes: {
+    icon: {
+      control: {
+        type: 'select',
+        options: ['none', 'left', 'right'],
+      },
+    },
+    iconPosition: {
+      control: {
+        type: 'radio',
+        options: ['left', 'right'],
+      },
+    },
+    size: {
+      control: {
+      type: 'radio',
+      options: ['small', 'medium', 'large'],
+      }
+     
+    },
+    variant: {
+      control: {
+      type: 'radio',
+      options: [ "primary" , "secondary" , "tertiary" , "danger" , "success" , "warning" , "info" , "light" , "dark" , "link"],
+      }
+    },
+    option: {
+      control: {
+      type: 'radio',
+      options: ["submit", "reset", "button"],
+      }
+    },
+   
+    
+  }
+ 
 } as ComponentMeta<typeof ReactDynamicButtons>;
+
+
 
 const Template: ComponentStory<typeof ReactDynamicButtons> = (args) => <ReactDynamicButtons {...args} />;
 export const ReactDynamicButtonsStory = Template.bind({});
 
 ReactDynamicButtonsStory.args = {
   text: 'Button',
-  size: undefined,
+  size: "medium",
   onClick: () => {},
   disabled: false,
-  type: undefined,
+  option: "submit",
   textColor: '#000',
   bgColor: "",
   styles: undefined,

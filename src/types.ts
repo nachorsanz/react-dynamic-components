@@ -16,7 +16,7 @@ export interface ButtonProps extends
   onClick: () => void
   variant: ButtonTypes
   disabled?: boolean
-  type: 'button' | 'submit' | 'reset'
+  option: 'button' | 'submit' | 'reset'
   styles?: React.CSSProperties
   bgColor?: string 
   textColor?: string 
