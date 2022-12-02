@@ -3,7 +3,7 @@ import { getIcon } from './icons';
 import StyledButton from './StyledButton'
 import { ButtonProps } from './types';
 import { getSizeProps, getVariantProps } from './utils';
-import { Icon } from 'react-icons-kit'
+
 
  const ReactDynamicButtons: React.FC<ButtonProps> = ({ className, icon , iconPosition, text, size = "medium", styles = null, onClick, disabled = false, type, bgColor, textColor, variant = "primary" }) => {
 
@@ -31,7 +31,7 @@ import { Icon } from 'react-icons-kit'
     disabled={disabled} 
     bgColor={bgColor}
     textColor={textColor}
-    >{icon && iconPosition === "left" && <Icon icon={getIcon(icon)}/>} {text} {icon && iconPosition === "right" && <Icon icon={getIcon(icon)}/>}
+    >{icon && iconPosition === "left" && getIcon(icon)} {text} {icon && iconPosition === "right" && getIcon(icon)}
     </StyledButton>
   )
 }

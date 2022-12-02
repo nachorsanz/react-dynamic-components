@@ -1,12 +1,18 @@
 
-import * as Icons from "react-icons-kit/fa";
+import React from "react";
+import * as Icons from "react-icons/fa";
 
 
 export const getIcon   = ( iconName: string) => {
-const icon = Icons[iconName];
-return icon
+const Icon = Icons[iconName];
+return (<><Icon /></>);
 }
 
 export const getAllIcons = () => {
-  return Object.keys(Icons)
+
+const icons = Object.keys(Icons);
+return icons;
+
+
+
 }

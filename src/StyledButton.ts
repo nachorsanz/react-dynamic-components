@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 const StyledButton = styled.button`
   font-size: 15px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
   font-weight: 500;
   border-radius: 4px;
-  text-align: center;
   padding: 0.8rem 2rem;
   border: 0px;
   ${(props) =>
@@ -17,6 +20,7 @@ const StyledButton = styled.button`
     `& {
     background-color: ${props.bgColor};
   }`};
+
 
  
 `;
