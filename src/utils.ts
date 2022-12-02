@@ -25,52 +25,52 @@ export const getVariantProps = (variant: string) => {
     switch (variant) {
         case "primary":
         return {
-            bgColor: "#007bff",
+            backgroundColor: "#007bff",
             textColor: "#fff",
         };
         case "secondary":
         return {
-            bgColor: "#6c757d",
+          backgroundColor: "#6c757d",
             textColor: "#fff",
         };
         case "tertiary":
         return {
-            bgColor: "#28a745",
+            backgroundColor: "#28a745",
             textColor: "#fff",
         };
         case "danger":
         return {
-            bgColor: "#dc3545",
+            backgroundColor: "#dc3545",
             textColor: "#fff",
         };
         case "success":
         return {
-            bgColor: "#28a745",
+            backgroundColor: "#28a745",
             textColor: "#fff",
         };
         case "warning":
         return {
-            bgColor: "#ffc107",
+            backgroundColor: "#ffc107",
             textColor: "#fff",
         };
         case "info":
         return {
-            bgColor: "#17a2b8",
+            backgroundColor: "#17a2b8",
             textColor: "#fff",
         };
         case "light":
         return {
-            bgColor: "#f8f9fa",
+            backgroundColor: "#f8f9fa",
             textColor: "#000",
         };
         case "dark":
         return {
-            bgColor: "#343a40",
+            backgroundColor: "#343a40",
             textColor: "#fff",
         };
         case "link":
         return {
-            bgColor: "transparent",
+            backgroundColor: "transparent",
             textColor: "#007bff",
         };
     }
