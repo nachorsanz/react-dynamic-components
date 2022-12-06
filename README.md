@@ -71,8 +71,8 @@ There are many great button libraries and component libraries on Github; however
 
 Here's why:
 
-- Your will save thousands of kilobytes for just the feature you want.
-- You can customize almost everything.
+-   Your will save thousands of kilobytes for just the feature you want.
+-   You can customize almost everything.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,6 +83,33 @@ Here's why:
 [![Storybook][storybook]][storybook-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USE EXAMPLES-->
+
+## Use Examples
+
+```
+import ReactDynamicButtons from "react-dynamic-buttons";
+
+function App() {
+
+  return (
+    <div className="App">
+
+        <ReactDynamicButtons
+          children={"React Dynamic Buttons"}
+          variant={"danger"}
+          icon={"FaReact"}
+          iconPosition={"right"}
+          size={"large"}
+        />
+
+    </div>
+  );
+}
+
+export default App;
+```
 
 <!-- CONTRIBUTING -->
 
