@@ -19,6 +19,7 @@ export interface ButtonProps extends
   size: SizesTypes
   onClick: () => void
   variant: ButtonTypes
+  withShadow?: boolean
   disabled?: boolean
   option: OptionsType
   styles?: React.CSSProperties

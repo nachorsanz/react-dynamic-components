@@ -80,4 +80,53 @@ export const getVariantProps = (variant: ButtonTypes) => {
     }
     }
 
+    export const getShadowProps = (variant: ButtonTypes) => {
+        switch (variant) {
+            case "primary":
+            return {
+                boxShadow: "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
+            };
+            case "secondary":
+            return {
+                boxShadow: "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
+            };
+            case "tertiary":
+            return {
+                boxShadow: "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
+            };
+            case "danger":
+            return {
+                boxShadow: "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
+            };
+            case "success":
+            return {
+                boxShadow: "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
+            };
+            case "warning":
+            return {
+                boxShadow: "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
+            };
+            case "info":
+            return {
+                boxShadow: "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
+            };
+            case "light":
+            return {
+                boxShadow: "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
+            };
+            case "dark":
+            return {
+                boxShadow: "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
+            };
+            case "link":
+            return {
+                boxShadow: "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
+            };
+            case null:
+            return {};
+    
+        }
+
+    }
+
   

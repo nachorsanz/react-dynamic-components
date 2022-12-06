@@ -62,6 +62,7 @@ ReactDynamicButtonsStory.args = {
   bgColor: "",
   styles: undefined,
   variant: "primary",
+  withShadow: false,
   icon: null,
   iconPosition: "none",
   className: "ReactDynamicButtons",
