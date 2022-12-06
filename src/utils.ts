@@ -1,4 +1,3 @@
-import { useCallback } from "react";
 import { SizesTypes } from "./types";
 import { ButtonTypes } from "./types";
 
