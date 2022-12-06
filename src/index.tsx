@@ -5,7 +5,9 @@ import { ButtonProps } from './types';
 import { getSizeProps, getVariantProps } from './utils';
 
 
- const ReactDynamicButtons: React.FC<ButtonProps> = ({ className, icon , iconPosition, text , size = "medium", styles = null, onClick, disabled = false,  bgColor, textColor, variant = null }) => {
+ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
+  const { text, size, variant, styles, className, onClick, disabled, bgColor, textColor, icon, iconPosition } = props;
+  
 
   let _style: React.CSSProperties = {}
 
