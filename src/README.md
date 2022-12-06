@@ -71,8 +71,8 @@ There are many great button libraries and component libraries on Github; however
 
 Here's why:
 
-- Your will save thousands of kilobytes for just the feature you want.
-- You can customize almost everything.
+-   Your will save thousands of kilobytes for just the feature you want.
+-   You can customize almost everything.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
