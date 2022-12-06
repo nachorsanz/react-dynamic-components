@@ -53,18 +53,18 @@ const Template: ComponentStory<typeof ReactDynamicButtons> = (args) => <ReactDyn
 export const ReactDynamicButtonsStory = Template.bind({});
 
 ReactDynamicButtonsStory.args = {
-  text: 'Button',
-  size: "medium",
+  text: 'React Dynamic Buttons',
+  size: "large",
   onClick: () => {},
   disabled: false,
   option: "submit",
   textColor: '',
   bgColor: "",
   styles: undefined,
-  variant: "primary",
+  variant: "danger",
   withShadow: false,
-  icon: null,
-  iconPosition: "none",
+  icon: "FaReact",
+  iconPosition: "right",
   className: "ReactDynamicButtons",
 
 };
