@@ -84,6 +84,25 @@ Here's why:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- PROPS & DEFINITIONS-->
+
+## Props & Definitions
+
+-   size: ['small', 'medium', 'large'] // default: "large"
+-   onClick: () => void
+-   variant: ['primary', 'secondary', 'tertiary', 'danger', 'success', 'warning', 'info', 'light', 'dark', 'link'] // default: "primary"
+-   withShadow?: boolean // default: false
+-   disabled?: boolean // default: false
+-   option: ['button', 'submit', 'reset'] // default: "button"
+-   styles?: React.CSSProperties
+-   bgColor?: string // default: ""
+-   textColor?: string // default: ""
+-   text?: string // default: "Button"
+-   icon?: string | null // default: null
+-   iconPosition?: ['left', 'right', 'none'] // default: "none"
+-   className?: string // default: ""
+-   children?: React.ReactNode // default: "Button"
+
 <!-- USE EXAMPLES-->
 
 ## Use Examples
@@ -97,7 +116,7 @@ function App() {
     <div className="App">
 
         <ReactDynamicButtons
-          children={"React Dynamic Buttons"}
+          text={"React Dynamic Buttons"}
           variant={"danger"}
           icon={"FaReact"}
           iconPosition={"right"}
