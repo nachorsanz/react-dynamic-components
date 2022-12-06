@@ -6,17 +6,17 @@ import { getShadowProps, getSizeProps, getVariantProps } from './utils'
 
 const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
     const {
-        text,
-        size,
-        variant,
-        styles,
-        className,
-        onClick,
-        disabled,
-        bgColor,
-        textColor,
-        icon,
-        iconPosition,
+        text = 'Button',
+        size = 'medium',
+        variant = 'primary',
+        styles = {},
+        className = '',
+        onClick = () => {},
+        disabled = false,
+        bgColor = '',
+        textColor = '',
+        icon = '',
+        iconPosition = null,
         withShadow = false,
     } = props
 
@@ -36,11 +36,9 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
             className={className}
             style={_style}
             onClick={onClick}
-            variant={variant}
             disabled={disabled}
             bgColor={bgColor}
             textColor={textColor}
-            withShadow={withShadow}
         >
             {icon && iconPosition === 'left' && getIcon(icon)} {text}{' '}
             {icon && iconPosition === 'right' && getIcon(icon)}
