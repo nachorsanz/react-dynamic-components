@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+// types
 const  SizesTypes = ["small" , "medium" , "large"] as const
 export type SizesTypes = typeof SizesTypes[number]
 
@@ -13,7 +13,7 @@ export type OptionsType = typeof OptionsType[number]
 const IconPosition = ["left" , "right" , "none"] as const
 export type IconPosition = typeof IconPosition[number]
 
-
+// interface
 export interface ButtonProps extends
   React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   size: SizesTypes
