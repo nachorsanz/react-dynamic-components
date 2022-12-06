@@ -58,10 +58,10 @@ ReactDynamicButtonsStory.args = {
   onClick: () => {},
   disabled: false,
   option: "submit",
-  textColor: '#000',
+  textColor: '',
   bgColor: "",
   styles: undefined,
-  variant: null,
+  variant: "primary",
   icon: null,
 
 };

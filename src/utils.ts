@@ -1,7 +1,8 @@
-import { sizes } from "./types";
+import { SizesTypes } from "./types";
+import { ButtonTypes } from "./types";
 
 
-export const getSizeProps = (size: sizes ) => {
+export const getSizeProps = (size: SizesTypes ) => {
   switch (size) {
     case "small":
       return {
@@ -21,7 +22,7 @@ export const getSizeProps = (size: sizes ) => {
   }
 }
 
-export const getVariantProps = (variant: string) => {
+export const getVariantProps = (variant: ButtonTypes) => {
     switch (variant) {
         case "primary":
         return {
@@ -30,8 +31,8 @@ export const getVariantProps = (variant: string) => {
         };
         case "secondary":
         return {
-          backgroundColor: "#6c757d",
-            textColor: "#fff",
+          backgroundColor: "#d6cdcd",
+            textColor: "#000",
         };
         case "tertiary":
         return {
@@ -78,3 +79,4 @@ export const getVariantProps = (variant: string) => {
 
     }
     }
+

@@ -5,9 +5,9 @@ import { ButtonProps } from './types';
 import { getSizeProps, getVariantProps } from './utils';
 
 
- const ReactDynamicButtons: React.FC<ButtonProps> = ({ className, icon , iconPosition, text, size = "medium", styles = null, onClick, disabled = false, type, bgColor, textColor, variant = null }) => {
+ const ReactDynamicButtons: React.FC<ButtonProps> = ({ className, icon , iconPosition, text , size = "medium", styles = null, onClick, disabled = false,  bgColor, textColor, variant = null }) => {
 
-  let _style: React.CSSProperties = {};
+  let _style: React.CSSProperties = {}
 
   if (size){
     _style = { ..._style, ...getSizeProps(size) }
@@ -27,7 +27,7 @@ import { getSizeProps, getVariantProps } from './utils';
     className={className}
     style={_style}  
     onClick={onClick} 
-    type={type} 
+    variant={variant} 
     disabled={disabled} 
     bgColor={bgColor}
     textColor={textColor}

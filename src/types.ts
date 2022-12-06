@@ -3,16 +3,17 @@
 import React from 'react'
 
 
-export type sizes = "small" | "medium" | "large"; 
+const  SizesTypes = ["small" , "medium" , "large"] as const
+export type SizesTypes = typeof SizesTypes[number]
 
-export type ButtonTypes  = 
-    "primary" | "secondary" | "tertiary" | "danger" | "success" | "warning" | "info" | "light" | "dark" | "link" | null;
+const  ButtonTypes = ["primary" , "secondary" , "tertiary" , "danger" , "success" , "warning" , "info" , "light" , "dark" , "link" , null] as const
 
+export type ButtonTypes = typeof ButtonTypes[number]
 
 
 export interface ButtonProps extends
   React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-  size: sizes
+  size: SizesTypes
   onClick: () => void
   variant: ButtonTypes
   disabled?: boolean
