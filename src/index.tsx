@@ -22,21 +22,14 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
 
     let _style: React.CSSProperties = {}
 
-    if (size) {
-        _style = { ..._style, ...getSizeProps(size) }
-    }
+    if (size) _style = { ..._style, ...getSizeProps(size) }
 
-    if (variant) {
-        _style = { ..._style, ...getVariantProps(variant) }
-    }
+    if (variant) _style = { ..._style, ...getVariantProps(variant) }
 
-    if (variant && withShadow) {
+    if (variant && withShadow)
         _style = { ..._style, ...getShadowProps(variant) }
-    }
 
-    if (styles) {
-        _style = { ..._style, ...styles }
-    }
+    if (styles) _style = { ..._style, ...styles }
 
     return (
         <StyledButton
