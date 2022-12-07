@@ -36,6 +36,7 @@ export interface ButtonProps
     variant: ButtonTypes
     withShadow?: boolean
     disabled?: boolean
+    hover?: boolean
     option: OptionsType
     styles?: React.CSSProperties
     bgColor?: string

@@ -16,3 +16,15 @@ export declare const getShadowProps: (variant: ButtonTypes) => {
 } | {
     boxShadow?: undefined;
 };
+export declare const getHoverProps: (variant: ButtonTypes) => {
+    "&:hover": {
+        backgroundColor: string;
+    };
+    backgroundColor?: undefined;
+} | {
+    backgroundColor: string;
+    "&:hover"?: undefined;
+} | {
+    "&:hover"?: undefined;
+    backgroundColor?: undefined;
+};

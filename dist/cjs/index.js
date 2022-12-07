@@ -20,7 +20,7 @@ const StyledButton_1 = __importDefault(require("./StyledButton"));
 const utils_1 = require("./utils");
 const ReactDynamicButtons = (_a) => {
     var props = __rest(_a, []);
-    const { text = 'Button', size = 'medium', variant = 'primary', styles = {}, className = '', onClick = () => { }, disabled = false, bgColor = '', textColor = '', icon = '', iconPosition = null, withShadow = false, } = props;
+    const { text = 'Button', size = 'medium', variant = 'primary', styles = {}, className = '', onClick = () => { }, disabled = false, bgColor = '', textColor = '', icon = '', iconPosition = null, withShadow = false, hover = false, } = props;
     let _style = {};
     if (size)
         _style = Object.assign(Object.assign({}, _style), (0, utils_1.getSizeProps)(size));
@@ -28,6 +28,8 @@ const ReactDynamicButtons = (_a) => {
         _style = Object.assign(Object.assign({}, _style), (0, utils_1.getVariantProps)(variant));
     if (variant && withShadow)
         _style = Object.assign(Object.assign({}, _style), (0, utils_1.getShadowProps)(variant));
+    if (variant && hover)
+        _style = Object.assign(Object.assign({}, _style), (0, utils_1.getHoverProps)(variant));
     if (styles)
         _style = Object.assign(Object.assign({}, _style), styles);
     return (react_1.default.createElement(StyledButton_1.default, { className: className, style: _style, onClick: onClick, disabled: disabled, bgColor: bgColor, textColor: textColor },

@@ -73,4 +73,5 @@ ReactDynamicButtonsStory.args = {
     icon: 'FaReact',
     iconPosition: 'right',
     className: 'ReactDynamicButtons',
+    hover: false,
 }

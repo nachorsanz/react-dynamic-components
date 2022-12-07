@@ -26,7 +26,7 @@ export const getVariantProps = (variant: ButtonTypes) => {
         case 'primary':
             return {
                 backgroundColor: '#007bff',
-                textColor: '#fff',
+                textColor: '#000',
             }
         case 'secondary':
             return {
@@ -36,27 +36,27 @@ export const getVariantProps = (variant: ButtonTypes) => {
         case 'tertiary':
             return {
                 backgroundColor: '#28a745',
-                textColor: '#fff',
+                textColor: '#000',
             }
         case 'danger':
             return {
                 backgroundColor: '#dc3545',
-                textColor: '#fff',
+                textColor: '#000',
             }
         case 'success':
             return {
                 backgroundColor: '#28a745',
-                textColor: '#fff',
+                textColor: '#000',
             }
         case 'warning':
             return {
                 backgroundColor: '#ffc107',
-                textColor: '#fff',
+                textColor: '#000',
             }
         case 'info':
             return {
                 backgroundColor: '#17a2b8',
-                textColor: '#fff',
+                textColor: '#000',
             }
         case 'light':
             return {
@@ -66,7 +66,7 @@ export const getVariantProps = (variant: ButtonTypes) => {
         case 'dark':
             return {
                 backgroundColor: '#343a40',
-                textColor: '#fff',
+                textColor: '#000',
             }
         case 'link':
             return {
@@ -119,6 +119,53 @@ export const getShadowProps = (variant: ButtonTypes) => {
         case 'link':
             return {
                 boxShadow: '0 0.5rem 1rem rgba(0, 0, 0, 0.15)',
+            }
+        case null:
+            return {}
+    }
+}
+
+export const getHoverProps = (variant: ButtonTypes) => {
+    switch (variant) {
+        case 'primary':
+            return {
+                backgroundColor: '#0069d9',
+            }
+        case 'secondary':
+            return {
+                backgroundColor: '#c6c6c6',
+            }
+        case 'tertiary':
+            return {
+                backgroundColor: '#218838',
+            }
+        case 'danger':
+            return {
+                backgroundColor: '#c82333',
+            }
+        case 'success':
+            return {
+                backgroundColor: '#218838',
+            }
+        case 'warning':
+            return {
+                backgroundColor: '#e0a800',
+            }
+        case 'info':
+            return {
+                backgroundColor: '#138496',
+            }
+        case 'light':
+            return {
+                backgroundColor: '#e2e6ea',
+            }
+        case 'dark':
+            return {
+                backgroundColor: '#1d2124',
+            }
+        case 'link':
+            return {
+                backgroundColor: 'transparent',
             }
         case null:
             return {}

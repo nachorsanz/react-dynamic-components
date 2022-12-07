@@ -65,5 +65,6 @@ ReactDynamicButtonsStory.args = {
     icon: 'FaReact',
     iconPosition: 'right',
     className: 'ReactDynamicButtons',
+    hover: false,
 };
 //# sourceMappingURL=button-component.stories.js.map

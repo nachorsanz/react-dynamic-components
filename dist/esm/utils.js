@@ -119,4 +119,68 @@ export const getShadowProps = (variant) => {
             return {};
     }
 };
+export const getHoverProps = (variant) => {
+    switch (variant) {
+        case 'primary':
+            return {
+                "&:hover": {
+                    backgroundColor: '#0069d9',
+                }
+            };
+        case 'secondary':
+            return {
+                "&:hover": {
+                    backgroundColor: '#c6c6c6',
+                }
+            };
+        case 'tertiary':
+            return {
+                "&:hover": {
+                    backgroundColor: '#218838',
+                }
+            };
+        case 'danger':
+            return {
+                "&:hover": {
+                    backgroundColor: '#c82333',
+                }
+            };
+        case 'success':
+            return {
+                "&:hover": {
+                    backgroundColor: '#218838',
+                }
+            };
+        case 'warning':
+            return {
+                "&:hover": {
+                    backgroundColor: '#e0a800',
+                }
+            };
+        case 'info':
+            return {
+                backgroundColor: '#138496',
+            };
+        case 'light':
+            return {
+                "&:hover": {
+                    backgroundColor: '#e2e6ea',
+                }
+            };
+        case 'dark':
+            return {
+                "&:hover": {
+                    backgroundColor: '#1d2124',
+                }
+            };
+        case 'link':
+            return {
+                "&:hover": {
+                    backgroundColor: 'transparent',
+                }
+            };
+        case null:
+            return {};
+    }
+};
 //# sourceMappingURL=utils.js.map

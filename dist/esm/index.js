@@ -12,10 +12,10 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React from 'react';
 import { getIcon } from './icons';
 import StyledButton from './StyledButton';
-import { getShadowProps, getSizeProps, getVariantProps } from './utils';
+import { getHoverProps, getShadowProps, getSizeProps, getVariantProps } from './utils';
 const ReactDynamicButtons = (_a) => {
     var props = __rest(_a, []);
-    const { text = 'Button', size = 'medium', variant = 'primary', styles = {}, className = '', onClick = () => { }, disabled = false, bgColor = '', textColor = '', icon = '', iconPosition = null, withShadow = false, } = props;
+    const { text = 'Button', size = 'medium', variant = 'primary', styles = {}, className = '', onClick = () => { }, disabled = false, bgColor = '', textColor = '', icon = '', iconPosition = null, withShadow = false, hover = false, } = props;
     let _style = {};
     if (size)
         _style = Object.assign(Object.assign({}, _style), getSizeProps(size));
@@ -23,6 +23,8 @@ const ReactDynamicButtons = (_a) => {
         _style = Object.assign(Object.assign({}, _style), getVariantProps(variant));
     if (variant && withShadow)
         _style = Object.assign(Object.assign({}, _style), getShadowProps(variant));
+    if (variant && hover)
+        _style = Object.assign(Object.assign({}, _style), getHoverProps(variant));
     if (styles)
         _style = Object.assign(Object.assign({}, _style), styles);
     return (React.createElement(StyledButton, { className: className, style: _style, onClick: onClick, disabled: disabled, bgColor: bgColor, textColor: textColor },
