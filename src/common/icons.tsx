@@ -5,7 +5,7 @@ export const getIcon = (iconName: string) => {
     const Icon = Icons[iconName]
     return (
         <>
-            <Icon />
+            <Icon data-testid="button-icon" />
         </>
     )
 }

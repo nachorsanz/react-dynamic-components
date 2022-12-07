@@ -9,6 +9,7 @@ const config: Config = {
     },
     testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)'],
     testPathIgnorePatterns: ['/node_modules/', '/dist/'],
+
     globals: {
         'ts-jest': {
             tsconfig: 'tsconfig.json',
