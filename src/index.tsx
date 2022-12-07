@@ -3,7 +3,6 @@ import { getIcon } from './icons'
 import StyledButton from './StyledButton'
 import { ButtonProps } from './types'
 import {
-    getHoverProps,
     getShadowProps,
     getSizeProps,
     getVariantProps,
