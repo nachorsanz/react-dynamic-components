@@ -17,8 +17,9 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
+      - run: npm install --frozen-lockfile
       - name: UI-Unit Tests (using React-Testing Lib & Storybook)
-        run: npm run test:ui-jest 
+        run: npm run --cwd test:ui-jest 
 
    build:
      runs-on: ubuntu-latest
