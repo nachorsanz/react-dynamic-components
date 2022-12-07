@@ -1,5 +1,5 @@
 
-name: React Dynamic Buttons
+name: NPM - RDB
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
    unit-tests:
-     name:  UI-Unit-Tests
+     name: Unit & UI-Unit-Tests
      runs-on: ubuntu-latest
      timeout-minutes: 60
  
@@ -18,6 +18,10 @@ jobs:
            node-version: 16
            cache: 'npm'
        - run: npm install --frozen-lockfile
+
+       - name: Unit Tests (using Jest)
+         run: npm run test:unit
+
        - name: UI-Unit Tests (using React-Testing Lib & Storybook)
          run: npm run test:ui-jest 
 

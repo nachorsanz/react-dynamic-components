@@ -1,34 +1,42 @@
-
 /**
  * @jest-environment jsdom
  */
 
 import React from 'react'
 import { render } from '@testing-library/react'
-import { ReactDynamicButtonsStory } from '../../stories/button-component.stories';
-import '@testing-library/jest-dom';
+import * as stories from '../../stories/button-component.stories'
+import { composeStories } from '@storybook/testing-react'
 
+const { ReactDynamicButtonsStory } = composeStories(stories)
 
+import '@testing-library/jest-dom'
 
-test('renders button', () => {
-    const { getByTestId } = render( <ReactDynamicButtonsStory size='medium' onClick={()=>{}} variant="primary" option='button'  /> )
-    const button = getByTestId('button')
-    expect(button).toBeInTheDocument()
-  
-})
+describe('Button', () => {
+    it('renders button', () => {
+        const { getByTestId } = render(<ReactDynamicButtonsStory />)
+        const button = getByTestId('button')
+        expect(button).toBeInTheDocument()
+    })
 
+    it('renders button with text', () => {
+        const { getByTestId } = render(<ReactDynamicButtonsStory />)
+        const button = getByTestId('button')
+        expect(button.textContent).toEqual(' React Dynamic Buttons ')
+    })
 
-test('renders button with text', () => {
-    const { getByTestId } = render( <ReactDynamicButtonsStory size='medium' onClick={()=>{}} variant="primary" option='button' text='React Dynamic Buttons'  /> )
-    const button = getByTestId('button')
-    expect(button.textContent).toEqual(' React Dynamic Buttons ')
+    it('renders button with icon left', () => {
+        const { getByTestId } = render(
+            <ReactDynamicButtonsStory icon={'FaReact'} iconPosition="left" />
+        )
+        const icon = getByTestId('button-icon')
+        expect(icon).toBeInTheDocument()
+    })
 
-})
-
-
-test('renders button with icon left', () => {
-    const { getByTestId } = render( <ReactDynamicButtonsStory size='medium' onClick={()=>{}} variant="primary" option='button' icon={"FaReact"} iconPosition="left"  /> )
-    const icon = getByTestId('button-icon')
-    expect(icon).toBeInTheDocument()
-
+    it('renders button with icon right', () => {
+        const { getByTestId } = render(
+            <ReactDynamicButtonsStory icon={'FaReact'} iconPosition="right" />
+        )
+        const icon = getByTestId('button-icon')
+        expect(icon).toBeInTheDocument()
+    })
 })

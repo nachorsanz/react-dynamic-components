@@ -1,3 +1,3 @@
-import ReactDynamicButtons from "./ui/button/button";
+import ReactDynamicButtons from './ui/button/button'
 
-module.exports = {ReactDynamicButtons};
+module.exports = { ReactDynamicButtons }

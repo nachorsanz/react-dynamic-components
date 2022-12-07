@@ -14,6 +14,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:ui-jest": "jest --config=\"./jest.config.ts\" --testPathPattern=\".*ui-jest\\.spec\\..*\" --testEnvironment=\"jsdom\"",
+    "test:unit": "jest --config=\"./jest.config.ts\" --testPathPattern=\".*unit\\.spec\\..*\" --env=node",
     "prettier": "npx prettier --write src/",
     "build": "rm -rf dist && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
