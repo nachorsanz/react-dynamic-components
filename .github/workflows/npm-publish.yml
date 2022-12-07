@@ -1,5 +1,5 @@
 
-name: Automated Workflow - React Dynamic Buttons
+name: React Dynamic Buttons
 
 on:
   push:
