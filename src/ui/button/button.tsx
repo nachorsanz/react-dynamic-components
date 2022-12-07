@@ -1,12 +1,12 @@
 import React from 'react'
-import { getIcon } from './icons'
+import { getIcon } from '../../common/icons'
 import StyledButton from './StyledButton'
-import { ButtonProps } from './types'
+import { ButtonProps } from '../../domain/types'
 import {
     getShadowProps,
     getSizeProps,
     getVariantProps,
-} from './utils'
+} from '../../domain/utils'
 
 const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
     const {

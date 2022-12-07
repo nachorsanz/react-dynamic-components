@@ -1,8 +1,8 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import ReactDynamicButtons from '../index'
-import { getAllIcons } from '../icons'
+import ReactDynamicButtons from '../ui/button/button'
+import { getAllIcons } from '../common/icons'
 
 export default {
     title: 'React Dynamic Buttons/Components/Button',

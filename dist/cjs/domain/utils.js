@@ -1,4 +1,7 @@
-export const getSizeProps = (size) => {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getHoverProps = exports.getShadowProps = exports.getVariantProps = exports.getSizeProps = void 0;
+const getSizeProps = (size) => {
     switch (size) {
         case 'small':
             return {
@@ -17,63 +20,75 @@ export const getSizeProps = (size) => {
             };
     }
 };
-export const getVariantProps = (variant) => {
+exports.getSizeProps = getSizeProps;
+const getVariantProps = (variant) => {
     switch (variant) {
         case 'primary':
             return {
                 backgroundColor: '#007bff',
-                textColor: '#fff',
+                textColor: '#000',
+                borderRadius: "3px",
             };
         case 'secondary':
             return {
                 backgroundColor: '#d6cdcd',
                 textColor: '#000',
+                borderRadius: "3px",
             };
         case 'tertiary':
             return {
                 backgroundColor: '#28a745',
-                textColor: '#fff',
+                textColor: '#000',
+                borderRadius: "3px",
             };
         case 'danger':
             return {
                 backgroundColor: '#dc3545',
-                textColor: '#fff',
+                textColor: '#000',
+                borderRadius: "3px",
             };
         case 'success':
             return {
                 backgroundColor: '#28a745',
-                textColor: '#fff',
+                textColor: '#000',
+                borderRadius: "3px",
             };
         case 'warning':
             return {
                 backgroundColor: '#ffc107',
-                textColor: '#fff',
+                textColor: '#000',
+                borderRadius: "3px",
             };
         case 'info':
             return {
                 backgroundColor: '#17a2b8',
-                textColor: '#fff',
+                textColor: '#000',
+                borderRadius: "3px",
             };
         case 'light':
             return {
                 backgroundColor: '#f8f9fa',
                 textColor: '#000',
+                borderRadius: "3px",
             };
         case 'dark':
             return {
                 backgroundColor: '#343a40',
-                textColor: '#fff',
+                textColor: '#000',
+                borderRadius: "3px",
             };
         case 'link':
             return {
                 backgroundColor: 'transparent',
                 textColor: '#007bff',
+                borderRadius: "3px",
             };
         case null:
             return {};
     }
 };
-export const getShadowProps = (variant) => {
+exports.getVariantProps = getVariantProps;
+const getShadowProps = (variant) => {
     switch (variant) {
         case 'primary':
             return {
@@ -119,43 +134,32 @@ export const getShadowProps = (variant) => {
             return {};
     }
 };
-export const getHoverProps = (variant) => {
+exports.getShadowProps = getShadowProps;
+const getHoverProps = (variant) => {
     switch (variant) {
         case 'primary':
             return {
-                "&:hover": {
-                    backgroundColor: '#0069d9',
-                }
+                backgroundColor: '#0069d9',
             };
         case 'secondary':
             return {
-                "&:hover": {
-                    backgroundColor: '#c6c6c6',
-                }
+                backgroundColor: '#c6c6c6',
             };
         case 'tertiary':
             return {
-                "&:hover": {
-                    backgroundColor: '#218838',
-                }
+                backgroundColor: '#218838',
             };
         case 'danger':
             return {
-                "&:hover": {
-                    backgroundColor: '#c82333',
-                }
+                backgroundColor: '#c82333',
             };
         case 'success':
             return {
-                "&:hover": {
-                    backgroundColor: '#218838',
-                }
+                backgroundColor: '#218838',
             };
         case 'warning':
             return {
-                "&:hover": {
-                    backgroundColor: '#e0a800',
-                }
+                backgroundColor: '#e0a800',
             };
         case 'info':
             return {
@@ -163,24 +167,19 @@ export const getHoverProps = (variant) => {
             };
         case 'light':
             return {
-                "&:hover": {
-                    backgroundColor: '#e2e6ea',
-                }
+                backgroundColor: '#e2e6ea',
             };
         case 'dark':
             return {
-                "&:hover": {
-                    backgroundColor: '#1d2124',
-                }
+                backgroundColor: '#1d2124',
             };
         case 'link':
             return {
-                "&:hover": {
-                    backgroundColor: 'transparent',
-                }
+                backgroundColor: 'transparent',
             };
         case null:
             return {};
     }
 };
+exports.getHoverProps = getHoverProps;
 //# sourceMappingURL=utils.js.map

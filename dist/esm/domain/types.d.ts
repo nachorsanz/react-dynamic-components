@@ -13,6 +13,7 @@ export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAtt
     variant: ButtonTypes;
     withShadow?: boolean;
     disabled?: boolean;
+    hover?: boolean;
     option: OptionsType;
     styles?: React.CSSProperties;
     bgColor?: string;

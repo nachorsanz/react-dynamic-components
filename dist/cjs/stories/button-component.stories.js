@@ -5,11 +5,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ReactDynamicButtonsStory = void 0;
 const react_1 = __importDefault(require("react"));
-const index_1 = __importDefault(require("../index"));
-const icons_1 = require("../icons");
+const button_1 = __importDefault(require("../ui/button/button"));
+const icons_1 = require("../common/icons");
 exports.default = {
     title: 'React Dynamic Buttons/Components/Button',
-    component: index_1.default,
+    component: button_1.default,
     argTypes: {
         icon: {
             control: {
@@ -55,7 +55,7 @@ exports.default = {
         },
     },
 };
-const Template = (args) => (react_1.default.createElement(index_1.default, Object.assign({}, args)));
+const Template = (args) => (react_1.default.createElement(button_1.default, Object.assign({}, args)));
 exports.ReactDynamicButtonsStory = Template.bind({});
 exports.ReactDynamicButtonsStory.args = {
     text: 'React Dynamic Buttons',

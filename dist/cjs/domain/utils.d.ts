@@ -7,9 +7,11 @@ export declare const getSizeProps: (size: SizesTypes) => {
 export declare const getVariantProps: (variant: ButtonTypes) => {
     backgroundColor: string;
     textColor: string;
+    borderRadius: string;
 } | {
     backgroundColor?: undefined;
     textColor?: undefined;
+    borderRadius?: undefined;
 };
 export declare const getShadowProps: (variant: ButtonTypes) => {
     boxShadow: string;
@@ -17,14 +19,7 @@ export declare const getShadowProps: (variant: ButtonTypes) => {
     boxShadow?: undefined;
 };
 export declare const getHoverProps: (variant: ButtonTypes) => {
-    "&:hover": {
-        backgroundColor: string;
-    };
-    backgroundColor?: undefined;
-} | {
     backgroundColor: string;
-    "&:hover"?: undefined;
 } | {
-    "&:hover"?: undefined;
     backgroundColor?: undefined;
 };
