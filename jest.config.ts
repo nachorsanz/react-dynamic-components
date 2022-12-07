@@ -1,6 +1,7 @@
 import type {Config} from 'jest';
 import {defaults} from 'jest-config';
 
+
 const config: Config = {
     verbose: true,
     moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
@@ -15,6 +16,7 @@ const config: Config = {
             tsconfig: 'tsconfig.json',
         },
     },
+
 };
 
 export default config;

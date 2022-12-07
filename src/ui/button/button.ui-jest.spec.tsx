@@ -6,15 +6,14 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { ReactDynamicButtonsStory } from '../../stories/button-component.stories';
-import {expect, test} from '@jest/globals';
-
+import '@testing-library/jest-dom';
 
 
 
 test('renders button', () => {
     const { getByTestId } = render( <ReactDynamicButtonsStory size='medium' onClick={()=>{}} variant="primary" option='button'  /> )
     const button = getByTestId('button')
-    expect(button).toBeDefined()
+    expect(button).toBeInTheDocument()
   
 })
 
@@ -30,6 +29,6 @@ test('renders button with text', () => {
 test('renders button with icon left', () => {
     const { getByTestId } = render( <ReactDynamicButtonsStory size='medium' onClick={()=>{}} variant="primary" option='button' icon={"FaReact"} iconPosition="left"  /> )
     const icon = getByTestId('button-icon')
-    expect(icon).not.toBeNull()
+    expect(icon).toBeInTheDocument()
 
 })
