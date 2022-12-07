@@ -55,7 +55,7 @@ export default {
 } as ComponentMeta<typeof ReactDynamicButtons>
 
 const Template: ComponentStory<typeof ReactDynamicButtons> = (args) => (
-    <ReactDynamicButtons {...args} />
+    <ReactDynamicButtons data-testid="button" {...args} />
 )
 export const ReactDynamicButtonsStory = Template.bind({})
 

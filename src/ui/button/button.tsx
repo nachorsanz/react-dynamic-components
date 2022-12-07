@@ -38,6 +38,7 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
 
     return (
         <StyledButton
+            data-testid="button"
             className={className}
             style={_style}
             onClick={onClick}
