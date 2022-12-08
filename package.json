@@ -1,10 +1,14 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   "name": "dynamic-react-components",
 =======
   "name": "react-dynamic-components",
 >>>>>>> 64ff9cb (chore: update npm)
+=======
+  "name": "dynamic-react-components",
+>>>>>>> 0254db9 (chore: update npm)
   "version": "1.0.12-beta",
   "description": "React library provides multiple types of components (beta version)",
   "main": "dist/cjs/index.js",

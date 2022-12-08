@@ -5,7 +5,6 @@ import { getAllColorIcons, getAllFAIcons } from '../domain/icons'
 
 export default {
     title: 'Dynamic React Components/Components/Button',
-
     component: Button,
 
     argTypes: {
