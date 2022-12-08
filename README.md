@@ -24,14 +24,14 @@
   <p align="center">
     An awesome library with thousands of customizations for React components 
     <br />
-    <a href="https://github.com/nachorsanz/react-dynamic-buttons"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/nachorsanz/react-dynamic-components"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://react-dynamic-buttons-nachorsanz.vercel.app/">View Demo | WIP</a>
+    <a href="https://dynamic-react-components-nachorsanz.vercel.app/">View Demo | WIP</a>
     ·
-    <a href="https://github.com/nachorsanz/react-dynamic-buttons/issues">Report Bug</a>
+    <a href="https://github.com/nachorsanz/react-dynamic-components/issues">Report Bug</a>
     ·
-    <a href="https://github.com/nachorsanz/react-dynamic-buttons/issues">Request Feature</a>
+    <a href="https://github.com/nachorsanz/react-dynamic-components/issues">Request Feature</a>
   </p>
 </div>
 
