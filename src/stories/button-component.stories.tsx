@@ -1,16 +1,12 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import ReactDynamicButtons from '../ui/button/button'
-<<<<<<< HEAD
+import Button from '../ui/button/button'
 import { getAllColorIcons, getAllFAIcons } from '../domain/icons'
-=======
-import { getAllColorIcons, getAllFAIcons } from '../common/icons'
->>>>>>> 470ebdf (refactor: chenge name props icons for icon family)
 
 export default {
-    title: 'React Dynamic Buttons/Components/Button',
-    component: ReactDynamicButtons,
+    title: 'React Dynamic Components/Components/Button',
+    component: Button,
 
     argTypes: {
         faIcon: {
@@ -62,15 +58,15 @@ export default {
             },
         },
     },
-} as ComponentMeta<typeof ReactDynamicButtons>
+} as ComponentMeta<typeof Button>
 
-const Template: ComponentStory<typeof ReactDynamicButtons> = (args) => (
-    <ReactDynamicButtons data-testid="button" {...args} />
+const Template: ComponentStory<typeof Button> = (args) => (
+    <Button data-testid="button" {...args} />
 )
-export const ReactDynamicButtonsStory = Template.bind({})
+export const ButtonStory = Template.bind({})
 
-ReactDynamicButtonsStory.args = {
-    text: 'React Dynamic Buttons',
+ButtonStory.args = {
+    text: 'Button',
     size: 'large',
     onClick: () => {},
     disabled: false,
@@ -83,6 +79,6 @@ ReactDynamicButtonsStory.args = {
     faIcon: null,
     colorIcon: null,
     iconPosition: 'none',
-    className: 'ReactDynamicButtons',
+    className: 'ReactDynamicComponents',
     hover: false,
 }

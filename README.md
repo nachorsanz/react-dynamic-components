@@ -109,7 +109,7 @@ Here's why:
 ## Use Examples
 
 ```
-import ReactDynamicButtons from "react-dynamic-buttons";
+import Button from "react-dynamic-components";
 // maybe need module import (beta)
 
 function App() {
@@ -117,7 +117,7 @@ function App() {
   return (
     <div className="App">
 
-        <ReactDynamicButtons
+        <Button
           text={"React Dynamic Buttons"}
           variant={"danger"}
           faIcon={"FaReact"}

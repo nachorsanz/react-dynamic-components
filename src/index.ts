@@ -1,3 +1,2 @@
-import ReactDynamicButtons from "./ui/button/button";
-
-export default ReactDynamicButtons;
+// This file is used to export all the components from the library
+export { default as Button } from "./ui/button/button";
