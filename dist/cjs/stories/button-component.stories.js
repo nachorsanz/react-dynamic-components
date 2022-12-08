@@ -8,7 +8,9 @@ const react_1 = __importDefault(require("react"));
 const button_1 = __importDefault(require("../ui/button/button"));
 const icons_1 = require("../domain/icons");
 exports.default = {
+
     title: 'Dynamic React Components/Components/Button',
+
     component: button_1.default,
     argTypes: {
         faIcon: {

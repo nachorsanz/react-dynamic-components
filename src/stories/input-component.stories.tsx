@@ -4,7 +4,9 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import Input from "../ui/input/input";
 
 export default {
+
     title: "Dynamic React Components/Components/Input",
+
     component: Input,
     argTypes: {
         placeholder: {
