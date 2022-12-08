@@ -3,7 +3,6 @@ import * as Icons from 'react-icons/fa'
 import * as ColorIcons from 'react-icons/fc'
 
 export const getIcon = (iconName: string) => {
-    console.log('All', ColorIcons)
     const Icon = Icons[iconName]
     return (
         <>
