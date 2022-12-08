@@ -18,7 +18,7 @@ describe('Icons', () => {
 
     it('get all color icons', () => {
         const result = getAllColorIcons()
-        expect(result).toHaveLength(329)
+        expect(result).toHaveLength(330)
     })
 
 
