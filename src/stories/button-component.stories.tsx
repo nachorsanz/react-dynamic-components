@@ -9,7 +9,7 @@ export default {
     component: ReactDynamicButtons,
 
     argTypes: {
-        icon: {
+        faIcon: {
             control: {
                 type: 'select',
                 options: getAllFAIcons(),
