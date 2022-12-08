@@ -48,3 +48,12 @@ export interface ButtonProps
     className?: string
     children?: React.ReactNode
 }
+
+export interface InputProps
+    extends React.DetailedHTMLProps<
+        React.InputHTMLAttributes<HTMLInputElement>,
+        HTMLInputElement
+    > {
+    placeholder?: string 
+    }
+
