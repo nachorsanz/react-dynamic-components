@@ -1,7 +1,7 @@
 {
-  "name": "react-dynamic-buttons",
-  "version": "1.0.11-beta",
-  "description": "React library provides multiple types buttons (Alpha version)",
+  "name": "react-dynamic-components",
+  "version": "1.0.12-beta",
+  "description": "React library provides multiple types of components (beta version)",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "repository": {

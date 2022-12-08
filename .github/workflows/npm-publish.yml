@@ -1,5 +1,5 @@
 
-name: NPM - RDB
+name: NPM - RDC
 
 on:
   push:

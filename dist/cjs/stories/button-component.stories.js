@@ -3,12 +3,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReactDynamicButtonsStory = void 0;
+exports.ButtonStory = void 0;
 const react_1 = __importDefault(require("react"));
 const button_1 = __importDefault(require("../ui/button/button"));
 const icons_1 = require("../domain/icons");
 exports.default = {
-    title: 'React Dynamic Buttons/Components/Button',
+    title: 'React Dynamic Components/Components/Button',
     component: button_1.default,
     argTypes: {
         faIcon: {
@@ -62,9 +62,9 @@ exports.default = {
     },
 };
 const Template = (args) => (react_1.default.createElement(button_1.default, Object.assign({ "data-testid": "button" }, args)));
-exports.ReactDynamicButtonsStory = Template.bind({});
-exports.ReactDynamicButtonsStory.args = {
-    text: 'React Dynamic Buttons',
+exports.ButtonStory = Template.bind({});
+exports.ButtonStory.args = {
+    text: 'Button',
     size: 'large',
     onClick: () => { },
     disabled: false,
@@ -77,7 +77,7 @@ exports.ReactDynamicButtonsStory.args = {
     faIcon: null,
     colorIcon: null,
     iconPosition: 'none',
-    className: 'ReactDynamicButtons',
+    className: 'ReactDynamicComponents',
     hover: false,
 };
 //# sourceMappingURL=button-component.stories.js.map

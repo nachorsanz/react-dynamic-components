@@ -22,7 +22,7 @@
   <h3 align="center">React Dynamic Buttons</h3>
 
   <p align="center">
-    An awesome library with thousands of customizations for buttons 
+    An awesome library with thousands of customizations for React components 
     <br />
     <a href="https://github.com/nachorsanz/react-dynamic-buttons"><strong>Explore the docs »</strong></a>
     <br />
@@ -109,7 +109,7 @@ Here's why:
 ## Use Examples
 
 ```
-import ReactDynamicButtons from "react-dynamic-buttons";
+import Button from "react-dynamic-components";
 // maybe need module import (beta)
 
 function App() {
@@ -117,8 +117,8 @@ function App() {
   return (
     <div className="App">
 
-        <ReactDynamicButtons
-          text={"React Dynamic Buttons"}
+        <Button
+          text={"React Dynamic Button"}
           variant={"danger"}
           faIcon={"FaReact"}
           iconPosition={"right"}
