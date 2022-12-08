@@ -24,7 +24,8 @@
     "build:watch:cjs": "tsc --module commonjs --outDir dist/cjs --watch",
     "dev": "npm run build:watch:esm & npm run build:watch:cjs & npm run storybook",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "predeploy": "npm run test:ui-jest & npm run test:unit & npm run build"
   },
   "author": "Nacho Rodriguez Sanz",
   "license": "MIT",
