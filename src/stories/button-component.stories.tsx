@@ -2,7 +2,7 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import ReactDynamicButtons from '../button'
-import { getAllColorIcons, getAllFAIcons } from '../common/icons'
+import { getAllColorIcons, getAllFAIcons } from '../icons'
 
 export default {
     title: 'React Dynamic Buttons/Components/Button',

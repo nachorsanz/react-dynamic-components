@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDynamicButtons from '../button';
-import { getAllColorIcons, getAllFAIcons } from '../common/icons';
+import { getAllColorIcons, getAllFAIcons } from '../icons';
 export default {
     title: 'React Dynamic Buttons/Components/Button',
     component: ReactDynamicButtons,

@@ -10,7 +10,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import { getColorIcon, getFAIcon } from './common/icons';
+import { getColorIcon, getFAIcon } from './icons';
 import StyledButton from './StyledButton';
 import { getShadowProps, getSizeProps, getVariantProps, } from './domain/utils';
 const ReactDynamicButtons = (_a) => {

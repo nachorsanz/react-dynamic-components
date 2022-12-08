@@ -1,7 +1,7 @@
 import React from 'react'
-import { getColorIcon, getFAIcon } from './common/icons'
+import { getColorIcon, getFAIcon } from './icons'
 import StyledButton from './StyledButton'
-import { ButtonProps } from './domain/types'
+import { ButtonProps } from './types'
 import {
     getShadowProps,
     getSizeProps,
