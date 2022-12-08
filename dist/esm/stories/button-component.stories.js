@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDynamicButtons from '../ui/button/button';
+import Button from '../ui/button/button';
 import { getAllColorIcons, getAllFAIcons } from '../domain/icons';
 export default {
-    title: 'React Dynamic Buttons/Components/Button',
-    component: ReactDynamicButtons,
+    title: 'React Dynamic Components/Components/Button',
+    component: Button,
     argTypes: {
         faIcon: {
             control: {
@@ -55,10 +55,10 @@ export default {
         },
     },
 };
-const Template = (args) => (React.createElement(ReactDynamicButtons, Object.assign({ "data-testid": "button" }, args)));
-export const ReactDynamicButtonsStory = Template.bind({});
-ReactDynamicButtonsStory.args = {
-    text: 'React Dynamic Buttons',
+const Template = (args) => (React.createElement(Button, Object.assign({ "data-testid": "button" }, args)));
+export const ButtonStory = Template.bind({});
+ButtonStory.args = {
+    text: 'Button',
     size: 'large',
     onClick: () => { },
     disabled: false,
@@ -71,7 +71,7 @@ ReactDynamicButtonsStory.args = {
     faIcon: null,
     colorIcon: null,
     iconPosition: 'none',
-    className: 'ReactDynamicButtons',
+    className: 'ReactDynamicComponents',
     hover: false,
 };
 //# sourceMappingURL=button-component.stories.js.map

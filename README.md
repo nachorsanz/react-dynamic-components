@@ -22,7 +22,7 @@
   <h3 align="center">React Dynamic Buttons</h3>
 
   <p align="center">
-    An awesome library with thousands of customizations for buttons 
+    An awesome library with thousands of customizations for React components 
     <br />
     <a href="https://github.com/nachorsanz/react-dynamic-buttons"><strong>Explore the docs »</strong></a>
     <br />
@@ -118,7 +118,7 @@ function App() {
     <div className="App">
 
         <Button
-          text={"React Dynamic Buttons"}
+          text={"React Dynamic Button"}
           variant={"danger"}
           faIcon={"FaReact"}
           iconPosition={"right"}

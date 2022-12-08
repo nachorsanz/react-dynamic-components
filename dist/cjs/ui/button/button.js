@@ -18,7 +18,7 @@ const react_1 = __importDefault(require("react"));
 const icons_1 = require("../../domain/icons");
 const StyledButton_1 = __importDefault(require("./StyledButton"));
 const utils_1 = require("../../domain/utils");
-const ReactDynamicButtons = (_a) => {
+const Button = (_a) => {
     var props = __rest(_a, []);
     const { text = 'Button', size = 'medium', variant = 'primary', styles = {}, className = '', onClick = () => { }, disabled = false, bgColor = '', textColor = '', faIcon = null, colorIcon = null, iconPosition = null, withShadow = false, hover = false, } = props;
     let _style = {};
@@ -48,5 +48,5 @@ const ReactDynamicButtons = (_a) => {
             iconPosition === 'right' &&
             (0, icons_1.getColorIcon)(colorIcon)));
 };
-exports.default = ReactDynamicButtons;
+exports.default = Button;
 //# sourceMappingURL=button.js.map

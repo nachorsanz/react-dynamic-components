@@ -13,7 +13,7 @@ import React from 'react';
 import { getColorIcon, getFAIcon } from '../../domain/icons';
 import StyledButton from './StyledButton';
 import { getShadowProps, getSizeProps, getVariantProps, } from '../../domain/utils';
-const ReactDynamicButtons = (_a) => {
+const Button = (_a) => {
     var props = __rest(_a, []);
     const { text = 'Button', size = 'medium', variant = 'primary', styles = {}, className = '', onClick = () => { }, disabled = false, bgColor = '', textColor = '', faIcon = null, colorIcon = null, iconPosition = null, withShadow = false, hover = false, } = props;
     let _style = {};
@@ -43,5 +43,5 @@ const ReactDynamicButtons = (_a) => {
             iconPosition === 'right' &&
             getColorIcon(colorIcon)));
 };
-export default ReactDynamicButtons;
+export default Button;
 //# sourceMappingURL=button.js.map
