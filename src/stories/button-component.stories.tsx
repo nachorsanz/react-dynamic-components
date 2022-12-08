@@ -2,7 +2,11 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import ReactDynamicButtons from '../ui/button/button'
+<<<<<<< HEAD
 import { getAllColorIcons, getAllFAIcons } from '../domain/icons'
+=======
+import { getAllColorIcons, getAllFAIcons } from '../common/icons'
+>>>>>>> 470ebdf (refactor: chenge name props icons for icon family)
 
 export default {
     title: 'React Dynamic Buttons/Components/Button',
