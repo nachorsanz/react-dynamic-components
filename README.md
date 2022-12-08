@@ -98,7 +98,8 @@ Here's why:
 -   bgColor?: string // default: ""
 -   textColor?: string // default: ""
 -   text?: string // default: "Button"
--   icon?: string | null // default: null
+-   faIcon?: string | null // default: null "Font Awesome Icons"
+-   colorIcon: string | null // default: null "Flat Colors Icons"
 -   iconPosition?: ['left', 'right', 'none'] // default: "none"
 -   className?: string // default: ""
 -   children?: React.ReactNode // default: "Button"
@@ -109,6 +110,7 @@ Here's why:
 
 ```
 import ReactDynamicButtons from "react-dynamic-buttons";
+// maybe need module import (beta)
 
 function App() {
 
@@ -118,7 +120,7 @@ function App() {
         <ReactDynamicButtons
           text={"React Dynamic Buttons"}
           variant={"danger"}
-          icon={"FaReact"}
+          faIcon={"FaReact"}
           iconPosition={"right"}
           size={"large"}
         />

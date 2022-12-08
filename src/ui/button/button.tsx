@@ -1,5 +1,5 @@
 import React from 'react'
-import { getColorIcon, getIcon } from '../../common/icons'
+import { getColorIcon, getFAIcon } from '../../common/icons'
 import StyledButton from './StyledButton'
 import { ButtonProps } from '../../domain/types'
 import {
@@ -19,7 +19,7 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
         disabled = false,
         bgColor = '',
         textColor = '',
-        icon = null,
+        faIcon = null,
         colorIcon = null,
         iconPosition = null,
         withShadow = false,
@@ -37,7 +37,7 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
 
     if (styles) _style = { ..._style, ...styles }
 
-    if (icon && colorIcon)
+    if (faIcon && colorIcon)
         throw new Error(
             "You can't use both icon and colorIcon props at the same time"
         )
@@ -53,18 +53,18 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
             textColor={textColor}
             hover={hover ? variant : null}
         >
-            {icon && !colorIcon && iconPosition === 'left' && getIcon(icon)}
+            {faIcon && !colorIcon && iconPosition === 'left' && getFAIcon(faIcon)}
             {colorIcon &&
-                !icon &&
+                !faIcon &&
                 iconPosition === 'left' &&
                 getColorIcon(colorIcon)}
             {text}
-            {icon &&
+            {faIcon &&
                 !colorIcon &&
                 iconPosition === 'right' &&
-                getIcon(icon)}
+                getFAIcon(faIcon)}
             {colorIcon &&
-                !icon &&
+                !faIcon &&
                 iconPosition === 'right' &&
                 getColorIcon(colorIcon)}
         </StyledButton>

@@ -2,7 +2,7 @@ import React from 'react'
 import * as Icons from 'react-icons/fa'
 import * as ColorIcons from 'react-icons/fc'
 
-export const getIcon = (iconName: string) => {
+export const getFAIcon = (iconName: string) => {
     const Icon = Icons[iconName]
     return (
         <>
@@ -11,7 +11,7 @@ export const getIcon = (iconName: string) => {
     )
 }
 
-export const getAllIcons = () => {
+export const getAllFAIcons = () => {
     const icons = Object.keys(Icons)
     return icons
 }

@@ -26,7 +26,7 @@ describe('Button', () => {
 
     it('renders button with icon left', () => {
         const { getByTestId } = render(
-            <ReactDynamicButtonsStory icon={'FaReact'} iconPosition="left" />
+            <ReactDynamicButtonsStory faIcon={'FaReact'} iconPosition="left" />
         )
         const icon = getByTestId('button-icon')
         expect(icon).toBeInTheDocument()
@@ -34,7 +34,7 @@ describe('Button', () => {
 
     it('renders button with icon right', () => {
         const { getByTestId } = render(
-            <ReactDynamicButtonsStory icon={'FaReact'} iconPosition="right" />
+            <ReactDynamicButtonsStory faIcon={'FaReact'} iconPosition="right" />
         )
         const icon = getByTestId('button-icon')
         expect(icon).toBeInTheDocument()
