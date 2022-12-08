@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { render } from '@testing-library/react';
-import * as stories from './stories/button-component.stories';
+import * as stories from '../../stories/button-component.stories';
 import { composeStories } from '@storybook/testing-react';
 const { ReactDynamicButtonsStory } = composeStories(stories);
 import '@testing-library/jest-dom';
@@ -39,4 +39,4 @@ describe('Button', () => {
         expect(icon).toBeInTheDocument();
     });
 });
-//# sourceMappingURL=index.ui-jest.spec.js.map
+//# sourceMappingURL=button.ui-jest.spec.js.map

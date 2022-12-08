@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { getHoverProps, getVariantProps } from './utils'
+import { getHoverProps, getVariantProps } from '../../domain/utils'
 
 const StyledButton = styled.button`
     font-size: 15px;

@@ -1,4 +1,2 @@
-import React from 'react';
-import { ButtonProps } from './types';
-declare const ReactDynamicButtons: React.FC<ButtonProps>;
+import ReactDynamicButtons from "./ui/button/button";
 export default ReactDynamicButtons;

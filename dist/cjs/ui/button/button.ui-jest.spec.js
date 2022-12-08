@@ -31,7 +31,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 const react_2 = require("@testing-library/react");
-const stories = __importStar(require("./stories/button-component.stories"));
+const stories = __importStar(require("../../stories/button-component.stories"));
 const testing_react_1 = require("@storybook/testing-react");
 const { ReactDynamicButtonsStory } = (0, testing_react_1.composeStories)(stories);
 require("@testing-library/jest-dom");
@@ -67,4 +67,4 @@ describe('Button', () => {
         expect(icon).toBeInTheDocument();
     });
 });
-//# sourceMappingURL=index.ui-jest.spec.js.map
+//# sourceMappingURL=button.ui-jest.spec.js.map
