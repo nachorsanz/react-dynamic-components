@@ -39,4 +39,4 @@ describe('Button', () => {
         expect(icon).toBeInTheDocument();
     });
 });
-//# sourceMappingURL=button.ui-jest.spec.js.map
+//# sourceMappingURL=index.ui-jest.spec.js.map

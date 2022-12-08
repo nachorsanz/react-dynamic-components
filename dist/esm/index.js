@@ -1,4 +1,3 @@
-"use strict";
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -10,43 +9,39 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
-const icons_1 = require("./icons");
-const StyledButton_1 = __importDefault(require("./StyledButton"));
-const utils_1 = require("./utils");
+import React from 'react';
+import { getColorIcon, getFAIcon } from './icons';
+import StyledButton from './StyledButton';
+import { getShadowProps, getSizeProps, getVariantProps, } from './utils';
 const ReactDynamicButtons = (_a) => {
     var props = __rest(_a, []);
     const { text = 'Button', size = 'medium', variant = 'primary', styles = {}, className = '', onClick = () => { }, disabled = false, bgColor = '', textColor = '', faIcon = null, colorIcon = null, iconPosition = null, withShadow = false, hover = false, } = props;
     let _style = {};
     if (size)
-        _style = Object.assign(Object.assign({}, _style), (0, utils_1.getSizeProps)(size));
+        _style = Object.assign(Object.assign({}, _style), getSizeProps(size));
     if (variant && !hover)
-        _style = Object.assign(Object.assign({}, _style), (0, utils_1.getVariantProps)(variant));
+        _style = Object.assign(Object.assign({}, _style), getVariantProps(variant));
     if (variant && withShadow)
-        _style = Object.assign(Object.assign({}, _style), (0, utils_1.getShadowProps)(variant));
+        _style = Object.assign(Object.assign({}, _style), getShadowProps(variant));
     if (styles)
         _style = Object.assign(Object.assign({}, _style), styles);
     if (faIcon && colorIcon)
         throw new Error("You can't use both icon and colorIcon props at the same time");
-    return (react_1.default.createElement(StyledButton_1.default, { "data-testid": "button", className: className, style: _style, onClick: onClick, disabled: disabled, bgColor: bgColor, textColor: textColor, hover: hover ? variant : null },
-        faIcon && !colorIcon && iconPosition === 'left' && (0, icons_1.getFAIcon)(faIcon),
+    return (React.createElement(StyledButton, { "data-testid": "button", className: className, style: _style, onClick: onClick, disabled: disabled, bgColor: bgColor, textColor: textColor, hover: hover ? variant : null },
+        faIcon && !colorIcon && iconPosition === 'left' && getFAIcon(faIcon),
         colorIcon &&
             !faIcon &&
             iconPosition === 'left' &&
-            (0, icons_1.getColorIcon)(colorIcon),
+            getColorIcon(colorIcon),
         text,
         faIcon &&
             !colorIcon &&
             iconPosition === 'right' &&
-            (0, icons_1.getFAIcon)(faIcon),
+            getFAIcon(faIcon),
         colorIcon &&
             !faIcon &&
             iconPosition === 'right' &&
-            (0, icons_1.getColorIcon)(colorIcon)));
+            getColorIcon(colorIcon)));
 };
-exports.default = ReactDynamicButtons;
-//# sourceMappingURL=button.js.map
+export default ReactDynamicButtons;
+//# sourceMappingURL=index.js.map
