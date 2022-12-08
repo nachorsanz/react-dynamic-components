@@ -15,9 +15,19 @@ export default {
     },
 }  as ComponentMeta<typeof Input>
 
-const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
+const Template: ComponentStory<typeof Input> = (args) => <Input data-testid="input" {...args} />;
 export const InputStory = Template.bind({});
 
 InputStory.args = {
     placeholder: "Placeholder",
+    styles : {},
+    className : "",
+    onChange : () => {},
+    disabled : false,
+    value : "",
+    type : "text",
+    name : "",
+    id : "",
+    withShadow : false,
+    hover : false,
 };

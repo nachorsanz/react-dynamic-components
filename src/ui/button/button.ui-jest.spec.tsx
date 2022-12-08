@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-
+import '@testing-library/jest-dom'
 import React from 'react'
 import { render } from '@testing-library/react'
 import * as stories from '../../stories/button-component.stories'
@@ -9,7 +9,7 @@ import { composeStories } from '@storybook/testing-react'
 
 const { ButtonStory } = composeStories(stories)
 
-import '@testing-library/jest-dom'
+
 
 describe('Button', () => {
     it('renders button', () => {
@@ -21,7 +21,7 @@ describe('Button', () => {
     it('renders button with text', () => {
         const { getByTestId } = render(<ButtonStory />)
         const button = getByTestId('button')
-        expect(button.textContent).toEqual('React Dynamic Buttons')
+        expect(button.textContent).toEqual('Button')
     })
 
     it('renders button with icon left', () => {
