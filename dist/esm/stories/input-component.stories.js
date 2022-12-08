@@ -2,12 +2,16 @@ import React from 'react';
 import Input from "../ui/input/input";
 export default {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     title: "Dynamic React Components/Components/Input",
 
 =======
     title: "React Dynamic Components/Components/Input",
 >>>>>>> 64ff9cb (chore: update npm)
+=======
+    title: "Dynamic React Components/Components/Input",
+>>>>>>> 7ac2adc (chore: prepare main)
     component: Input,
     argTypes: {
         placeholder: {

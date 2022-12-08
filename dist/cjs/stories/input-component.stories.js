@@ -7,9 +7,7 @@ exports.InputStory = void 0;
 const react_1 = __importDefault(require("react"));
 const input_1 = __importDefault(require("../ui/input/input"));
 exports.default = {
-
     title: "Dynamic React Components/Components/Input",
-
     component: input_1.default,
     argTypes: {
         placeholder: {

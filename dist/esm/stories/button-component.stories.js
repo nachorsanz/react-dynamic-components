@@ -2,9 +2,7 @@ import React from 'react';
 import Button from '../ui/button/button';
 import { getAllColorIcons, getAllFAIcons } from '../domain/icons';
 export default {
-
     title: 'Dynamic React Components/Components/Button',
-
     component: Button,
     argTypes: {
         faIcon: {
