@@ -1,5 +1,5 @@
 import React from 'react'
-import { getColorIcon, getIcon } from '../../common/icons'
+import { getColorIcon, getFAIcon } from '../../common/icons'
 import StyledButton from './StyledButton'
 import { ButtonProps } from '../../domain/types'
 import {
@@ -53,7 +53,7 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
             textColor={textColor}
             hover={hover ? variant : null}
         >
-            {icon && !colorIcon && iconPosition === 'left' && getIcon(icon)}
+            {icon && !colorIcon && iconPosition === 'left' && getFAIcon(icon)}
             {colorIcon &&
                 !icon &&
                 iconPosition === 'left' &&
@@ -62,7 +62,7 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
             {icon &&
                 !colorIcon &&
                 iconPosition === 'right' &&
-                getIcon(icon)}
+                getFAIcon(icon)}
             {colorIcon &&
                 !icon &&
                 iconPosition === 'right' &&

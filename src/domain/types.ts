@@ -42,7 +42,7 @@ export interface ButtonProps
     bgColor?: string
     textColor?: string
     text?: string
-    icon?: string | null
+    faIcon?: string | null
     colorIcon?: string | null
     iconPosition?: IconPosition
     className?: string
