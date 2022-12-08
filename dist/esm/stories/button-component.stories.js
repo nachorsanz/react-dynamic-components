@@ -1,14 +1,20 @@
 import React from 'react';
-import ReactDynamicButtons from '../ui/button/button';
-import { getAllIcons } from '../common/icons';
+import ReactDynamicButtons from '../button';
+import { getAllColorIcons, getAllFAIcons } from '../common/icons';
 export default {
     title: 'React Dynamic Buttons/Components/Button',
     component: ReactDynamicButtons,
     argTypes: {
-        icon: {
+        faIcon: {
             control: {
                 type: 'select',
-                options: getAllIcons(),
+                options: getAllFAIcons(),
+            },
+        },
+        colorIcon: {
+            control: {
+                type: 'select',
+                options: getAllColorIcons(),
             },
         },
         iconPosition: {
@@ -49,7 +55,7 @@ export default {
         },
     },
 };
-const Template = (args) => (React.createElement(ReactDynamicButtons, Object.assign({}, args)));
+const Template = (args) => (React.createElement(ReactDynamicButtons, Object.assign({ "data-testid": "button" }, args)));
 export const ReactDynamicButtonsStory = Template.bind({});
 ReactDynamicButtonsStory.args = {
     text: 'React Dynamic Buttons',
@@ -62,8 +68,9 @@ ReactDynamicButtonsStory.args = {
     styles: undefined,
     variant: 'danger',
     withShadow: false,
-    icon: 'FaReact',
-    iconPosition: 'right',
+    faIcon: null,
+    colorIcon: null,
+    iconPosition: 'none',
     className: 'ReactDynamicButtons',
     hover: false,
 };

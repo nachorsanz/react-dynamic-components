@@ -1,12 +1,22 @@
 import React from 'react';
 import * as Icons from 'react-icons/fa';
-export const getIcon = (iconName) => {
+import * as ColorIcons from 'react-icons/fc';
+export const getFAIcon = (iconName) => {
     const Icon = Icons[iconName];
     return (React.createElement(React.Fragment, null,
-        React.createElement(Icon, null)));
+        React.createElement(Icon, { "data-testid": "button-icon" })));
 };
-export const getAllIcons = () => {
+export const getAllFAIcons = () => {
     const icons = Object.keys(Icons);
+    return icons;
+};
+export const getColorIcon = (iconName) => {
+    const Icon = ColorIcons[iconName];
+    return (React.createElement(React.Fragment, null,
+        React.createElement(Icon, { "data-testid": "button-icon" })));
+};
+export const getAllColorIcons = () => {
+    const icons = Object.keys(ColorIcons);
     return icons;
 };
 //# sourceMappingURL=icons.js.map

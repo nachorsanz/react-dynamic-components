@@ -27,61 +27,61 @@ const getVariantProps = (variant) => {
             return {
                 backgroundColor: '#007bff',
                 textColor: '#000',
-                borderRadius: "3px",
+                borderRadius: '3px',
             };
         case 'secondary':
             return {
                 backgroundColor: '#d6cdcd',
                 textColor: '#000',
-                borderRadius: "3px",
+                borderRadius: '3px',
             };
         case 'tertiary':
             return {
                 backgroundColor: '#28a745',
                 textColor: '#000',
-                borderRadius: "3px",
+                borderRadius: '3px',
             };
         case 'danger':
             return {
                 backgroundColor: '#dc3545',
                 textColor: '#000',
-                borderRadius: "3px",
+                borderRadius: '3px',
             };
         case 'success':
             return {
                 backgroundColor: '#28a745',
                 textColor: '#000',
-                borderRadius: "3px",
+                borderRadius: '3px',
             };
         case 'warning':
             return {
                 backgroundColor: '#ffc107',
                 textColor: '#000',
-                borderRadius: "3px",
+                borderRadius: '3px',
             };
         case 'info':
             return {
                 backgroundColor: '#17a2b8',
                 textColor: '#000',
-                borderRadius: "3px",
+                borderRadius: '3px',
             };
         case 'light':
             return {
                 backgroundColor: '#f8f9fa',
                 textColor: '#000',
-                borderRadius: "3px",
+                borderRadius: '3px',
             };
         case 'dark':
             return {
                 backgroundColor: '#343a40',
                 textColor: '#000',
-                borderRadius: "3px",
+                borderRadius: '3px',
             };
         case 'link':
             return {
                 backgroundColor: 'transparent',
                 textColor: '#007bff',
-                borderRadius: "3px",
+                borderRadius: '3px',
             };
         case null:
             return {};

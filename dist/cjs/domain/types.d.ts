@@ -19,7 +19,8 @@ export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAtt
     bgColor?: string;
     textColor?: string;
     text?: string;
-    icon?: string | null;
+    faIcon?: string | null;
+    colorIcon?: string | null;
     iconPosition?: IconPosition;
     className?: string;
     children?: React.ReactNode;

@@ -26,18 +26,30 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getAllIcons = exports.getIcon = void 0;
+exports.getAllColorIcons = exports.getColorIcon = exports.getAllFAIcons = exports.getFAIcon = void 0;
 const react_1 = __importDefault(require("react"));
 const Icons = __importStar(require("react-icons/fa"));
-const getIcon = (iconName) => {
+const ColorIcons = __importStar(require("react-icons/fc"));
+const getFAIcon = (iconName) => {
     const Icon = Icons[iconName];
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement(Icon, null)));
+        react_1.default.createElement(Icon, { "data-testid": "button-icon" })));
 };
-exports.getIcon = getIcon;
-const getAllIcons = () => {
+exports.getFAIcon = getFAIcon;
+const getAllFAIcons = () => {
     const icons = Object.keys(Icons);
     return icons;
 };
-exports.getAllIcons = getAllIcons;
+exports.getAllFAIcons = getAllFAIcons;
+const getColorIcon = (iconName) => {
+    const Icon = ColorIcons[iconName];
+    return (react_1.default.createElement(react_1.default.Fragment, null,
+        react_1.default.createElement(Icon, { "data-testid": "button-icon" })));
+};
+exports.getColorIcon = getColorIcon;
+const getAllColorIcons = () => {
+    const icons = Object.keys(ColorIcons);
+    return icons;
+};
+exports.getAllColorIcons = getAllColorIcons;
 //# sourceMappingURL=icons.js.map

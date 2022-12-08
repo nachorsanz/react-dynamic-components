@@ -15,12 +15,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
-const icons_1 = require("../../common/icons");
+const icons_1 = require("./common/icons");
 const StyledButton_1 = __importDefault(require("./StyledButton"));
-const utils_1 = require("../../domain/utils");
+const utils_1 = require("./domain/utils");
 const ReactDynamicButtons = (_a) => {
     var props = __rest(_a, []);
-    const { text = 'Button', size = 'medium', variant = 'primary', styles = {}, className = '', onClick = () => { }, disabled = false, bgColor = '', textColor = '', icon = '', iconPosition = null, withShadow = false, hover = false, } = props;
+    const { text = 'Button', size = 'medium', variant = 'primary', styles = {}, className = '', onClick = () => { }, disabled = false, bgColor = '', textColor = '', faIcon = null, colorIcon = null, iconPosition = null, withShadow = false, hover = false, } = props;
     let _style = {};
     if (size)
         _style = Object.assign(Object.assign({}, _style), (0, utils_1.getSizeProps)(size));
@@ -30,12 +30,23 @@ const ReactDynamicButtons = (_a) => {
         _style = Object.assign(Object.assign({}, _style), (0, utils_1.getShadowProps)(variant));
     if (styles)
         _style = Object.assign(Object.assign({}, _style), styles);
-    return (react_1.default.createElement(StyledButton_1.default, { className: className, style: _style, onClick: onClick, disabled: disabled, bgColor: bgColor, textColor: textColor, hover: hover ? variant : null },
-        icon && iconPosition === 'left' && (0, icons_1.getIcon)(icon),
-        " ",
+    if (faIcon && colorIcon)
+        throw new Error("You can't use both icon and colorIcon props at the same time");
+    return (react_1.default.createElement(StyledButton_1.default, { "data-testid": "button", className: className, style: _style, onClick: onClick, disabled: disabled, bgColor: bgColor, textColor: textColor, hover: hover ? variant : null },
+        faIcon && !colorIcon && iconPosition === 'left' && (0, icons_1.getFAIcon)(faIcon),
+        colorIcon &&
+            !faIcon &&
+            iconPosition === 'left' &&
+            (0, icons_1.getColorIcon)(colorIcon),
         text,
-        ' ',
-        icon && iconPosition === 'right' && (0, icons_1.getIcon)(icon)));
+        faIcon &&
+            !colorIcon &&
+            iconPosition === 'right' &&
+            (0, icons_1.getFAIcon)(faIcon),
+        colorIcon &&
+            !faIcon &&
+            iconPosition === 'right' &&
+            (0, icons_1.getColorIcon)(colorIcon)));
 };
 exports.default = ReactDynamicButtons;
 //# sourceMappingURL=button.js.map

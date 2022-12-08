@@ -5,16 +5,22 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ReactDynamicButtonsStory = void 0;
 const react_1 = __importDefault(require("react"));
-const button_1 = __importDefault(require("../ui/button/button"));
+const button_1 = __importDefault(require("../button"));
 const icons_1 = require("../common/icons");
 exports.default = {
     title: 'React Dynamic Buttons/Components/Button',
     component: button_1.default,
     argTypes: {
-        icon: {
+        faIcon: {
             control: {
                 type: 'select',
-                options: (0, icons_1.getAllIcons)(),
+                options: (0, icons_1.getAllFAIcons)(),
+            },
+        },
+        colorIcon: {
+            control: {
+                type: 'select',
+                options: (0, icons_1.getAllColorIcons)(),
             },
         },
         iconPosition: {
@@ -55,7 +61,7 @@ exports.default = {
         },
     },
 };
-const Template = (args) => (react_1.default.createElement(button_1.default, Object.assign({}, args)));
+const Template = (args) => (react_1.default.createElement(button_1.default, Object.assign({ "data-testid": "button" }, args)));
 exports.ReactDynamicButtonsStory = Template.bind({});
 exports.ReactDynamicButtonsStory.args = {
     text: 'React Dynamic Buttons',
@@ -68,8 +74,9 @@ exports.ReactDynamicButtonsStory.args = {
     styles: undefined,
     variant: 'danger',
     withShadow: false,
-    icon: 'FaReact',
-    iconPosition: 'right',
+    faIcon: null,
+    colorIcon: null,
+    iconPosition: 'none',
     className: 'ReactDynamicButtons',
     hover: false,
 };
