@@ -19,7 +19,7 @@
 <br />
 <div align="center">
 
-  <h3 align="center">React Dynamic Buttons</h3>
+  <h3 align="center">Dynamic React Components</h3>
 
   <p align="center">
     An awesome library with thousands of customizations for React components 
