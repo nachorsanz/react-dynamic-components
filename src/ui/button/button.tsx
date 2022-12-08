@@ -8,7 +8,7 @@ import {
     getVariantProps,
 } from '../../domain/utils'
 
-const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
+export const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
     const {
         text = 'Button',
         size = 'medium',
@@ -71,4 +71,4 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
     )
 }
 
-export default ReactDynamicButtons
+
