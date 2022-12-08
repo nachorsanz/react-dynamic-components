@@ -6,7 +6,7 @@ import {
     getShadowProps,
     getSizeProps,
     getVariantProps,
-} from './domain/utils'
+} from './utils'
 
 const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
     const {
