@@ -80,6 +80,18 @@ export interface IconProps {
 }
 =======
     placeholder?: string 
+    type?: string
+    name?: string
+    value?: string
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    styles?: React.CSSProperties
+    className?: string
+    children?: React.ReactNode
+    id?: string
+    withShadow?: boolean
+    disabled?: boolean
+    hover?: boolean
+
     }
 
 >>>>>>> 62df838 (chore: add input)
