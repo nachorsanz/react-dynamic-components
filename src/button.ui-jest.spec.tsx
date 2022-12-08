@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { render } from '@testing-library/react'
-import * as stories from '../../stories/button-component.stories'
+import * as stories from './stories/button-component.stories'
 import { composeStories } from '@storybook/testing-react'
 
 const { ReactDynamicButtonsStory } = composeStories(stories)

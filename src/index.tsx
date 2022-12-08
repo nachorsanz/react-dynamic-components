@@ -1,14 +1,14 @@
 import React from 'react'
-import { getColorIcon, getFAIcon } from '../../common/icons'
+import { getColorIcon, getFAIcon } from './common/icons'
 import StyledButton from './StyledButton'
-import { ButtonProps } from '../../domain/types'
+import { ButtonProps } from './domain/types'
 import {
     getShadowProps,
     getSizeProps,
     getVariantProps,
-} from '../../domain/utils'
+} from './domain/utils'
 
-export const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
+const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
     const {
         text = 'Button',
         size = 'medium',
@@ -71,4 +71,4 @@ export const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
     )
 }
 
-
+export default ReactDynamicButtons
