@@ -109,8 +109,7 @@ Here's why:
 ## Use Examples
 
 ```
-import Button from "react-dynamic-components";
-// maybe need module import (beta)
+import { Button } from "dynamic-react-components";
 
 function App() {
 
