@@ -2,7 +2,7 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import ReactDynamicButtons from '../ui/button/button'
-import { getAllIcons } from '../common/icons'
+import { getAllColorIcons, getAllIcons } from '../common/icons'
 
 export default {
     title: 'React Dynamic Buttons/Components/Button',
@@ -13,6 +13,12 @@ export default {
             control: {
                 type: 'select',
                 options: getAllIcons(),
+            },
+        },
+        colorIcon: {
+            control: {
+                type: 'select',
+                options: getAllColorIcons(),
             },
         },
         iconPosition: {
@@ -70,8 +76,9 @@ ReactDynamicButtonsStory.args = {
     styles: undefined,
     variant: 'danger',
     withShadow: false,
-    icon: 'FaReact',
-    iconPosition: 'right',
+    icon: null,
+    colorIcon: null,
+    iconPosition: 'none',
     className: 'ReactDynamicButtons',
     hover: false,
 }

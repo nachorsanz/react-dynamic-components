@@ -3,11 +3,14 @@
  */
 
 import '@testing-library/jest-dom'
-import { getHoverProps, getShadowProps, getSizeProps, getVariantProps } from './utils'
+import {
+    getHoverProps,
+    getShadowProps,
+    getSizeProps,
+    getVariantProps,
+} from './utils'
 
 describe('Utils', () => {
-    
-
     it('get sizes props with small value', () => {
         const result = getSizeProps('small')
         expect(result).toEqual({
@@ -38,5 +41,4 @@ describe('Utils', () => {
             backgroundColor: '#0069d9',
         })
     })
-
 })

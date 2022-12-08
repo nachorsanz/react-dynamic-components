@@ -43,6 +43,7 @@ export interface ButtonProps
     textColor?: string
     text?: string
     icon?: string | null
+    colorIcon?: string | null
     iconPosition?: IconPosition
     className?: string
     children?: React.ReactNode

@@ -1,5 +1,5 @@
 import React from 'react'
-import { getIcon } from '../../common/icons'
+import { getColorIcon, getIcon } from '../../common/icons'
 import StyledButton from './StyledButton'
 import { ButtonProps } from '../../domain/types'
 import {
@@ -19,7 +19,8 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
         disabled = false,
         bgColor = '',
         textColor = '',
-        icon = '',
+        icon = null,
+        colorIcon = null,
         iconPosition = null,
         withShadow = false,
         hover = false,
@@ -36,6 +37,11 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
 
     if (styles) _style = { ..._style, ...styles }
 
+    if (icon && colorIcon)
+        throw new Error(
+            "You can't use both icon and colorIcon props at the same time"
+        )
+
     return (
         <StyledButton
             data-testid="button"
@@ -47,8 +53,20 @@ const ReactDynamicButtons: React.FC<ButtonProps> = ({ ...props }) => {
             textColor={textColor}
             hover={hover ? variant : null}
         >
-            {icon && iconPosition === 'left' && getIcon(icon)} {text}{' '}
-            {icon && iconPosition === 'right' && getIcon(icon)}
+            {icon && !colorIcon && iconPosition === 'left' && getIcon(icon)}
+            {colorIcon &&
+                !icon &&
+                iconPosition === 'left' &&
+                getColorIcon(colorIcon)}
+            {text}
+            {icon &&
+                !colorIcon &&
+                iconPosition === 'right' &&
+                getIcon(icon)}
+            {colorIcon &&
+                !icon &&
+                iconPosition === 'right' &&
+                getColorIcon(colorIcon)}
         </StyledButton>
     )
 }

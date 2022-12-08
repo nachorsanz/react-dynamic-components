@@ -21,7 +21,7 @@ describe('Button', () => {
     it('renders button with text', () => {
         const { getByTestId } = render(<ReactDynamicButtonsStory />)
         const button = getByTestId('button')
-        expect(button.textContent).toEqual(' React Dynamic Buttons ')
+        expect(button.textContent).toEqual('React Dynamic Buttons')
     })
 
     it('renders button with icon left', () => {
@@ -35,6 +35,22 @@ describe('Button', () => {
     it('renders button with icon right', () => {
         const { getByTestId } = render(
             <ReactDynamicButtonsStory icon={'FaReact'} iconPosition="right" />
+        )
+        const icon = getByTestId('button-icon')
+        expect(icon).toBeInTheDocument()
+    })
+
+    it('renders button with color icon left', () => {
+        const { getByTestId } = render(
+            <ReactDynamicButtonsStory colorIcon={'FcAbout'} iconPosition="left" />
+        )
+        const icon = getByTestId('button-icon')
+        expect(icon).toBeInTheDocument()
+    })
+
+    it('renders button with color icon right', () => {
+        const { getByTestId } = render(
+            <ReactDynamicButtonsStory colorIcon={'FcAbout'} iconPosition="right" />
         )
         const icon = getByTestId('button-icon')
         expect(icon).toBeInTheDocument()
