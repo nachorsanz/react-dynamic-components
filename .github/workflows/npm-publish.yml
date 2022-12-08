@@ -3,7 +3,7 @@ name: NPM - RDB
 
 on:
   push:
-    branches: [ "main" ] 
+    branches: [ "main", "develop" ] 
 
 jobs:
    unit-tests:
