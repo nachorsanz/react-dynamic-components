@@ -54,6 +54,7 @@ export interface InputProps
         React.InputHTMLAttributes<HTMLInputElement>,
         HTMLInputElement
     > {
+<<<<<<< HEAD
     placeholder?: string
     type?: string
     name?: string
@@ -77,3 +78,8 @@ export interface IconProps {
     className?: string
     children?: React.ReactNode
 }
+=======
+    placeholder?: string 
+    }
+
+>>>>>>> 62df838 (chore: add input)

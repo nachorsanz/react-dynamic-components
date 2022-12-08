@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { InputProps } from '../../domain/types'
 import StyledInput from './StyledInput'
@@ -35,3 +36,17 @@ const Input: React.FC<InputProps> = ({ ...props }) => {
 }
 
 export default Input
+=======
+import React from "react";
+import { InputProps } from "../../domain/types";
+import StyledInput from "./StyledInput";
+
+
+const Input: React.FC<InputProps> = () => {
+    return (
+        <StyledInput data-testid="input" />
+    )
+}
+
+export default Input
+>>>>>>> 62df838 (chore: add input)
