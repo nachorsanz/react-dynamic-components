@@ -54,7 +54,7 @@ export interface InputProps
         React.InputHTMLAttributes<HTMLInputElement>,
         HTMLInputElement
     > {
-    placeholder?: string 
+    placeholder?: string
     type?: string
     name?: string
     value?: string
@@ -66,6 +66,14 @@ export interface InputProps
     withShadow?: boolean
     disabled?: boolean
     hover?: boolean
+}
 
-    }
-
+export interface IconProps {
+    faIcon?: string 
+    fcIcon?: string  
+    color?: string
+    size?: string
+    styles?: React.CSSProperties
+    className?: string
+    children?: React.ReactNode
+}

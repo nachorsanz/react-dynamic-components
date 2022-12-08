@@ -1,37 +1,35 @@
-import React from "react";
-import { InputProps } from "../../domain/types";
-import StyledInput from "./StyledInput";
+import React from 'react'
+import { InputProps } from '../../domain/types'
+import StyledInput from './StyledInput'
 
-
-const Input: React.FC<InputProps> = ({...props}) => {
+const Input: React.FC<InputProps> = ({ ...props }) => {
     const {
-        placeholder = "Placeholder",
+        placeholder = 'Placeholder',
         styles = {},
-        className = "",
+        className = '',
         onChange = () => {},
         disabled = false,
-        value = "",
-        type = "text",
-        name = "",
-        id = "",
+        value = '',
+        type = 'text',
+        name = '',
+        id = '',
         withShadow = false,
         hover = false,
-    } = props;
+    } = props
     return (
-        <StyledInput data-testid="input"
-                        className={className}
-                        style={styles}
-                        onChange={onChange}
-                        disabled={disabled}
-                        value={value}
-                        type={type}
-                        name={name}
-                        id={id}
-                        placeholder={placeholder}
-                        withShadow={withShadow}
-                        hover={hover}
-                        
-        
+        <StyledInput
+            data-testid="input"
+            className={className}
+            style={styles}
+            onChange={onChange}
+            disabled={disabled}
+            value={value}
+            type={type}
+            name={name}
+            id={id}
+            placeholder={placeholder}
+            withShadow={withShadow}
+            hover={hover}
         />
     )
 }

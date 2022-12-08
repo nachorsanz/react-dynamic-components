@@ -53,7 +53,10 @@ const Button: React.FC<ButtonProps> = ({ ...props }) => {
             textColor={textColor}
             hover={hover ? variant : null}
         >
-            {faIcon && !colorIcon && iconPosition === 'left' && getFAIcon(faIcon)}
+            {faIcon &&
+                !colorIcon &&
+                iconPosition === 'left' &&
+                getFAIcon(faIcon)}
             {colorIcon &&
                 !faIcon &&
                 iconPosition === 'left' &&

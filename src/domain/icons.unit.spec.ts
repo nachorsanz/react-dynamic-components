@@ -3,7 +3,12 @@
  */
 
 import '@testing-library/jest-dom'
-import { getAllColorIcons, getAllFAIcons, getColorIcon, getFAIcon } from './icons'
+import {
+    getAllColorIcons,
+    getAllFAIcons,
+    getColorIcon,
+    getFAIcon,
+} from './icons'
 
 describe('Icons', () => {
     it('get all icons', () => {
@@ -21,11 +26,8 @@ describe('Icons', () => {
         expect(result).toHaveLength(330)
     })
 
-
     it('get icon with name and color', () => {
         const result = getColorIcon('FcAbout')
         expect(result).toBeDefined()
     })
-
-
 })

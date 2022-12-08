@@ -9,8 +9,6 @@ import { composeStories } from '@storybook/testing-react'
 
 const { ButtonStory } = composeStories(stories)
 
-
-
 describe('Button', () => {
     it('renders button', () => {
         const { getByTestId } = render(<ButtonStory />)

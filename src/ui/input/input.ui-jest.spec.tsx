@@ -9,9 +9,7 @@ import { composeStories } from '@storybook/testing-react'
 
 const { InputStory } = composeStories(stories)
 
-
 describe('Input', () => {
-
     it('renders input', () => {
         const { getByTestId } = render(<InputStory />)
         const input = getByTestId('input')
