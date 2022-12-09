@@ -54,7 +54,6 @@ export interface InputProps
         React.InputHTMLAttributes<HTMLInputElement>,
         HTMLInputElement
     > {
-<<<<<<< HEAD
     placeholder?: string
     type?: string
     name?: string
@@ -70,28 +69,11 @@ export interface InputProps
 }
 
 export interface IconProps {
-    faIcon?: string 
-    fcIcon?: string  
+    faIcon?: string
+    fcIcon?: string
     color?: string
     size?: string
     styles?: React.CSSProperties
     className?: string
     children?: React.ReactNode
 }
-=======
-    placeholder?: string 
-    type?: string
-    name?: string
-    value?: string
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
-    styles?: React.CSSProperties
-    className?: string
-    children?: React.ReactNode
-    id?: string
-    withShadow?: boolean
-    disabled?: boolean
-    hover?: boolean
-
-    }
-
->>>>>>> 62df838 (chore: add input)

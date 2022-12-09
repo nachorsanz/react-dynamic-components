@@ -1,12 +1,8 @@
-import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-
-import Icon from '../ui/icon-component/icon'
-import { getAllColorIcons, getAllFAIcons } from '../domain/icons'
-
+import React from 'react';
+import Icon from '../ui/icon-component/icon';
+import { getAllColorIcons, getAllFAIcons } from '../domain/icons';
 export default {
     title: 'Dynamic React Components/Components/Icon',
-
     component: Icon,
     argTypes: {
         faIcon: {
@@ -32,12 +28,9 @@ export default {
             },
         },
     },
-} as ComponentMeta<typeof Icon>
-
-const Template: ComponentStory<typeof Icon> = (args) => (
-    <Icon data-testid="icon" {...args} />
-)
-export const IconStory = Template.bind({})
+};
+const Template = (args) => (React.createElement(Icon, Object.assign({ "data-testid": "icon" }, args)));
+export const IconStory = Template.bind({});
 IconStory.args = {
     faIcon: 'FaHome',
     fcIcon: undefined,
@@ -45,4 +38,5 @@ IconStory.args = {
     size: '1rem',
     styles: {},
     className: '',
-}
+};
+//# sourceMappingURL=icon-component.stories.js.map

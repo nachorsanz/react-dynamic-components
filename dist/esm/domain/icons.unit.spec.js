@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import '@testing-library/jest-dom';
-import { getAllColorIcons, getAllFAIcons, getColorIcon, getFAIcon } from './icons';
+import { getAllColorIcons, getAllFAIcons, getColorIcon, getFAIcon, } from './icons';
 describe('Icons', () => {
     it('get all icons', () => {
         const result = getAllFAIcons();
