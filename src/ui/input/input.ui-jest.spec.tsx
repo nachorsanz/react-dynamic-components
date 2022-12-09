@@ -21,8 +21,5 @@ describe('Input', () => {
         const input = getByTestId('input')
         expect(input).toHaveAttribute('placeholder', 'Placeholder')
     })
-<<<<<<< HEAD
+    
 })
-=======
-})
->>>>>>> 1746e20 (chore: add input test)
