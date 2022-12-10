@@ -31,7 +31,7 @@
     ·
     <a href="https://github.com/nachorsanz/react-dynamic-components/issues">Report Bug</a>
     ·
-    <a href="https://github.com/nachorsanz/react-dynamic-components/issues">Request Feature</a>
+    <a href="https://github.com/users/nachorsanz/projects/1">Request Feature</a>
   </p>
 </div>
 
