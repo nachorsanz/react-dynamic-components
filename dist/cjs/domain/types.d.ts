@@ -39,4 +39,13 @@ export interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttri
     disabled?: boolean;
     hover?: boolean;
 }
+export interface IconProps {
+    faIcon?: string;
+    fcIcon?: string;
+    color?: string;
+    size?: string;
+    styles?: React.CSSProperties;
+    className?: string;
+    children?: React.ReactNode;
+}
 export {};

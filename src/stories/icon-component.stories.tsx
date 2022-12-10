@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import Icon from '../ui/icon/icon'
+import Icon from '../ui/icon-component/icon'
 import { getAllColorIcons, getAllFAIcons } from '../domain/icons'
 
 export default {

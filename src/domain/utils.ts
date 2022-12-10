@@ -181,3 +181,11 @@ export const getHoverProps = (variant: ButtonTypes) => {
             return {}
     }
 }
+
+
+export const getButtonAnimation = (variant: ButtonTypes) => {
+
+   
+                
+    
+}

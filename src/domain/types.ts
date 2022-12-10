@@ -69,8 +69,8 @@ export interface InputProps
 }
 
 export interface IconProps {
-    faIcon?: string 
-    fcIcon?: string  
+    faIcon?: string
+    fcIcon?: string
     color?: string
     size?: string
     styles?: React.CSSProperties

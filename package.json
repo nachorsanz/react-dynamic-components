@@ -1,7 +1,5 @@
 {
-
   "name": "dynamic-react-components",
-
   "version": "1.0.12-beta",
   "description": "React library provides multiple types of components (beta version)",
   "main": "dist/cjs/index.js",
@@ -27,7 +25,8 @@
     "dev": "npm run build:watch:esm & npm run build:watch:cjs & npm run storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "predeploy": "npm run test:ui-jest & npm run test:unit & npm run build"
+    "predeploy": "npm run test:ui-jest & npm run test:unit & npm run build",
+    "add": "npm run prettier & git add ."
   },
   "author": "Nacho Rodriguez Sanz",
   "license": "MIT",
