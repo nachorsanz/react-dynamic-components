@@ -12,11 +12,14 @@ const StyledCard = styled.div`
 
 type CardProps = {
     children: React.ReactNode
+    styles?: React.CSSProperties
 }
 
-const Card: React.FC<CardProps> = ({children }) => {
+const Card: React.FC<CardProps> = ({children, styles }) => {
     return (
-        <StyledCard>
+        <StyledCard 
+            style={styles}
+        >
             {children}
         </StyledCard>
     )

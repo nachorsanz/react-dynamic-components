@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { getHoverProps, getVariantProps } from '../../domain/utils'
+import { getButtonAnimation, getHoverProps, getVariantProps } from '../../domain/utils'
 
 const StyledButton = styled.button`
     font-size: 15px;
@@ -30,6 +30,7 @@ const StyledButton = styled.button`
         &:hover {
           color: #fff;
           background-color: ${getHoverProps(props.hover).backgroundColor};
+       
   }`};
 `
 
