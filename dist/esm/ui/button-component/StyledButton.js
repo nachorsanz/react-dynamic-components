@@ -26,6 +26,7 @@ const StyledButton = styled.button `
         &:hover {
           color: #fff;
           background-color: ${getHoverProps(props.hover).backgroundColor};
+       
   }`};
 `;
 export default StyledButton;

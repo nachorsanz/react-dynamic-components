@@ -16,7 +16,7 @@ const Icon = (_a) => {
     const { faIcon, fcIcon, color, size, styles, className } = props;
     if (faIcon && fcIcon)
         throw new Error("You can't use both faIcon and fcIcon props at the same time");
-    return (React.createElement("div", { className: className, style: Object.assign(Object.assign({}, styles), { color, fontSize: size }) },
+    return (React.createElement("div", { "data-testid": "icon", className: className, style: Object.assign(Object.assign({}, styles), { color, fontSize: size }) },
         faIcon && getFAIcon(faIcon),
         fcIcon && getColorIcon(fcIcon)));
 };

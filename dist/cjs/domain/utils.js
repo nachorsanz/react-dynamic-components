@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getHoverProps = exports.getShadowProps = exports.getVariantProps = exports.getSizeProps = void 0;
+exports.getButtonAnimation = exports.getHoverProps = exports.getShadowProps = exports.getVariantProps = exports.getSizeProps = void 0;
 const getSizeProps = (size) => {
     switch (size) {
         case 'small':
@@ -182,4 +182,7 @@ const getHoverProps = (variant) => {
     }
 };
 exports.getHoverProps = getHoverProps;
+const getButtonAnimation = (variant) => {
+};
+exports.getButtonAnimation = getButtonAnimation;
 //# sourceMappingURL=utils.js.map

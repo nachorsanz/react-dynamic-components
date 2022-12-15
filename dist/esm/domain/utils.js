@@ -175,4 +175,6 @@ export const getHoverProps = (variant) => {
             return {};
     }
 };
+export const getButtonAnimation = (variant) => {
+};
 //# sourceMappingURL=utils.js.map

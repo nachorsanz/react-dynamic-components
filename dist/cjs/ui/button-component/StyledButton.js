@@ -31,6 +31,7 @@ const StyledButton = styled_components_1.default.button `
         &:hover {
           color: #fff;
           background-color: ${(0, utils_1.getHoverProps)(props.hover).backgroundColor};
+       
   }`};
 `;
 exports.default = StyledButton;

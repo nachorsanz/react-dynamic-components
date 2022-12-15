@@ -23,3 +23,4 @@ export declare const getHoverProps: (variant: ButtonTypes) => {
 } | {
     backgroundColor?: undefined;
 };
+export declare const getButtonAnimation: (variant: ButtonTypes) => void;

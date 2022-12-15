@@ -19,19 +19,19 @@
 <br />
 <div align="center">
 
-  <h3 align="center">React Dynamic Buttons</h3>
+  <h3 align="center">Dynamic React Components</h3>
 
   <p align="center">
-    An awesome library with thousands of customizations for buttons 
+    An awesome library with thousands of customizations for React components 
     <br />
-    <a href="https://github.com/nachorsanz/react-dynamic-buttons"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/nachorsanz/react-dynamic-components"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://react-dynamic-buttons-nachorsanz.vercel.app/">View Demo | WIP</a>
+    <a href="https://dynamic-react-components-nachorsanz.vercel.app/">View Demo | WIP</a>
     ·
-    <a href="https://github.com/nachorsanz/react-dynamic-buttons/issues">Report Bug</a>
+    <a href="https://github.com/nachorsanz/react-dynamic-components/issues">Report Bug</a>
     ·
-    <a href="https://github.com/nachorsanz/react-dynamic-buttons/issues">Request Feature</a>
+    <a href="https://github.com/users/nachorsanz/projects/1">Request Feature</a>
   </p>
 </div>
 
@@ -84,6 +84,53 @@ Here's why:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- PROPS & DEFINITIONS-->
+
+## Props & Definitions
+
+-   size: ['small', 'medium', 'large'] // default: "large"
+-   onClick: () => void
+-   variant: ['primary', 'secondary', 'tertiary', 'danger', 'success', 'warning', 'info', 'light', 'dark', 'link'] // default: "primary"
+-   withShadow?: boolean // default: false
+-   disabled?: boolean // default: false
+-   option: ['button', 'submit', 'reset'] // default: "button"
+-   styles?: React.CSSProperties
+-   bgColor?: string // default: ""
+-   textColor?: string // default: ""
+-   text?: string // default: "Button"
+-   faIcon?: string | null // default: null "Font Awesome Icons"
+-   colorIcon: string | null // default: null "Flat Colors Icons"
+-   iconPosition?: ['left', 'right', 'none'] // default: "none"
+-   className?: string // default: ""
+-   children?: React.ReactNode // default: "Button"
+
+<!-- USE EXAMPLES-->
+
+## Use Examples
+
+```
+import { Button } from "dynamic-react-components";
+
+function App() {
+
+  return (
+    <div className="App">
+
+        <Button
+          text={"React Dynamic Button"}
+          variant={"danger"}
+          faIcon={"FaReact"}
+          iconPosition={"right"}
+          size={"large"}
+        />
+
+    </div>
+  );
+}
+
+export default App;
+```
+
 <!-- CONTRIBUTING -->
 
 ## Contributing
@@ -93,11 +140,7 @@ Contributions are what make the open source community such an amazing place to l
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Please refer to the [Contributing guide](https://github.com/nachorsanz/react-dynamic-buttons/blob/main/CONTRIBUTING.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
