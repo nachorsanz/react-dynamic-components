@@ -182,10 +182,4 @@ export const getHoverProps = (variant: ButtonTypes) => {
     }
 }
 
-
-export const getButtonAnimation = (variant: ButtonTypes) => {
-
-   
-                
-    
-}
+export const getButtonAnimation = (variant: ButtonTypes) => {}

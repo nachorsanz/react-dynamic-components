@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const StyledCard = styled.div`
     background-color: #fff;
     border-radius: 5px;
@@ -15,14 +14,8 @@ type CardProps = {
     styles?: React.CSSProperties
 }
 
-const Card: React.FC<CardProps> = ({children, styles }) => {
-    return (
-        <StyledCard 
-            style={styles}
-        >
-            {children}
-        </StyledCard>
-    )
+const Card: React.FC<CardProps> = ({ children, styles }) => {
+    return <StyledCard style={styles}>{children}</StyledCard>
 }
 
 export default Card

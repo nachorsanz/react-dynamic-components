@@ -13,7 +13,7 @@ const StyledCard = styled_components_1.default.div `
     width: 300px;
 `;
 const Card = ({ children, styles }) => {
-    return (react_1.default.createElement(StyledCard, { style: styles }, children));
+    return react_1.default.createElement(StyledCard, { style: styles }, children);
 };
 exports.default = Card;
 //# sourceMappingURL=card-component.js.map

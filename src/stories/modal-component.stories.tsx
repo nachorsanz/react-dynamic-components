@@ -7,10 +7,27 @@ export default {
     component: Modal,
 } as ComponentMeta<typeof Modal>
 
-const Template: ComponentStory<typeof Modal> = (args) => <Modal data-testid="modal" {...args} />
+const Template: ComponentStory<typeof Modal> = (args) => (
+    <Modal data-testid="modal" {...args} />
+)
+const style = {
+    width: '300px',
+    backgroundColor: '#fff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '20px',
+    fontWeight: 'bold',
+}
 
 export const ModalStory = Template.bind({})
 
 ModalStory.args = {
-    children: 'Modal',
+    isOpen: true,
+    onClose: () => {},
+    children: (
+        <div style={style}>
+            <h1>Modal</h1>
+        </div>
+    ),
 }

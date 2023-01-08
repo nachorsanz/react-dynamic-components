@@ -182,7 +182,6 @@ const getHoverProps = (variant) => {
     }
 };
 exports.getHoverProps = getHoverProps;
-const getButtonAnimation = (variant) => {
-};
+const getButtonAnimation = (variant) => { };
 exports.getButtonAnimation = getButtonAnimation;
 //# sourceMappingURL=utils.js.map

@@ -8,7 +8,7 @@ const StyledCard = styled.div `
     width: 300px;
 `;
 const Card = ({ children, styles }) => {
-    return (React.createElement(StyledCard, { style: styles }, children));
+    return React.createElement(StyledCard, { style: styles }, children);
 };
 export default Card;
 //# sourceMappingURL=card-component.js.map

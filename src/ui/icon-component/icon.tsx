@@ -11,7 +11,11 @@ const Icon: React.FC<IconProps> = ({ ...props }) => {
         )
 
     return (
-        <div data-testid="icon" className={className} style={{ ...styles, color, fontSize: size }}>
+        <div
+            data-testid="icon"
+            className={className}
+            style={{ ...styles, color, fontSize: size }}
+        >
             {faIcon && getFAIcon(faIcon)}
             {fcIcon && getColorIcon(fcIcon)}
         </div>

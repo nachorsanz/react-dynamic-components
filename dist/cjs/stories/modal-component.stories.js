@@ -10,9 +10,21 @@ exports.default = {
     title: 'Dynamic React Components/Components/Modal',
     component: modal_1.default,
 };
-const Template = (args) => react_1.default.createElement(modal_1.default, Object.assign({ "data-testid": "modal" }, args));
+const Template = (args) => (react_1.default.createElement(modal_1.default, Object.assign({ "data-testid": "modal" }, args)));
+const style = {
+    width: '300px',
+    backgroundColor: '#fff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '20px',
+    fontWeight: 'bold',
+};
 exports.ModalStory = Template.bind({});
 exports.ModalStory.args = {
-    children: 'Modal',
+    isOpen: true,
+    onClose: () => { },
+    children: (react_1.default.createElement("div", { style: style },
+        react_1.default.createElement("h1", null, "Modal"))),
 };
 //# sourceMappingURL=modal-component.stories.js.map

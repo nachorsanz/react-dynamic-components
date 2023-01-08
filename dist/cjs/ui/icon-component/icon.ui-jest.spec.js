@@ -62,7 +62,7 @@ describe('Icon', () => {
         expect(icon).toHaveClass('icon');
     });
     it('renders icon with fcIcon', () => {
-        const { getByTestId } = (0, react_2.render)(react_1.default.createElement(IconStory, { faIcon: "", fcIcon: 'FcAbout' }));
+        const { getByTestId } = (0, react_2.render)(react_1.default.createElement(IconStory, { faIcon: '', fcIcon: 'FcAbout' }));
         const icon = getByTestId('icon');
         expect(icon).toBeInTheDocument();
     });

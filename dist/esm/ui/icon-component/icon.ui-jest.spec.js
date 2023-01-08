@@ -34,7 +34,7 @@ describe('Icon', () => {
         expect(icon).toHaveClass('icon');
     });
     it('renders icon with fcIcon', () => {
-        const { getByTestId } = render(React.createElement(IconStory, { faIcon: "", fcIcon: 'FcAbout' }));
+        const { getByTestId } = render(React.createElement(IconStory, { faIcon: '', fcIcon: 'FcAbout' }));
         const icon = getByTestId('icon');
         expect(icon).toBeInTheDocument();
     });

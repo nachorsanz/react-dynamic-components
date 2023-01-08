@@ -26,20 +26,25 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importStar(require("react"));
-const StyledOverlay_1 = __importDefault(require("./StyledOverlay"));
-const modal_wrapper_1 = __importDefault(require("./modal-wrapper"));
-const Modal = ({ isOpen, onClose, children }) => {
-    const [isVisible, setIsVisible] = (0, react_1.useState)(false);
-    react_1.default.useEffect(() => {
-        setIsVisible(isOpen);
-    }, [isOpen]);
-    const handleClose = () => {
-        setIsVisible(false);
-        onClose();
-    };
-    return (react_1.default.createElement(react_1.default.Fragment, null, isVisible && (react_1.default.createElement(StyledOverlay_1.default, { onClick: handleClose },
-        react_1.default.createElement(modal_wrapper_1.default, { onClick: (e) => e.stopPropagation(), "data-testid": "modal" }, children)))));
-};
-exports.default = Modal;
-//# sourceMappingURL=modal.js.map
+/**
+ * @jest-environment jsdom
+ */
+require("@testing-library/jest-dom");
+const react_1 = __importDefault(require("react"));
+const react_2 = require("@testing-library/react");
+const stories = __importStar(require("../../stories/modal-component.stories"));
+const testing_react_1 = require("@storybook/testing-react");
+const { ModalStory } = (0, testing_react_1.composeStories)(stories);
+describe('Modal', () => {
+    it('renders modal with isOpen is true', () => {
+        const { getByTestId } = (0, react_2.render)(react_1.default.createElement(ModalStory, null));
+        const modal = getByTestId('modal');
+        expect(modal).toBeInTheDocument();
+    });
+    it('Not renders modal with isOpen is false', () => {
+        const { queryByTestId } = (0, react_2.render)(react_1.default.createElement(ModalStory, { isOpen: false }));
+        const modal = queryByTestId('modal');
+        expect(modal).not.toBeInTheDocument();
+    });
+});
+//# sourceMappingURL=modal.ui-jest.spec.js.map

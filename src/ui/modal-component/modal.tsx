@@ -1,18 +1,38 @@
-import React from 'react'
-import Card from '../common/card-component/card-component'
+import React, { useState } from 'react'
+import StyledOverlay from './StyledOverlay'
+import ModalWrapper from './modal-wrapper'
 
- type ModalProps = {
+type ModalProps = {
+    isOpen: boolean
+    onClose: () => void
     children: React.ReactNode
-    styles?: React.CSSProperties
-
 }
 
-const Modal: React.FC<ModalProps> = ({children, styles}) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+    const [isVisible, setIsVisible] = useState(false)
+
+    React.useEffect(() => {
+        setIsVisible(isOpen)
+    }, [isOpen])
+
+    const handleClose = () => {
+        setIsVisible(false)
+        onClose()
+    }
+
     return (
-        <Card styles={styles}>
-            Modal
-            {children}
-        </Card>
+        <>
+            {isVisible && (
+                <StyledOverlay onClick={handleClose}>
+                    <ModalWrapper
+                        onClick={(e) => e.stopPropagation()}
+                        data-testid="modal"
+                    >
+                        {children}
+                    </ModalWrapper>
+                </StyledOverlay>
+            )}
+        </>
     )
 }
 

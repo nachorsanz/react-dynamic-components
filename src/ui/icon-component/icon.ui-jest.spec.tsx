@@ -7,18 +7,14 @@ import { render } from '@testing-library/react'
 import * as stories from '../../stories/icon-component.stories'
 import { composeStories } from '@storybook/testing-react'
 
-
 const { IconStory } = composeStories(stories)
 
 describe('Icon', () => {
-
     it('renders icon', () => {
         const { getByTestId } = render(<IconStory />)
         const icon = getByTestId('icon')
         expect(icon).toBeInTheDocument()
     })
-
-  
 
     it('renders icon with color', () => {
         const { getByTestId } = render(<IconStory color={'#000000'} />)
@@ -33,7 +29,9 @@ describe('Icon', () => {
     })
 
     it('renders icon with styles', () => {
-        const { getByTestId } = render(<IconStory styles={{ color: '#000000' }} />)
+        const { getByTestId } = render(
+            <IconStory styles={{ color: '#000000' }} />
+        )
         const icon = getByTestId('icon')
         expect(icon).toHaveStyle('color: #000000')
     })
@@ -45,9 +43,10 @@ describe('Icon', () => {
     })
 
     it('renders icon with fcIcon', () => {
-        const { getByTestId } = render(<IconStory faIcon={""} fcIcon={'FcAbout'} />)
+        const { getByTestId } = render(
+            <IconStory faIcon={''} fcIcon={'FcAbout'} />
+        )
         const icon = getByTestId('icon')
         expect(icon).toBeInTheDocument()
     })
-
 })
