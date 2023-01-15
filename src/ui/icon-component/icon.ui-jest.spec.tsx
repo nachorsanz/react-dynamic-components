@@ -44,9 +44,30 @@ describe('Icon', () => {
 
     it('renders icon with fcIcon', () => {
         const { getByTestId } = render(
-            <IconStory faIcon={''} fcIcon={'FcAbout'} />
+            <IconStory faIcon={undefined} fcIcon={'FcAbout'} />
         )
         const icon = getByTestId('icon')
         expect(icon).toBeInTheDocument()
+        const renderIcon = getByTestId('button-icon')
+        expect(renderIcon).toBeInTheDocument()
     })
+    it('renders icon with faIcon', () => {
+        const { getByTestId } = render(
+            <IconStory faIcon={'FaHome'} fcIcon={undefined} />
+        )
+        const icon = getByTestId('icon')
+        expect(icon).toBeInTheDocument()
+        const renderIcon = getByTestId('button-icon')
+        expect(renderIcon).toBeInTheDocument()
+    })
+    it('not renders icon without Icon', () => {
+        const { queryByTestId, getByTestId } = render(
+            <IconStory faIcon={undefined} fcIcon={undefined} />
+        )
+        const icon = getByTestId('icon')
+        expect(icon).toBeInTheDocument()
+        const renderIcon = queryByTestId('button-icon')
+        expect(renderIcon).not.toBeInTheDocument()
+    })
+    
 })
