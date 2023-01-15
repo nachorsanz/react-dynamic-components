@@ -25,6 +25,11 @@ export type OptionsType = typeof OptionsType[number]
 const IconPosition = ['left', 'right', 'none'] as const
 export type IconPosition = typeof IconPosition[number]
 
+export type SelectContent = {
+    key: string
+    value: string
+}
+
 // interface
 export interface ButtonProps
     extends React.DetailedHTMLProps<
@@ -76,4 +81,13 @@ export interface IconProps {
     styles?: React.CSSProperties
     className?: string
     children?: React.ReactNode
+}
+
+export interface SelectProps {
+    selectContent: SelectContent[]
+    className?: string
+    styles?: React.CSSProperties
+    selectPlaceHolder: string
+    setValue(value: string): void
+    id?: string
 }
