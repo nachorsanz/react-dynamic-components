@@ -13,6 +13,7 @@ const StyledSelect = styled.div`
     span {
         overflow: hidden;
         white-space: nowrap;
+        text-overflow: ellipsis;
         width: 100%;
     }
 `

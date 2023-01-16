@@ -10,6 +10,7 @@ const StyledSelectItem = styled.div`
         display: block;
         width: 100%;
         overflow: hidden;
+        text-overflow: ellipsis;
         white-space: nowrap;
     }
 `

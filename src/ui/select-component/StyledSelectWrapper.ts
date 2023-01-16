@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
 const StyledSelectWrapper = styled.div`
-    max-width: 18rem;
-    background-color: ${props => props.selectContent && "red"};
-`
+    max-width: 18rem;`
 export default StyledSelectWrapper
