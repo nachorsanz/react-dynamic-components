@@ -17,15 +17,15 @@ const SelectComponent: React.FC<SelectProps> = ({ ...props }) => {
         setValue,
     } = props
 
-    const [showDropdown, setShowDropdown] = useState(false)
+    const [showDropdown, setShowDropdown] = useState<boolean | null>(false)
     const [currentSelectValue, setCurrentSelectValue] =
-        useState('')
+        useState<string | null>('')
 
     const handleDropdown = () => {
         setShowDropdown(!showDropdown)
     }
 
-    const handleSelect = (value) => {
+    const handleSelect = (value: string ) => {
         setCurrentSelectValue(value)
         setShowDropdown(!showDropdown)
         setValue && setValue(value)
