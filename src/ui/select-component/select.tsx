@@ -13,19 +13,20 @@ const SelectComponent: React.FC<SelectProps> = ({ ...props }) => {
         styles,
         selectPlaceHolder,
         id,
+        shouldHaveValue,
         setValue,
     } = props
 
     const [showDropdown, setShowDropdown] = useState(false)
-    const [selectPlaceholder, setSelectPlaceholder] =
-        useState(selectPlaceHolder)
+    const [currentSelectValue, setCurrentSelectValue] =
+        useState('')
 
     const handleDropdown = () => {
         setShowDropdown(!showDropdown)
     }
 
     const handleSelect = (value) => {
-        setSelectPlaceholder(value)
+        setCurrentSelectValue(value)
         setShowDropdown(!showDropdown)
         setValue && setValue(value)
     }
@@ -38,14 +39,27 @@ const SelectComponent: React.FC<SelectProps> = ({ ...props }) => {
             data-testid="select"
         >
             <StyledSelect onClick={handleDropdown}>
-                <span data-testid='select-placeholder'>{selectPlaceholder}</span>
+                <span data-testid="select-placeholder">
+                    {currentSelectValue === '' ? selectPlaceHolder : currentSelectValue}
+                </span>
                 {showDropdown ? <FaArrowUp /> : <FaArrowDown />}
             </StyledSelect>
             {showDropdown && (
-                <StyledSelectList data-testid='select-list-content'>
+                <StyledSelectList data-testid="select-list-content">
+                    {!shouldHaveValue && (
+                        <StyledSelectItem
+                            data-testid="select-item"
+                            onClick={() => {
+                                setCurrentSelectValue('')
+                                setShowDropdown(false)
+                            }}
+                        >
+                            {selectPlaceHolder}
+                        </StyledSelectItem>
+                    )}
                     {selectContent.map((content) => (
                         <StyledSelectItem
-                        data-testid='select-item'
+                            data-testid="select-item"
                             key={content.key}
                             onClick={() => handleSelect(content.value)}
                         >

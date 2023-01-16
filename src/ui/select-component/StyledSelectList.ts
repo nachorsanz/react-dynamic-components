@@ -6,5 +6,6 @@ const StyledSelectList = styled.div`
     top: 110%;
     left: 0;
     right: 0;
+    box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.2);
 `
 export default StyledSelectList

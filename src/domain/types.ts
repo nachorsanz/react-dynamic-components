@@ -88,6 +88,7 @@ export interface SelectProps {
     className?: string
     styles?: React.CSSProperties
     selectPlaceHolder: string
+    shouldHaveValue?: boolean
     setValue(value: string): void
     id?: string
 }

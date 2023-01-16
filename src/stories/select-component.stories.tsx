@@ -34,4 +34,5 @@ SelectComponentStory.args = {
         },
     ],
     selectPlaceHolder: 'Select one option',
+    shouldHaveValue: true,
 }
