@@ -10,5 +10,10 @@ const StyledSelect = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 1em;
+    span {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+    }
 `
 export default StyledSelect

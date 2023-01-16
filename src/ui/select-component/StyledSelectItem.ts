@@ -6,5 +6,11 @@ const StyledSelectItem = styled.div`
     &:hover {
         background-color: #d6d6d6;
     }
+    span {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 `
 export default StyledSelectItem

@@ -17,7 +17,7 @@ export const SelectComponentStory = Template.bind({})
 SelectComponentStory.args = {
     selectContent: [
         {
-            key: 'Oviedo',
+            key: 'Oviedoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
             value: 'Oviedo',
         },
         {

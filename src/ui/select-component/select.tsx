@@ -63,7 +63,7 @@ const SelectComponent: React.FC<SelectProps> = ({ ...props }) => {
                             key={content.key}
                             onClick={() => handleSelect(content.value)}
                         >
-                            {content.key}
+                            <span key={content.key}>{content.key}</span>
                         </StyledSelectItem>
                     ))}
                 </StyledSelectList>
