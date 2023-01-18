@@ -33,5 +33,21 @@ describe('Utils', () => {
             backgroundColor: '#0069d9',
         });
     });
+    it('get switcher sizes props with small value', () => {
+        const result = (0, utils_1.getSwitcherSizeProps)('small');
+        expect(result).toEqual({
+            height: '1rem',
+            width: '2rem',
+            padding: '0.175rem',
+        });
+    });
+    it('get variant color without type parameter', () => {
+        const result = (0, utils_1.getVariantColor)('primary');
+        expect(result).toEqual('#007bff');
+    });
+    it('get variant color with dark type', () => {
+        const result = (0, utils_1.getVariantColor)('primary', 'dark');
+        expect(result).toEqual('#0069d9');
+    });
 });
 //# sourceMappingURL=utils.unit.spec.js.map

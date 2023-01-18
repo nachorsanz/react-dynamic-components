@@ -34,9 +34,25 @@ describe('Icon', () => {
         expect(icon).toHaveClass('icon');
     });
     it('renders icon with fcIcon', () => {
-        const { getByTestId } = render(React.createElement(IconStory, { faIcon: '', fcIcon: 'FcAbout' }));
+        const { getByTestId } = render(React.createElement(IconStory, { faIcon: undefined, fcIcon: 'FcAbout' }));
         const icon = getByTestId('icon');
         expect(icon).toBeInTheDocument();
+        const renderIcon = getByTestId('button-icon');
+        expect(renderIcon).toBeInTheDocument();
+    });
+    it('renders icon with faIcon', () => {
+        const { getByTestId } = render(React.createElement(IconStory, { faIcon: 'FaHome', fcIcon: undefined }));
+        const icon = getByTestId('icon');
+        expect(icon).toBeInTheDocument();
+        const renderIcon = getByTestId('button-icon');
+        expect(renderIcon).toBeInTheDocument();
+    });
+    it('not renders icon without Icon', () => {
+        const { queryByTestId, getByTestId } = render(React.createElement(IconStory, { faIcon: undefined, fcIcon: undefined }));
+        const icon = getByTestId('icon');
+        expect(icon).toBeInTheDocument();
+        const renderIcon = queryByTestId('button-icon');
+        expect(renderIcon).not.toBeInTheDocument();
     });
 });
 //# sourceMappingURL=icon.ui-jest.spec.js.map
