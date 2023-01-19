@@ -19,6 +19,27 @@ const ButtonTypes = [
 ] as const
 export type ButtonTypes = typeof ButtonTypes[number]
 
+const VariantColors = [
+    'primary',
+    'secondary',
+    'tertiary',
+    'danger',
+    'success',
+    'warning',
+    'info',
+    'light',
+    'dark',
+    null,
+] as const
+export type VariantColors = typeof VariantColors[number]
+
+const VariantColorTypes = [
+    'light',
+    'dark',
+    null,
+] as const
+export type VariantColorTypes = typeof VariantColorTypes[number]
+
 const OptionsType = ['button', 'submit', 'reset'] as const
 export type OptionsType = typeof OptionsType[number]
 
@@ -29,6 +50,19 @@ export type SelectContent = {
     key: string
     value: string
 }
+const SwitcherTypes = [
+    'primary',
+    'secondary',
+    'tertiary',
+    'danger',
+    'success',
+    'warning',
+    'info',
+    'light',
+    'dark',
+    null,
+] as const
+export type SwitcherTypes = typeof SwitcherTypes[number]
 
 // interface
 export interface ButtonProps
@@ -91,4 +125,18 @@ export interface SelectProps {
     shouldHaveValue?: boolean
     setValue(value: string): void
     id?: string
+}
+
+export interface SwitcherProps {
+    value?: string | number | boolean | null
+    size: SizesTypes
+    variant: SwitcherTypes
+    withShadow?: boolean
+    disabled?: boolean
+    styles?: React.CSSProperties
+    bgColor?: string
+    thumbColor?: string
+    text?: string
+    className?: string
+    children?: React.ReactNode
 }
