@@ -6,7 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const styled_components_1 = __importDefault(require("styled-components"));
 const StyledSelectList = styled_components_1.default.div `
     border-radius: 4px;
-    background-color: white;
+    background-color: ${(props) => props.backgroundColor};
+    color: ${(props) => props.textColor};
     top: 110%;
     left: 0;
     right: 0;

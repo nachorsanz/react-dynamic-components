@@ -3,7 +3,7 @@ const StyledSelectItem = styled.div `
     padding: 1rem;
     cursor: pointer;
     &:hover {
-        background-color: #d6d6d6;
+        background-color: ${(props) => props.itemListHoverColor};
     }
     span {
         display: block;

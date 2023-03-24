@@ -74,19 +74,19 @@ describe('Switcher', () => {
         expect(switcher).toHaveStyle('opacity: 0.5');
     });
     it('switcher thumb color changes with custom thumbColor', () => {
-        const { getByTestId } = (0, react_2.render)(react_1.default.createElement(SwitcherStory, { thumbColor: '#000000' }));
+        const { getByTestId } = (0, react_2.render)(react_1.default.createElement(SwitcherStory, { thumbColor: "#000000" }));
         const switcherThumb = getByTestId('switcher-thumb');
         expect(switcherThumb).toHaveStyle('background-color: #000000');
     });
     it('switcher background color do not change with custom bgColor when variant is selected', () => __awaiter(void 0, void 0, void 0, function* () {
-        const { getByTestId } = (0, react_2.render)(react_1.default.createElement(SwitcherStory, { bgColor: '#000000' }));
+        const { getByTestId } = (0, react_2.render)(react_1.default.createElement(SwitcherStory, { bgColor: "#000000" }));
         const switcher = getByTestId('switcher');
         yield (0, test_utils_1.act)(() => switcher.click());
         const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper');
         expect(switcherThumbWrapper).toHaveStyle('background-color: #007bff');
     }));
     it('switcher background color changes with custom bgColor when variant is not selected', () => __awaiter(void 0, void 0, void 0, function* () {
-        const { getByTestId } = (0, react_2.render)(react_1.default.createElement(SwitcherStory, { bgColor: '#000000', variant: null }));
+        const { getByTestId } = (0, react_2.render)(react_1.default.createElement(SwitcherStory, { bgColor: "#000000", variant: null }));
         const switcher = getByTestId('switcher');
         yield (0, test_utils_1.act)(() => switcher.click());
         const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper');

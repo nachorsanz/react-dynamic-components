@@ -27,11 +27,7 @@ const VariantColors = [
     'dark',
     null,
 ];
-const VariantColorTypes = [
-    'light',
-    'dark',
-    null,
-];
+const VariantColorTypes = ['light', 'dark', null];
 const OptionsType = ['button', 'submit', 'reset'];
 const IconPosition = ['left', 'right', 'none'];
 const SwitcherTypes = [

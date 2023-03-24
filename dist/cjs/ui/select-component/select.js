@@ -57,15 +57,17 @@ const SelectComponent = (_a) => {
         setValue && setValue(value);
     };
     return (react_1.default.createElement(StyledSelectWrapper_1.default, { style: styles, className: className, id: id, "data-testid": "select" },
-        react_1.default.createElement(StyledSelect_1.default, { onClick: handleDropdown },
-            react_1.default.createElement("span", { "data-testid": "select-placeholder" }, currentSelectValue === '' ? selectPlaceHolder : currentSelectValue),
+        react_1.default.createElement(StyledSelect_1.default, { onClick: handleDropdown, textColor: props.textColor, backgroundColor: props.backgroundColor },
+            react_1.default.createElement("span", { "data-testid": "select-placeholder" }, currentSelectValue === ''
+                ? selectPlaceHolder
+                : currentSelectValue),
             showDropdown ? react_1.default.createElement(fa_1.FaArrowUp, null) : react_1.default.createElement(fa_1.FaArrowDown, null)),
-        showDropdown && (react_1.default.createElement(StyledSelectList_1.default, { "data-testid": "select-list-content" },
-            !shouldHaveValue && (react_1.default.createElement(StyledSelectItem_1.default, { "data-testid": "select-item", onClick: () => {
+        showDropdown && (react_1.default.createElement(StyledSelectList_1.default, { "data-testid": "select-list-content", textColor: props.textColor, backgroundColor: props.backgroundColor },
+            !shouldHaveValue && (react_1.default.createElement(StyledSelectItem_1.default, { "data-testid": "select-item", itemListHoverColor: props.itemListHoverColor, onClick: () => {
                     setCurrentSelectValue('');
                     setShowDropdown(false);
                 } }, selectPlaceHolder)),
-            selectContent.map((content) => (react_1.default.createElement(StyledSelectItem_1.default, { "data-testid": "select-item", key: content.key, onClick: () => handleSelect(content.value) },
+            selectContent.map((content) => (react_1.default.createElement(StyledSelectItem_1.default, { "data-testid": "select-item", itemListHoverColor: props.itemListHoverColor, key: content.key, onClick: () => handleSelect(content.value) },
                 react_1.default.createElement("span", { key: content.key }, content.key))))))));
 };
 exports.default = SelectComponent;

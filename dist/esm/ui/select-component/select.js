@@ -29,15 +29,17 @@ const SelectComponent = (_a) => {
         setValue && setValue(value);
     };
     return (React.createElement(StyledSelectWrapper, { style: styles, className: className, id: id, "data-testid": "select" },
-        React.createElement(StyledSelect, { onClick: handleDropdown },
-            React.createElement("span", { "data-testid": "select-placeholder" }, currentSelectValue === '' ? selectPlaceHolder : currentSelectValue),
+        React.createElement(StyledSelect, { onClick: handleDropdown, textColor: props.textColor, backgroundColor: props.backgroundColor },
+            React.createElement("span", { "data-testid": "select-placeholder" }, currentSelectValue === ''
+                ? selectPlaceHolder
+                : currentSelectValue),
             showDropdown ? React.createElement(FaArrowUp, null) : React.createElement(FaArrowDown, null)),
-        showDropdown && (React.createElement(StyledSelectList, { "data-testid": "select-list-content" },
-            !shouldHaveValue && (React.createElement(StyledSelectItem, { "data-testid": "select-item", onClick: () => {
+        showDropdown && (React.createElement(StyledSelectList, { "data-testid": "select-list-content", textColor: props.textColor, backgroundColor: props.backgroundColor },
+            !shouldHaveValue && (React.createElement(StyledSelectItem, { "data-testid": "select-item", itemListHoverColor: props.itemListHoverColor, onClick: () => {
                     setCurrentSelectValue('');
                     setShowDropdown(false);
                 } }, selectPlaceHolder)),
-            selectContent.map((content) => (React.createElement(StyledSelectItem, { "data-testid": "select-item", key: content.key, onClick: () => handleSelect(content.value) },
+            selectContent.map((content) => (React.createElement(StyledSelectItem, { "data-testid": "select-item", itemListHoverColor: props.itemListHoverColor, key: content.key, onClick: () => handleSelect(content.value) },
                 React.createElement("span", { key: content.key }, content.key))))))));
 };
 export default SelectComponent;

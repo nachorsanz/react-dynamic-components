@@ -1,22 +1,22 @@
 import React from 'react';
 declare const SizesTypes: readonly ["small", "medium", "large"];
-export type SizesTypes = typeof SizesTypes[number];
+export type SizesTypes = (typeof SizesTypes)[number];
 declare const ButtonTypes: readonly ["primary", "secondary", "tertiary", "danger", "success", "warning", "info", "light", "dark", "link", null];
-export type ButtonTypes = typeof ButtonTypes[number];
+export type ButtonTypes = (typeof ButtonTypes)[number];
 declare const VariantColors: readonly ["primary", "secondary", "tertiary", "danger", "success", "warning", "info", "light", "dark", null];
-export type VariantColors = typeof VariantColors[number];
+export type VariantColors = (typeof VariantColors)[number];
 declare const VariantColorTypes: readonly ["light", "dark", null];
-export type VariantColorTypes = typeof VariantColorTypes[number];
+export type VariantColorTypes = (typeof VariantColorTypes)[number];
 declare const OptionsType: readonly ["button", "submit", "reset"];
-export type OptionsType = typeof OptionsType[number];
+export type OptionsType = (typeof OptionsType)[number];
 declare const IconPosition: readonly ["left", "right", "none"];
-export type IconPosition = typeof IconPosition[number];
+export type IconPosition = (typeof IconPosition)[number];
 export type SelectContent = {
     key: string;
     value: string;
 };
 declare const SwitcherTypes: readonly ["primary", "secondary", "tertiary", "danger", "success", "warning", "info", "light", "dark", null];
-export type SwitcherTypes = typeof SwitcherTypes[number];
+export type SwitcherTypes = (typeof SwitcherTypes)[number];
 export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     size: SizesTypes;
     onClick: () => void;
@@ -64,6 +64,9 @@ export interface SelectProps {
     styles?: React.CSSProperties;
     selectPlaceHolder: string;
     shouldHaveValue?: boolean;
+    textColor: string;
+    backgroundColor: string;
+    itemListHoverColor: string;
     setValue(value: string): void;
     id?: string;
 }

@@ -32,6 +32,9 @@ exports.SelectComponentStory.args = {
         },
     ],
     selectPlaceHolder: 'Select one option',
+    textColor: '#000000',
+    backgroundColor: '#ffffff',
+    itemListHoverColor: ' #d6d6d6',
     shouldHaveValue: true,
 };
 //# sourceMappingURL=select-component.stories.js.map
