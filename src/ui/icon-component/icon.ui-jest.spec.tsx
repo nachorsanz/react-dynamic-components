@@ -69,5 +69,4 @@ describe('Icon', () => {
         const renderIcon = queryByTestId('button-icon')
         expect(renderIcon).not.toBeInTheDocument()
     })
-    
 })

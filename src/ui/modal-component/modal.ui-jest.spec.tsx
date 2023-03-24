@@ -22,4 +22,3 @@ describe('Modal', () => {
         expect(modal).not.toBeInTheDocument()
     })
 })
-

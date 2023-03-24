@@ -7,14 +7,13 @@ const StyledSwitcher = styled.label`
     align-items: center;
     position: relative;
     ${(props) =>
-      props.disabled &&
-      `
+        props.disabled &&
+        `
       &{
         pointer-events: none;
         cursor: default;
         opacity: 0.5;
-      }`
-    };
+      }`};
 
     input {
         position: absolute;

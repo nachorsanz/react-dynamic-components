@@ -10,7 +10,7 @@ import {
 } from '../../domain/utils'
 
 const Switcher: React.FC<SwitcherProps> = ({ ...props }) => {
-    const [ checked, setChecked ] = useState<boolean | null>(false)
+    const [checked, setChecked] = useState<boolean | null>(false)
 
     const {
         text = '',
@@ -32,21 +32,25 @@ const Switcher: React.FC<SwitcherProps> = ({ ...props }) => {
 
     if (variant && checked) _style = { ..._style, ...backgroundStyle }
 
-    if (variant && withShadow) _style = { ..._style, ...getShadowProps(variant || 'primary') }
+    if (variant && withShadow)
+        _style = { ..._style, ...getShadowProps(variant || 'primary') }
 
     if (styles) _style = { ..._style, ...styles }
 
     if (disabled) {
-        _style = { ..._style, ...{
-            pointerEvents: 'none',
-            cursor: 'pointer',
-            opacity: 0.5,
-        } }
+        _style = {
+            ..._style,
+            ...{
+                pointerEvents: 'none',
+                cursor: 'pointer',
+                opacity: 0.5,
+            },
+        }
     }
 
     const handleClick = (event: React.SyntheticEvent) => {
         event.preventDefault()
-        if(!disabled) setChecked(!checked)
+        if (!disabled) setChecked(!checked)
     }
 
     return (
@@ -54,8 +58,8 @@ const Switcher: React.FC<SwitcherProps> = ({ ...props }) => {
             data-testid="switcher"
             className={className}
             onClick={handleClick}
-            disabled={disabled}>
-
+            disabled={disabled}
+        >
             <input
                 type="checkbox"
                 true-value="true"
@@ -68,13 +72,12 @@ const Switcher: React.FC<SwitcherProps> = ({ ...props }) => {
                 style={_style}
                 checked={checked}
                 bgColor={bgColor}
-                thumbColor={thumbColor} >
-                    <span data-testid="switcher-thumb"></span>
+                thumbColor={thumbColor}
+            >
+                <span data-testid="switcher-thumb"></span>
             </StyledSwitcherThumb>
 
-            <StyledSwitcherLabel>
-                {text}
-            </StyledSwitcherLabel>
+            <StyledSwitcherLabel>{text}</StyledSwitcherLabel>
         </StyledSwitcher>
     )
 }

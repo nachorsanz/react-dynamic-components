@@ -18,14 +18,15 @@ const SelectComponent: React.FC<SelectProps> = ({ ...props }) => {
     } = props
 
     const [showDropdown, setShowDropdown] = useState<boolean | null>(false)
-    const [currentSelectValue, setCurrentSelectValue] =
-        useState<string | null>('')
+    const [currentSelectValue, setCurrentSelectValue] = useState<string | null>(
+        ''
+    )
 
     const handleDropdown = () => {
         setShowDropdown(!showDropdown)
     }
 
-    const handleSelect = (value: string ) => {
+    const handleSelect = (value: string) => {
         setCurrentSelectValue(value)
         setShowDropdown(!showDropdown)
         setValue && setValue(value)
@@ -38,17 +39,28 @@ const SelectComponent: React.FC<SelectProps> = ({ ...props }) => {
             id={id}
             data-testid="select"
         >
-            <StyledSelect onClick={handleDropdown}>
+            <StyledSelect
+                onClick={handleDropdown}
+                textColor={props.textColor}
+                backgroundColor={props.backgroundColor}
+            >
                 <span data-testid="select-placeholder">
-                    {currentSelectValue === '' ? selectPlaceHolder : currentSelectValue}
+                    {currentSelectValue === ''
+                        ? selectPlaceHolder
+                        : currentSelectValue}
                 </span>
                 {showDropdown ? <FaArrowUp /> : <FaArrowDown />}
             </StyledSelect>
             {showDropdown && (
-                <StyledSelectList data-testid="select-list-content">
+                <StyledSelectList
+                    data-testid="select-list-content"
+                    textColor={props.textColor}
+                    backgroundColor={props.backgroundColor}
+                >
                     {!shouldHaveValue && (
                         <StyledSelectItem
                             data-testid="select-item"
+                            itemListHoverColor={props.itemListHoverColor}
                             onClick={() => {
                                 setCurrentSelectValue('')
                                 setShowDropdown(false)
@@ -60,6 +72,7 @@ const SelectComponent: React.FC<SelectProps> = ({ ...props }) => {
                     {selectContent.map((content) => (
                         <StyledSelectItem
                             data-testid="select-item"
+                            itemListHoverColor={props.itemListHoverColor}
                             key={content.key}
                             onClick={() => handleSelect(content.value)}
                         >

@@ -46,26 +46,29 @@ export const getSwitcherSizeProps = (size: SizesTypes) => {
     }
 }
 
-export const getVariantColor = (variant: VariantColors, type: VariantColorTypes = null) => {
+export const getVariantColor = (
+    variant: VariantColors,
+    type: VariantColorTypes = null
+) => {
     switch (variant) {
         case 'primary':
-            return  type === 'dark' ? '#0069d9' : '#007bff'
+            return type === 'dark' ? '#0069d9' : '#007bff'
         case 'secondary':
-            return  type === 'dark' ? '#c6c6c6' : '#d6cdcd'
+            return type === 'dark' ? '#c6c6c6' : '#d6cdcd'
         case 'tertiary':
-            return  type === 'dark' ? '#218838' : '#28a745'
+            return type === 'dark' ? '#218838' : '#28a745'
         case 'danger':
-            return  type === 'dark' ? '#c82333' : '#dc3545'
+            return type === 'dark' ? '#c82333' : '#dc3545'
         case 'success':
-            return  type === 'dark' ? '#218838' : '#28a745'
+            return type === 'dark' ? '#218838' : '#28a745'
         case 'warning':
-            return  type === 'dark' ? '#e0a800' : '#ffc107'
+            return type === 'dark' ? '#e0a800' : '#ffc107'
         case 'info':
-            return  type === 'dark' ? '#138496' : '#17a2b8'
+            return type === 'dark' ? '#138496' : '#17a2b8'
         case 'light':
-            return  type === 'dark' ? '#e2e6ea' : '#f8f9fa'
+            return type === 'dark' ? '#e2e6ea' : '#f8f9fa'
         case 'dark':
-            return  type === 'dark' ? '#1d2124' : '#343a40'
+            return type === 'dark' ? '#1d2124' : '#343a40'
         case null:
             return ''
     }

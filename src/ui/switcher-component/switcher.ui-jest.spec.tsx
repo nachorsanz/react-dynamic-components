@@ -45,13 +45,13 @@ describe('Switcher', () => {
     })
 
     it('switcher thumb color changes with custom thumbColor', () => {
-        const { getByTestId } = render(<SwitcherStory thumbColor='#000000' />)
+        const { getByTestId } = render(<SwitcherStory thumbColor="#000000" />)
         const switcherThumb = getByTestId('switcher-thumb')
         expect(switcherThumb).toHaveStyle('background-color: #000000')
     })
 
     it('switcher background color do not change with custom bgColor when variant is selected', async () => {
-        const { getByTestId } = render(<SwitcherStory bgColor='#000000' />)
+        const { getByTestId } = render(<SwitcherStory bgColor="#000000" />)
         const switcher = getByTestId('switcher')
         await act(() => switcher.click())
 
@@ -60,7 +60,9 @@ describe('Switcher', () => {
     })
 
     it('switcher background color changes with custom bgColor when variant is not selected', async () => {
-        const { getByTestId } = render(<SwitcherStory bgColor='#000000' variant={null} />)
+        const { getByTestId } = render(
+            <SwitcherStory bgColor="#000000" variant={null} />
+        )
         const switcher = getByTestId('switcher')
         await act(() => switcher.click())
 
