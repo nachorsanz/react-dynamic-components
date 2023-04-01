@@ -30,6 +30,12 @@ export default {
                 ],
             },
         },
+        shape: {
+            control: {
+                type: 'radio',
+                options: ['rounded', 'square', 'sharp'],
+            },
+        },
     },
 } as ComponentMeta<typeof Switcher>
 
@@ -48,4 +54,5 @@ SwitcherStory.args = {
     bgColor: '',
     styles: undefined,
     className: 'ReactDynamicComponents',
+    shape: 'rounded',
 }

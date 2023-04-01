@@ -1,4 +1,4 @@
-import { SizesTypes } from './types'
+import { ShapeTypes, SizesTypes } from './types'
 import { ButtonTypes } from './types'
 import { VariantColors } from './types'
 import { VariantColorTypes } from './types'
@@ -229,6 +229,25 @@ export const getHoverProps = (variant: ButtonTypes) => {
         case 'link':
             return {
                 backgroundColor: 'transparent',
+            }
+        case null:
+            return {}
+    }
+}
+
+export const getSwitcherShapeProps = (shape: ShapeTypes) => {
+    switch (shape) {
+        case 'rounded':
+            return {
+                borderRadius: '10px',
+            }
+        case 'square':
+            return {
+                borderRadius: '4px',
+            }
+        case 'sharp':
+            return {
+                borderRadius: '0',
             }
         case null:
             return {}

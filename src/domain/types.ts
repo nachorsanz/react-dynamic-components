@@ -2,7 +2,7 @@ import React from 'react'
 
 // types
 const SizesTypes = ['small', 'medium', 'large'] as const
-export type SizesTypes = (typeof SizesTypes)[number]
+export type SizesTypes = typeof SizesTypes[number]
 
 const ButtonTypes = [
     'primary',
@@ -17,7 +17,7 @@ const ButtonTypes = [
     'link',
     null,
 ] as const
-export type ButtonTypes = (typeof ButtonTypes)[number]
+export type ButtonTypes = typeof ButtonTypes[number]
 
 const VariantColors = [
     'primary',
@@ -31,16 +31,16 @@ const VariantColors = [
     'dark',
     null,
 ] as const
-export type VariantColors = (typeof VariantColors)[number]
+export type VariantColors = typeof VariantColors[number]
 
 const VariantColorTypes = ['light', 'dark', null] as const
-export type VariantColorTypes = (typeof VariantColorTypes)[number]
+export type VariantColorTypes = typeof VariantColorTypes[number]
 
 const OptionsType = ['button', 'submit', 'reset'] as const
-export type OptionsType = (typeof OptionsType)[number]
+export type OptionsType = typeof OptionsType[number]
 
 const IconPosition = ['left', 'right', 'none'] as const
-export type IconPosition = (typeof IconPosition)[number]
+export type IconPosition = typeof IconPosition[number]
 
 export type SelectContent = {
     key: string
@@ -58,7 +58,11 @@ const SwitcherTypes = [
     'dark',
     null,
 ] as const
-export type SwitcherTypes = (typeof SwitcherTypes)[number]
+
+const ShapeTypes = ['square', 'rounded', 'sharp', null] as const
+export type ShapeTypes = typeof ShapeTypes[number]
+
+export type SwitcherTypes = typeof SwitcherTypes[number]
 
 // interface
 export interface ButtonProps
@@ -138,4 +142,5 @@ export interface SwitcherProps {
     text?: string
     className?: string
     children?: React.ReactNode
+    shape?: ShapeTypes
 }

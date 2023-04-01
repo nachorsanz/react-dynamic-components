@@ -8,12 +8,11 @@ const StyledSwitcherThumb = styled.span`
     height: 1.575rem;
     padding: 0.2rem;
     background-color: #b5b5b5;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 0.5rem;
     transition: background 0.15s ease-out, box-shadow 0.15s ease-out;
     span {
         display: block;
-        border-radius: 4px;
         height: 100%;
         aspect-ratio: 1/1;
         background-color: #f5f5f5;

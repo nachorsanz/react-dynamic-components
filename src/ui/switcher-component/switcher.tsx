@@ -5,6 +5,7 @@ import StyledSwitcherLabel from './StyledSwitcherLabel'
 import { SwitcherProps } from '../../domain/types'
 import {
     getShadowProps,
+    getSwitcherShapeProps,
     getSwitcherSizeProps,
     getVariantColor,
 } from '../../domain/utils'
@@ -22,9 +23,11 @@ const Switcher: React.FC<SwitcherProps> = ({ ...props }) => {
         bgColor = '',
         thumbColor = '',
         withShadow = false,
+        shape = 'rounded',
     } = props
 
     let _style: React.CSSProperties = {}
+    let _switcherButtonStyle: React.CSSProperties = {}
 
     const backgroundStyle = { backgroundColor: getVariantColor(variant) }
 
@@ -34,6 +37,14 @@ const Switcher: React.FC<SwitcherProps> = ({ ...props }) => {
 
     if (variant && withShadow)
         _style = { ..._style, ...getShadowProps(variant || 'primary') }
+
+    if (shape) {
+        _style = { ..._style, ...getSwitcherShapeProps(shape || 'square') }
+        _switcherButtonStyle = {
+            ..._switcherButtonStyle,
+            ...getSwitcherShapeProps(shape || 'square'),
+        }
+    }
 
     if (styles) _style = { ..._style, ...styles }
 
@@ -73,8 +84,12 @@ const Switcher: React.FC<SwitcherProps> = ({ ...props }) => {
                 checked={checked}
                 bgColor={bgColor}
                 thumbColor={thumbColor}
+                shape={shape}
             >
-                <span data-testid="switcher-thumb"></span>
+                <span
+                    style={_switcherButtonStyle}
+                    data-testid="switcher-thumb"
+                ></span>
             </StyledSwitcherThumb>
 
             <StyledSwitcherLabel>{text}</StyledSwitcherLabel>
