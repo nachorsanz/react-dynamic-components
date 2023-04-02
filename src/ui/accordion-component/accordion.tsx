@@ -10,12 +10,11 @@ export type AccordionProps = {
         title: string
         children: ReactNode
     }[]
+    wipComponent: boolean
 }
 
-const Accordion: React.FC<AccordionProps> = ({ sections }) => {
+const Accordion: React.FC<AccordionProps> = ({ sections, wipComponent }) => {
     const [clicked, setClicked] = useState<number | null>(null)
-
-    const wipComponent = true
 
     const toggle = (index: number) => {
         if (clicked === index) {

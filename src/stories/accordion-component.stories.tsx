@@ -6,7 +6,13 @@ export default {
     title: 'Dynamic React Components/Components/Accordion',
     component: Accordion,
 
-    argTypes: {},
+    argTypes: {
+        wipComponent: {
+            control: {
+                type: 'boolean',
+            },
+        },
+    },
 } as ComponentMeta<typeof Accordion>
 
 const Template: ComponentStory<typeof Accordion> = (args) => (
@@ -29,4 +35,5 @@ AccordionStory.args = {
             children: <p>Section 3 content</p>,
         },
     ],
+    wipComponent: true,
 }
