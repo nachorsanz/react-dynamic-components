@@ -71,25 +71,25 @@ describe('Switcher', () => {
     })
 
     it('switcher shape gets rounded when shape is not selected', async () => {
-        const { getByTestId } = render(<SwitcherStory shape={null} />)
+        const { getByTestId } = render(<SwitcherStory shape={undefined} />)
         const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper')
-        expect(switcherThumbWrapper).toHaveStyle('border-radius: 10px')
-    })
-
-    it('switcher shape gets square shape when square is selected', async () => {
-        const { getByTestId } = render(<SwitcherStory shape={'square'} />)
-        const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper')
-        expect(switcherThumbWrapper).toHaveStyle('border-radius: 4px')
+        expect(switcherThumbWrapper).toHaveStyle('border-radius: 1.25rem')
     })
 
     it('switcher shape gets rounded shape when rounded is selected', async () => {
-        const { getByTestId } = render(<SwitcherStory shape={'rounded'} />)
+        const { getByTestId } = render(<SwitcherStory shape="rounded" />)
         const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper')
-        expect(switcherThumbWrapper).toHaveStyle('border-radius: 10px')
+        expect(switcherThumbWrapper).toHaveStyle('border-radius: 1.25rem')
+    })
+
+    it('switcher shape gets square shape when square is selected', async () => {
+        const { getByTestId } = render(<SwitcherStory shape="square" />)
+        const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper')
+        expect(switcherThumbWrapper).toHaveStyle('border-radius: 0.25rem')
     })
 
     it('switcher shape gets sharp when sharp is selected', async () => {
-        const { getByTestId } = render(<SwitcherStory shape={'sharp'} />)
+        const { getByTestId } = render(<SwitcherStory shape="sharp" />)
         const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper')
         expect(switcherThumbWrapper).toHaveStyle('border-radius: 0')
     })

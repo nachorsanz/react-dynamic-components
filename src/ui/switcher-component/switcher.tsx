@@ -29,9 +29,11 @@ const Switcher: React.FC<SwitcherProps> = ({ ...props }) => {
     let _style: React.CSSProperties = {}
     let _switcherButtonStyle: React.CSSProperties = {}
 
+    const sizeProps = getSwitcherSizeProps(size)
+
     const backgroundStyle = { backgroundColor: getVariantColor(variant) }
 
-    if (size) _style = { ..._style, ...getSwitcherSizeProps(size) }
+    if (size) _style = { ..._style, ...sizeProps }
 
     if (variant && checked) _style = { ..._style, ...backgroundStyle }
 
@@ -39,10 +41,13 @@ const Switcher: React.FC<SwitcherProps> = ({ ...props }) => {
         _style = { ..._style, ...getShadowProps(variant || 'primary') }
 
     if (shape) {
-        _style = { ..._style, ...getSwitcherShapeProps(shape || 'square') }
+        _style = {
+            ..._style,
+            ...getSwitcherShapeProps(shape, sizeProps.height),
+        }
         _switcherButtonStyle = {
             ..._switcherButtonStyle,
-            ...getSwitcherShapeProps(shape || 'square'),
+            ...getSwitcherShapeProps(shape, sizeProps.height),
         }
     }
 
@@ -84,7 +89,6 @@ const Switcher: React.FC<SwitcherProps> = ({ ...props }) => {
                 checked={checked}
                 bgColor={bgColor}
                 thumbColor={thumbColor}
-                shape={shape}
             >
                 <span
                     style={_switcherButtonStyle}

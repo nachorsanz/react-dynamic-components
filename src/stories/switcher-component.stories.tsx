@@ -46,7 +46,7 @@ export const SwitcherStory = Template.bind({})
 
 SwitcherStory.args = {
     text: '',
-    size: 'large',
+    size: 'medium',
     variant: 'primary',
     disabled: false,
     withShadow: false,

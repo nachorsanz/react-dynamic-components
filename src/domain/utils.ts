@@ -235,22 +235,27 @@ export const getHoverProps = (variant: ButtonTypes) => {
     }
 }
 
-export const getSwitcherShapeProps = (shape: ShapeTypes) => {
+export const getSwitcherShapeProps = (
+    shape: ShapeTypes,
+    roundedRadius: string
+) => {
     switch (shape) {
         case 'rounded':
             return {
-                borderRadius: '10px',
+                borderRadius: roundedRadius,
             }
         case 'square':
             return {
-                borderRadius: '4px',
+                borderRadius: '0.25rem',
             }
         case 'sharp':
             return {
                 borderRadius: '0',
             }
-        case null:
-            return {}
+        case undefined:
+            return {
+                borderRadius: roundedRadius,
+            }
     }
 }
 

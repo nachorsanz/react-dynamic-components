@@ -59,7 +59,7 @@ const SwitcherTypes = [
     null,
 ] as const
 
-const ShapeTypes = ['square', 'rounded', 'sharp', null] as const
+const ShapeTypes = ['square', 'rounded', 'sharp'] as const
 export type ShapeTypes = typeof ShapeTypes[number]
 
 export type SwitcherTypes = typeof SwitcherTypes[number]
@@ -142,5 +142,5 @@ export interface SwitcherProps {
     text?: string
     className?: string
     children?: React.ReactNode
-    shape?: ShapeTypes
+    shape: ShapeTypes
 }
