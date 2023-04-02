@@ -26,7 +26,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "predeploy": "npm run test:ui-jest & npm run test:unit & npm run build",
-    "add": "npm run prettier & git add ."
+    "add": "npm run prettier & git add .",
+    "prepare": "husky install"
   },
   "author": "Nacho Rodriguez Sanz",
   "license": "MIT",
@@ -38,6 +39,8 @@
   },
   "devDependencies": {
     "@babel/core": "7.20.12",
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
     "@storybook/addon-actions": "6.5.15",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "6.5.15",
@@ -64,6 +67,7 @@
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-react": "7.32.1",
     "eslint-plugin-storybook": "0.6.10",
+    "husky": "^8.0.3",
     "jest": "^29.4.0",
     "jest-environment-jsdom": "^29.4.0",
     "jest-transform-stub": "^2.0.0",
