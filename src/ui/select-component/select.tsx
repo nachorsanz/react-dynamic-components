@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { SelectProps } from '../../domain/types'
-import { FaArrowDown, FaArrowUp } from 'react-icons/fa'
+import { FaChevronRight } from 'react-icons/fa'
 import StyledSelect from './StyledSelect'
 import StyledSelectList from './StyledSelectList'
 import StyledSelectItem from './StyledSelectItem'
 import StyledSelectWrapper from './StyledSelectWrapper'
+import StyledChevron from './StyledChevron'
 
 const SelectComponent: React.FC<SelectProps> = ({ ...props }) => {
     const {
@@ -49,7 +50,9 @@ const SelectComponent: React.FC<SelectProps> = ({ ...props }) => {
                         ? selectPlaceHolder
                         : currentSelectValue}
                 </span>
-                {showDropdown ? <FaArrowUp /> : <FaArrowDown />}
+                <StyledChevron drowpdownActive={showDropdown}>
+                    <FaChevronRight />
+                </StyledChevron>
             </StyledSelect>
             {showDropdown && (
                 <StyledSelectList
