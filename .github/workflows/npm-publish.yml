@@ -1,69 +1,60 @@
-
 name: NPM - RDC
 
 on:
-  push:
-    branches: [ "main", "develop" ] 
+    push:
+        branches: ['main', 'develop']
 
 jobs:
-   unit-tests:
-     name: Unit & UI-Unit-Tests
-     runs-on: ubuntu-latest
-     timeout-minutes: 60
- 
-     steps:
-       - uses: actions/checkout@v3
-       - uses: actions/setup-node@v3
-         with:
-           node-version: 16
-           cache: 'npm'
-       - run: npm install --frozen-lockfile
+    unit-tests:
+        name: Unit & UI-Unit-Tests
+        runs-on: ubuntu-latest
+        timeout-minutes: 60
 
-       - name: Unit Tests (using Jest)
-         run: npm run test:unit
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+                  cache: 'npm'
+            - run: npm install --frozen-lockfile
 
-       - name: UI-Unit Tests (using React-Testing Lib & Storybook)
-         run: npm run test:ui-jest 
+            - name: Unit Tests (using Jest)
+              run: npm run test:unit
 
-   build:
-     runs-on: ubuntu-latest
-     if: "contains(github.event.head_commit.message, 'deploy')"
-     strategy:
-       matrix:
-         node-version: [16]
-         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
- 
-     steps:
-     - uses: actions/checkout@v3
-     - name: Use Node.js ${{ matrix.node-version }}
-       uses: actions/setup-node@v3
-       with:
-         node-version: ${{ matrix.node-version }}
-         cache: 'npm'
-     - run: npm ci
-     - run: npm run build --if-present
-     # - run: npm test
- 
-   publish-npm:
-     needs: build
-     runs-on: ubuntu-latest
-     steps:
-       - uses: actions/checkout@v3
-       - uses: actions/setup-node@v3
-         with:
-           node-version: 16
-           registry-url: https://registry.npmjs.org/
-       - run: npm ci
-       - run: npm publish
-         env:
-           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
- 
-           
- 
-          
+            - name: UI-Unit Tests (using React-Testing Lib & Storybook)
+              run: npm run test:ui-jest
 
+    build:
+        runs-on: ubuntu-latest
+        if: "contains(github.event.head_commit.message, 'deploy')"
+        strategy:
+            matrix:
+                node-version: [16]
+                # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'npm'
+            - run: npm install
+            - run: npm ci
+            - run: npm run build --if-present
+        # - run: npm test
 
-
-
- 
+    publish-npm:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+                  registry-url: https://registry.npmjs.org/
+            - run: npm install
+            - run: npm ci
+            - run: npm publish
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
