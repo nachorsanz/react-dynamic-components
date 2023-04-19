@@ -10,11 +10,12 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { useState } from 'react';
-import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
 import StyledSelect from './StyledSelect';
 import StyledSelectList from './StyledSelectList';
 import StyledSelectItem from './StyledSelectItem';
 import StyledSelectWrapper from './StyledSelectWrapper';
+import StyledChevron from './StyledChevron';
 const SelectComponent = (_a) => {
     var props = __rest(_a, []);
     const { selectContent, className, styles, selectPlaceHolder, id, shouldHaveValue, setValue, } = props;
@@ -33,7 +34,8 @@ const SelectComponent = (_a) => {
             React.createElement("span", { "data-testid": "select-placeholder" }, currentSelectValue === ''
                 ? selectPlaceHolder
                 : currentSelectValue),
-            showDropdown ? React.createElement(FaArrowUp, null) : React.createElement(FaArrowDown, null)),
+            React.createElement(StyledChevron, { drowpdownActive: showDropdown },
+                React.createElement(FaChevronRight, null))),
         showDropdown && (React.createElement(StyledSelectList, { "data-testid": "select-list-content", textColor: props.textColor, backgroundColor: props.backgroundColor },
             !shouldHaveValue && (React.createElement(StyledSelectItem, { "data-testid": "select-item", itemListHoverColor: props.itemListHoverColor, onClick: () => {
                     setCurrentSelectValue('');

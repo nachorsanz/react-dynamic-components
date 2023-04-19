@@ -33,13 +33,19 @@ exports.default = {
                 ],
             },
         },
+        shape: {
+            control: {
+                type: 'radio',
+                options: ['rounded', 'square', 'sharp'],
+            },
+        },
     },
 };
 const Template = (args) => (react_1.default.createElement(switcher_1.default, Object.assign({ "data-testid": "switcher" }, args)));
 exports.SwitcherStory = Template.bind({});
 exports.SwitcherStory.args = {
     text: '',
-    size: 'large',
+    size: 'medium',
     variant: 'primary',
     disabled: false,
     withShadow: false,
@@ -47,5 +53,6 @@ exports.SwitcherStory.args = {
     bgColor: '',
     styles: undefined,
     className: 'ReactDynamicComponents',
+    shape: 'rounded',
 };
 //# sourceMappingURL=switcher-component.stories.js.map

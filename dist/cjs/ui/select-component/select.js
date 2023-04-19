@@ -43,6 +43,7 @@ const StyledSelect_1 = __importDefault(require("./StyledSelect"));
 const StyledSelectList_1 = __importDefault(require("./StyledSelectList"));
 const StyledSelectItem_1 = __importDefault(require("./StyledSelectItem"));
 const StyledSelectWrapper_1 = __importDefault(require("./StyledSelectWrapper"));
+const StyledChevron_1 = __importDefault(require("./StyledChevron"));
 const SelectComponent = (_a) => {
     var props = __rest(_a, []);
     const { selectContent, className, styles, selectPlaceHolder, id, shouldHaveValue, setValue, } = props;
@@ -61,7 +62,8 @@ const SelectComponent = (_a) => {
             react_1.default.createElement("span", { "data-testid": "select-placeholder" }, currentSelectValue === ''
                 ? selectPlaceHolder
                 : currentSelectValue),
-            showDropdown ? react_1.default.createElement(fa_1.FaArrowUp, null) : react_1.default.createElement(fa_1.FaArrowDown, null)),
+            react_1.default.createElement(StyledChevron_1.default, { drowpdownActive: showDropdown },
+                react_1.default.createElement(fa_1.FaChevronRight, null))),
         showDropdown && (react_1.default.createElement(StyledSelectList_1.default, { "data-testid": "select-list-content", textColor: props.textColor, backgroundColor: props.backgroundColor },
             !shouldHaveValue && (react_1.default.createElement(StyledSelectItem_1.default, { "data-testid": "select-item", itemListHoverColor: props.itemListHoverColor, onClick: () => {
                     setCurrentSelectValue('');

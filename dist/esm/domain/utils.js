@@ -221,5 +221,25 @@ export const getHoverProps = (variant) => {
             return {};
     }
 };
+export const getSwitcherShapeProps = (shape, roundedRadius) => {
+    switch (shape) {
+        case 'rounded':
+            return {
+                borderRadius: roundedRadius,
+            };
+        case 'square':
+            return {
+                borderRadius: '0.25rem',
+            };
+        case 'sharp':
+            return {
+                borderRadius: '0',
+            };
+        case undefined:
+            return {
+                borderRadius: roundedRadius,
+            };
+    }
+};
 export const getButtonAnimation = (variant) => { };
 //# sourceMappingURL=utils.js.map

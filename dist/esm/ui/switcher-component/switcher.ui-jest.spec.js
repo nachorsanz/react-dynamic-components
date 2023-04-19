@@ -64,5 +64,25 @@ describe('Switcher', () => {
         const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper');
         expect(switcherThumbWrapper).toHaveStyle('background-color: #000000');
     }));
+    it('switcher shape gets rounded when shape is not selected', () => __awaiter(void 0, void 0, void 0, function* () {
+        const { getByTestId } = render(React.createElement(SwitcherStory, { shape: undefined }));
+        const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper');
+        expect(switcherThumbWrapper).toHaveStyle('border-radius: 1.25rem');
+    }));
+    it('switcher shape gets rounded shape when rounded is selected', () => __awaiter(void 0, void 0, void 0, function* () {
+        const { getByTestId } = render(React.createElement(SwitcherStory, { shape: "rounded" }));
+        const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper');
+        expect(switcherThumbWrapper).toHaveStyle('border-radius: 1.25rem');
+    }));
+    it('switcher shape gets square shape when square is selected', () => __awaiter(void 0, void 0, void 0, function* () {
+        const { getByTestId } = render(React.createElement(SwitcherStory, { shape: "square" }));
+        const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper');
+        expect(switcherThumbWrapper).toHaveStyle('border-radius: 0.25rem');
+    }));
+    it('switcher shape gets sharp when sharp is selected', () => __awaiter(void 0, void 0, void 0, function* () {
+        const { getByTestId } = render(React.createElement(SwitcherStory, { shape: "sharp" }));
+        const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper');
+        expect(switcherThumbWrapper).toHaveStyle('border-radius: 0');
+    }));
 });
 //# sourceMappingURL=switcher.ui-jest.spec.js.map

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getButtonAnimation = exports.getHoverProps = exports.getShadowProps = exports.getVariantProps = exports.getVariantColor = exports.getSwitcherSizeProps = exports.getSizeProps = void 0;
+exports.getButtonAnimation = exports.getSwitcherShapeProps = exports.getHoverProps = exports.getShadowProps = exports.getVariantProps = exports.getVariantColor = exports.getSwitcherSizeProps = exports.getSizeProps = void 0;
 const getSizeProps = (size) => {
     switch (size) {
         case 'small':
@@ -230,6 +230,27 @@ const getHoverProps = (variant) => {
     }
 };
 exports.getHoverProps = getHoverProps;
+const getSwitcherShapeProps = (shape, roundedRadius) => {
+    switch (shape) {
+        case 'rounded':
+            return {
+                borderRadius: roundedRadius,
+            };
+        case 'square':
+            return {
+                borderRadius: '0.25rem',
+            };
+        case 'sharp':
+            return {
+                borderRadius: '0',
+            };
+        case undefined:
+            return {
+                borderRadius: roundedRadius,
+            };
+    }
+};
+exports.getSwitcherShapeProps = getSwitcherShapeProps;
 const getButtonAnimation = (variant) => { };
 exports.getButtonAnimation = getButtonAnimation;
 //# sourceMappingURL=utils.js.map

@@ -1,4 +1,4 @@
-import { SizesTypes } from './types';
+import { ShapeTypes, SizesTypes } from './types';
 import { ButtonTypes } from './types';
 import { VariantColors } from './types';
 import { VariantColorTypes } from './types';
@@ -30,5 +30,8 @@ export declare const getHoverProps: (variant: ButtonTypes) => {
     backgroundColor: string;
 } | {
     backgroundColor?: undefined;
+};
+export declare const getSwitcherShapeProps: (shape: ShapeTypes, roundedRadius: string) => {
+    borderRadius: string;
 };
 export declare const getButtonAnimation: (variant: ButtonTypes) => void;

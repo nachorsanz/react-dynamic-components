@@ -13,19 +13,25 @@ import React, { useState } from 'react';
 import StyledSwitcher from './StyledSwitcher';
 import StyledSwitcherThumb from './StyledSwitcherThumb';
 import StyledSwitcherLabel from './StyledSwitcherLabel';
-import { getShadowProps, getSwitcherSizeProps, getVariantColor, } from '../../domain/utils';
+import { getShadowProps, getSwitcherShapeProps, getSwitcherSizeProps, getVariantColor, } from '../../domain/utils';
 const Switcher = (_a) => {
     var props = __rest(_a, []);
     const [checked, setChecked] = useState(false);
-    const { text = '', size = 'medium', variant = 'primary', styles = {}, className = '', disabled = false, bgColor = '', thumbColor = '', withShadow = false, } = props;
+    const { text = '', size = 'medium', variant = 'primary', styles = {}, className = '', disabled = false, bgColor = '', thumbColor = '', withShadow = false, shape = 'rounded', } = props;
     let _style = {};
+    let _switcherButtonStyle = {};
+    const sizeProps = getSwitcherSizeProps(size);
     const backgroundStyle = { backgroundColor: getVariantColor(variant) };
     if (size)
-        _style = Object.assign(Object.assign({}, _style), getSwitcherSizeProps(size));
+        _style = Object.assign(Object.assign({}, _style), sizeProps);
     if (variant && checked)
         _style = Object.assign(Object.assign({}, _style), backgroundStyle);
     if (variant && withShadow)
         _style = Object.assign(Object.assign({}, _style), getShadowProps(variant || 'primary'));
+    if (shape) {
+        _style = Object.assign(Object.assign({}, _style), getSwitcherShapeProps(shape, sizeProps.height));
+        _switcherButtonStyle = Object.assign(Object.assign({}, _switcherButtonStyle), getSwitcherShapeProps(shape, sizeProps.height));
+    }
     if (styles)
         _style = Object.assign(Object.assign({}, _style), styles);
     if (disabled) {
@@ -43,7 +49,7 @@ const Switcher = (_a) => {
     return (React.createElement(StyledSwitcher, { "data-testid": "switcher", className: className, onClick: handleClick, disabled: disabled },
         React.createElement("input", { type: "checkbox", "true-value": "true", value: checked ? 'true' : 'false', disabled: disabled }),
         React.createElement(StyledSwitcherThumb, { "data-testid": "switcher-thumb-wrapper", style: _style, checked: checked, bgColor: bgColor, thumbColor: thumbColor },
-            React.createElement("span", { "data-testid": "switcher-thumb" })),
+            React.createElement("span", { style: _switcherButtonStyle, "data-testid": "switcher-thumb" })),
         React.createElement(StyledSwitcherLabel, null, text)));
 };
 export default Switcher;

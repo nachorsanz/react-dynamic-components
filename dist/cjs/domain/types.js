@@ -42,4 +42,5 @@ const SwitcherTypes = [
     'dark',
     null,
 ];
+const ShapeTypes = ['square', 'rounded', 'sharp'];
 //# sourceMappingURL=types.js.map
