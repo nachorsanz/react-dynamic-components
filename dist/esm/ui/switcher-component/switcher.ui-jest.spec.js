@@ -34,7 +34,7 @@ describe('Switcher', () => {
         expect(switcherThumbWrapper).toHaveStyle('background-color: #b5b5b5');
     });
     it('switcher background variant color working when switcher is checked', () => __awaiter(void 0, void 0, void 0, function* () {
-        const { getByTestId } = render(React.createElement(SwitcherStory, null));
+        const { getByTestId } = render(React.createElement(SwitcherStory, { checked: true }));
         const switcher = getByTestId('switcher');
         yield act(() => switcher.click());
         const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper');
@@ -46,19 +46,19 @@ describe('Switcher', () => {
         expect(switcher).toHaveStyle('opacity: 0.5');
     });
     it('switcher thumb color changes with custom thumbColor', () => {
-        const { getByTestId } = render(React.createElement(SwitcherStory, { thumbColor: "#000000" }));
+        const { getByTestId } = render(React.createElement(SwitcherStory, { checked: true, thumbColor: "#000000" }));
         const switcherThumb = getByTestId('switcher-thumb');
         expect(switcherThumb).toHaveStyle('background-color: #000000');
     });
     it('switcher background color do not change with custom bgColor when variant is selected', () => __awaiter(void 0, void 0, void 0, function* () {
-        const { getByTestId } = render(React.createElement(SwitcherStory, { bgColor: "#000000" }));
+        const { getByTestId } = render(React.createElement(SwitcherStory, { checked: true, bgColor: "#000000" }));
         const switcher = getByTestId('switcher');
         yield act(() => switcher.click());
         const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper');
         expect(switcherThumbWrapper).toHaveStyle('background-color: #007bff');
     }));
     it('switcher background color changes with custom bgColor when variant is not selected', () => __awaiter(void 0, void 0, void 0, function* () {
-        const { getByTestId } = render(React.createElement(SwitcherStory, { bgColor: "#000000", variant: null }));
+        const { getByTestId } = render(React.createElement(SwitcherStory, { checked: true, bgColor: "#000000", variant: null }));
         const switcher = getByTestId('switcher');
         yield act(() => switcher.click());
         const switcherThumbWrapper = getByTestId('switcher-thumb-wrapper');
