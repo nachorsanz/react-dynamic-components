@@ -131,7 +131,7 @@ export interface SelectProps {
 }
 
 export interface SwitcherProps {
-    checked: boolean,
+    checked: boolean
     onClick: (value: boolean) => void
     size: SizesTypes
     variant: SwitcherTypes
