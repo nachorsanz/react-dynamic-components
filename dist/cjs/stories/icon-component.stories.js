@@ -5,8 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.IconStory = void 0;
 const react_1 = __importDefault(require("react"));
-const icon_1 = __importDefault(require("../ui/icon-component/icon"));
-const icons_1 = require("../domain/icons");
+const icon_1 = __importDefault(require("../application/features/icon-component/icon"));
+const icons_1 = require("../domain/services/icons");
 exports.default = {
     title: 'Dynamic React Components/Components/Icon',
     component: icon_1.default,

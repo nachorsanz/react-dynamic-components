@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import SelectComponent from '../ui/select-component/select'
+import SelectComponent from '../application/features/select-component/select'
 
 export default {
     title: 'Dynamic React Components/Components/Select',

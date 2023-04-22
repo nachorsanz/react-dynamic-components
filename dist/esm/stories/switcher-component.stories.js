@@ -1,5 +1,5 @@
 import React from 'react';
-import Switcher from '../ui/switcher-component/switcher';
+import Switcher from '../application/features/switcher-component/switcher';
 export default {
     title: 'Dynamic React Components/Components/Switcher',
     component: Switcher,
@@ -38,6 +38,7 @@ export default {
 const Template = (args) => (React.createElement(Switcher, Object.assign({ "data-testid": "switcher" }, args)));
 export const SwitcherStory = Template.bind({});
 SwitcherStory.args = {
+    checked: false,
     text: '',
     size: 'medium',
     variant: 'primary',

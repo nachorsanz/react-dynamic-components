@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Switcher from '../ui/switcher-component/switcher'
+import Switcher from '../application/features/switcher-component/switcher'
 
 export default {
     title: 'Dynamic React Components/Components/Switcher',

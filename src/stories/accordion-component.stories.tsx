@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Accordion from '../ui/accordion-component/accordion'
+import Accordion from '../application/features/accordion-component/accordion'
 
 export default {
     title: 'Dynamic React Components/Components/Accordion',

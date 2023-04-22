@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SwitcherStory = void 0;
 const react_1 = __importDefault(require("react"));
-const switcher_1 = __importDefault(require("../ui/switcher-component/switcher"));
+const switcher_1 = __importDefault(require("../application/features/switcher-component/switcher"));
 exports.default = {
     title: 'Dynamic React Components/Components/Switcher',
     component: switcher_1.default,
@@ -44,6 +44,7 @@ exports.default = {
 const Template = (args) => (react_1.default.createElement(switcher_1.default, Object.assign({ "data-testid": "switcher" }, args)));
 exports.SwitcherStory = Template.bind({});
 exports.SwitcherStory.args = {
+    checked: false,
     text: '',
     size: 'medium',
     variant: 'primary',

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Modal from '../ui/modal-component/modal'
+import Modal from '../application/features/modal-component/modal'
 
 export default {
     title: 'Dynamic React Components/Components/Modal',

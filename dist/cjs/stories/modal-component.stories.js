@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ModalStory = void 0;
 const react_1 = __importDefault(require("react"));
-const modal_1 = __importDefault(require("../ui/modal-component/modal"));
+const modal_1 = __importDefault(require("../application/features/modal-component/modal"));
 exports.default = {
     title: 'Dynamic React Components/Components/Modal',
     component: modal_1.default,

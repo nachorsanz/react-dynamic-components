@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccordionStory = void 0;
 const react_1 = __importDefault(require("react"));
-const accordion_1 = __importDefault(require("../ui/accordion-component/accordion"));
+const accordion_1 = __importDefault(require("../application/features/accordion-component/accordion"));
 exports.default = {
     title: 'Dynamic React Components/Components/Accordion',
     component: accordion_1.default,

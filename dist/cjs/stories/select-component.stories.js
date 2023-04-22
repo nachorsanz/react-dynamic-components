@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SelectComponentStory = void 0;
 const react_1 = __importDefault(require("react"));
-const select_1 = __importDefault(require("../ui/select-component/select"));
+const select_1 = __importDefault(require("../application/features/select-component/select"));
 exports.default = {
     title: 'Dynamic React Components/Components/Select',
     component: select_1.default,

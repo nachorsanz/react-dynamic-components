@@ -27,7 +27,8 @@
         "build-storybook": "build-storybook",
         "predeploy": "npm run test:ui-jest & npm run test:unit & npm run build",
         "add": "npm run prettier & git add .",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "typecheck": "tsc --noEmit"
     },
     "author": "Nacho Rodriguez Sanz",
     "license": "MIT",

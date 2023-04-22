@@ -1,8 +1,8 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import Icon from '../ui/icon-component/icon'
-import { getAllColorIcons, getAllFAIcons } from '../domain/icons'
+import Icon from '../application/features/icon-component/icon'
+import { getAllColorIcons, getAllFAIcons } from '../domain/services/icons'
 
 export default {
     title: 'Dynamic React Components/Components/Icon',
