@@ -86,23 +86,9 @@ Here's why:
 
 <!-- PROPS & DEFINITIONS-->
 
-## Props & Definitions
+## Documents
 
--   size: ['small', 'medium', 'large'] // default: "large"
--   onClick: () => void
--   variant: ['primary', 'secondary', 'tertiary', 'danger', 'success', 'warning', 'info', 'light', 'dark', 'link'] // default: "primary"
--   withShadow?: boolean // default: false
--   disabled?: boolean // default: false
--   option: ['button', 'submit', 'reset'] // default: "button"
--   styles?: React.CSSProperties
--   bgColor?: string // default: ""
--   textColor?: string // default: ""
--   text?: string // default: "Button"
--   faIcon?: string | null // default: null "Font Awesome Icons"
--   colorIcon: string | null // default: null "Flat Colors Icons"
--   iconPosition?: ['left', 'right', 'none'] // default: "none"
--   className?: string // default: ""
--   children?: React.ReactNode // default: "Button"
+<a href="https://dynamic-react-components-nachorsanz.vercel.app/">View Demo | DOCUMENTS</a>
 
 <!-- USE EXAMPLES-->
 
