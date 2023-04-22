@@ -45,6 +45,7 @@ const Template: ComponentStory<typeof Switcher> = (args) => (
 export const SwitcherStory = Template.bind({})
 
 SwitcherStory.args = {
+    checked: false,
     text: '',
     size: 'medium',
     variant: 'primary',
