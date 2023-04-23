@@ -1,6 +1,6 @@
 {
     "name": "dynamic-react-components",
-    "version": "1.0.17-beta",
+    "version": "1.0.18-beta",
     "description": "React library provides multiple types of components (beta version)",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
