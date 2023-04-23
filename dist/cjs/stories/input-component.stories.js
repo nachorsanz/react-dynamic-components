@@ -29,7 +29,5 @@ exports.InputStory.args = {
     type: 'text',
     name: '',
     id: '',
-    withShadow: false,
-    hover: false,
 };
 //# sourceMappingURL=input-component.stories.js.map

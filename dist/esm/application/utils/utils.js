@@ -39,6 +39,28 @@ export const getSwitcherSizeProps = (size) => {
             };
     }
 };
+export const getCheckboxSizeProps = (size) => {
+    switch (size) {
+        case 'small':
+            return {
+                height: '1rem',
+                width: '2rem',
+                padding: '0.175rem',
+            };
+        case 'medium':
+            return {
+                height: '1.25rem',
+                width: '2.5rem',
+                padding: '0.25rem',
+            };
+        case 'large':
+            return {
+                height: '1.5rem',
+                width: '3rem',
+                padding: '0.5rem',
+            };
+    }
+};
 export const getVariantColor = (variant, type = null) => {
     switch (variant) {
         case 'primary':

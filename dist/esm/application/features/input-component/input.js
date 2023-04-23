@@ -13,8 +13,8 @@ import React from 'react';
 import StyledInput from './StyledInput';
 const Input = (_a) => {
     var props = __rest(_a, []);
-    const { placeholder = 'Placeholder', styles = {}, className = '', onChange = () => { }, disabled = false, value = '', type = 'text', name = '', id = '', withShadow = false, hover = false, } = props;
-    return (React.createElement(StyledInput, { "data-testid": "input", className: className, style: styles, onChange: onChange, disabled: disabled, value: value, type: type, name: name, id: id, placeholder: placeholder, withShadow: withShadow, hover: hover }));
+    const { placeholder = 'Placeholder', styles = {}, className = '', onChange = () => { }, disabled = false, value = '', type = 'text', name = '', id = '', } = props;
+    return (React.createElement(StyledInput, { "data-testid": "input", className: className, style: styles, onChange: onChange, disabled: disabled, value: value, type: type, name: name, id: id, placeholder: placeholder }));
 };
 export default Input;
 //# sourceMappingURL=input.js.map

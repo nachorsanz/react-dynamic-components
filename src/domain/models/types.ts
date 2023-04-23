@@ -41,6 +41,8 @@ export type OptionsType = typeof OptionsType[number]
 
 const IconPosition = ['left', 'right', 'none'] as const
 export type IconPosition = typeof IconPosition[number]
+const LabelPosition = ['left', 'right', 'none'] as const
+export type LabelPosition = typeof LabelPosition[number]
 
 export type SelectContent = {
     key: string
@@ -63,6 +65,20 @@ const ShapeTypes = ['square', 'rounded', 'sharp'] as const
 export type ShapeTypes = typeof ShapeTypes[number]
 
 export type SwitcherTypes = typeof SwitcherTypes[number]
+
+const CheckboxTypes = [
+    'primary',
+    'secondary',
+    'tertiary',
+    'danger',
+    'success',
+    'warning',
+    'info',
+    'light',
+    'dark',
+    null,
+] as const
+export type CheckboxTypes = typeof CheckboxTypes[number]
 
 // interface
 export interface ButtonProps
@@ -102,9 +118,7 @@ export interface InputProps
     className?: string
     children?: React.ReactNode
     id?: string
-    withShadow?: boolean
     disabled?: boolean
-    hover?: boolean
 }
 
 export interface IconProps {
@@ -145,3 +159,18 @@ export interface SwitcherProps {
     children?: React.ReactNode
     shape: ShapeTypes
 }
+
+
+export interface CheckboxProps {
+    checked: boolean
+    onChange: (value: boolean) => void
+    size: SizesTypes
+    variant: CheckboxTypes
+    label?: string
+    labelPosition: LabelPosition
+    withShadow?: boolean
+    disabled?: boolean
+    styles?: React.CSSProperties
+    className?: string 
+  }
+  

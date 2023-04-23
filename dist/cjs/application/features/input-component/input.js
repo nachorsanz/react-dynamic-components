@@ -18,8 +18,8 @@ const react_1 = __importDefault(require("react"));
 const StyledInput_1 = __importDefault(require("./StyledInput"));
 const Input = (_a) => {
     var props = __rest(_a, []);
-    const { placeholder = 'Placeholder', styles = {}, className = '', onChange = () => { }, disabled = false, value = '', type = 'text', name = '', id = '', withShadow = false, hover = false, } = props;
-    return (react_1.default.createElement(StyledInput_1.default, { "data-testid": "input", className: className, style: styles, onChange: onChange, disabled: disabled, value: value, type: type, name: name, id: id, placeholder: placeholder, withShadow: withShadow, hover: hover }));
+    const { placeholder = 'Placeholder', styles = {}, className = '', onChange = () => { }, disabled = false, value = '', type = 'text', name = '', id = '', } = props;
+    return (react_1.default.createElement(StyledInput_1.default, { "data-testid": "input", className: className, style: styles, onChange: onChange, disabled: disabled, value: value, type: type, name: name, id: id, placeholder: placeholder }));
 };
 exports.default = Input;
 //# sourceMappingURL=input.js.map

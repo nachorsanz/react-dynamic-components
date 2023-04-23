@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getButtonAnimation = exports.getSwitcherShapeProps = exports.getHoverProps = exports.getShadowProps = exports.getVariantProps = exports.getVariantColor = exports.getSwitcherSizeProps = exports.getSizeProps = void 0;
+exports.getButtonAnimation = exports.getSwitcherShapeProps = exports.getHoverProps = exports.getShadowProps = exports.getVariantProps = exports.getVariantColor = exports.getCheckboxSizeProps = exports.getSwitcherSizeProps = exports.getSizeProps = void 0;
 const getSizeProps = (size) => {
     switch (size) {
         case 'small':
@@ -44,6 +44,29 @@ const getSwitcherSizeProps = (size) => {
     }
 };
 exports.getSwitcherSizeProps = getSwitcherSizeProps;
+const getCheckboxSizeProps = (size) => {
+    switch (size) {
+        case 'small':
+            return {
+                height: '1rem',
+                width: '2rem',
+                padding: '0.175rem',
+            };
+        case 'medium':
+            return {
+                height: '1.25rem',
+                width: '2.5rem',
+                padding: '0.25rem',
+            };
+        case 'large':
+            return {
+                height: '1.5rem',
+                width: '3rem',
+                padding: '0.5rem',
+            };
+    }
+};
+exports.getCheckboxSizeProps = getCheckboxSizeProps;
 const getVariantColor = (variant, type = null) => {
     switch (variant) {
         case 'primary':

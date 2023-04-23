@@ -13,9 +13,9 @@ const Input: React.FC<InputProps> = ({ ...props }) => {
         type = 'text',
         name = '',
         id = '',
-        withShadow = false,
-        hover = false,
     } = props
+
+
     return (
         <StyledInput
             data-testid="input"
@@ -28,8 +28,7 @@ const Input: React.FC<InputProps> = ({ ...props }) => {
             name={name}
             id={id}
             placeholder={placeholder}
-            withShadow={withShadow}
-            hover={hover}
+      
         />
     )
 }

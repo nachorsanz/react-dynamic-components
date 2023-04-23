@@ -28,6 +28,7 @@ const VariantColors = [
 const VariantColorTypes = ['light', 'dark', null];
 const OptionsType = ['button', 'submit', 'reset'];
 const IconPosition = ['left', 'right', 'none'];
+const LabelPosition = ['left', 'right', 'none'];
 const SwitcherTypes = [
     'primary',
     'secondary',
@@ -41,5 +42,17 @@ const SwitcherTypes = [
     null,
 ];
 const ShapeTypes = ['square', 'rounded', 'sharp'];
+const CheckboxTypes = [
+    'primary',
+    'secondary',
+    'tertiary',
+    'danger',
+    'success',
+    'warning',
+    'info',
+    'light',
+    'dark',
+    null,
+];
 export {};
 //# sourceMappingURL=types.js.map

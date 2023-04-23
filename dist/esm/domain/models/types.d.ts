@@ -11,6 +11,8 @@ declare const OptionsType: readonly ["button", "submit", "reset"];
 export type OptionsType = typeof OptionsType[number];
 declare const IconPosition: readonly ["left", "right", "none"];
 export type IconPosition = typeof IconPosition[number];
+declare const LabelPosition: readonly ["left", "right", "none"];
+export type LabelPosition = typeof LabelPosition[number];
 export type SelectContent = {
     key: string;
     value: string;
@@ -19,6 +21,8 @@ declare const SwitcherTypes: readonly ["primary", "secondary", "tertiary", "dang
 declare const ShapeTypes: readonly ["square", "rounded", "sharp"];
 export type ShapeTypes = typeof ShapeTypes[number];
 export type SwitcherTypes = typeof SwitcherTypes[number];
+declare const CheckboxTypes: readonly ["primary", "secondary", "tertiary", "danger", "success", "warning", "info", "light", "dark", null];
+export type CheckboxTypes = typeof CheckboxTypes[number];
 export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     size: SizesTypes;
     onClick: () => void;
@@ -47,9 +51,7 @@ export interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttri
     className?: string;
     children?: React.ReactNode;
     id?: string;
-    withShadow?: boolean;
     disabled?: boolean;
-    hover?: boolean;
 }
 export interface IconProps {
     faIcon?: string;
@@ -86,5 +88,17 @@ export interface SwitcherProps {
     className?: string;
     children?: React.ReactNode;
     shape: ShapeTypes;
+}
+export interface CheckboxProps {
+    checked: boolean;
+    onChange: (value: boolean) => void;
+    size: SizesTypes;
+    variant: CheckboxTypes;
+    label?: string;
+    labelPosition: LabelPosition;
+    withShadow?: boolean;
+    disabled?: boolean;
+    styles?: React.CSSProperties;
+    className?: string;
 }
 export {};
