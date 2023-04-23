@@ -30,7 +30,7 @@ const react_1 = __importStar(require("react"));
 const StyledOverlay_1 = __importDefault(require("./StyledOverlay"));
 const modal_wrapper_1 = __importDefault(require("./modal-wrapper"));
 const styled_components_1 = __importDefault(require("styled-components"));
-const Modal = ({ isOpen, onClose, children, title, footer, withHeader, withFooter }) => {
+const Modal = ({ isOpen, onClose, children, title, footer, withHeader = true, withFooter = false }) => {
     const [isVisible, setIsVisible] = (0, react_1.useState)(false);
     react_1.default.useEffect(() => {
         setIsVisible(isOpen);

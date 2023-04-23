@@ -6,8 +6,8 @@ declare const _default: ComponentMeta<React.FC<{
     children: React.ReactNode;
     title?: string | undefined;
     footer?: React.ReactNode;
-    withHeader: boolean;
-    withFooter: boolean;
+    withHeader?: boolean | undefined;
+    withFooter?: boolean | undefined;
 }>>;
 export default _default;
 export declare const ModalStory: ComponentStory<React.FC<{
@@ -16,6 +16,6 @@ export declare const ModalStory: ComponentStory<React.FC<{
     children: React.ReactNode;
     title?: string | undefined;
     footer?: React.ReactNode;
-    withHeader: boolean;
-    withFooter: boolean;
+    withHeader?: boolean | undefined;
+    withFooter?: boolean | undefined;
 }>>;

@@ -9,12 +9,12 @@ type ModalProps = {
     children: React.ReactNode
     title?: string
     footer?: React.ReactNode
-    withHeader: boolean
-    withFooter: boolean
+    withHeader?: boolean
+    withFooter?: boolean
     
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title, footer, withHeader, withFooter }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title, footer, withHeader = true, withFooter = false }) => {
     const [isVisible, setIsVisible] = useState(false)
 
     React.useEffect(() => {

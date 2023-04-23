@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import StyledOverlay from './StyledOverlay';
 import ModalWrapper from './modal-wrapper';
 import styled from 'styled-components';
-const Modal = ({ isOpen, onClose, children, title, footer, withHeader, withFooter }) => {
+const Modal = ({ isOpen, onClose, children, title, footer, withHeader = true, withFooter = false }) => {
     const [isVisible, setIsVisible] = useState(false);
     React.useEffect(() => {
         setIsVisible(isOpen);
