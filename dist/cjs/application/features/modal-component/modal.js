@@ -29,7 +29,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
 const StyledOverlay_1 = __importDefault(require("./StyledOverlay"));
 const modal_wrapper_1 = __importDefault(require("./modal-wrapper"));
-const Modal = ({ isOpen, onClose, children }) => {
+const styled_components_1 = __importDefault(require("styled-components"));
+const Modal = ({ isOpen, onClose, children, title, footer, withHeader, withFooter }) => {
     const [isVisible, setIsVisible] = (0, react_1.useState)(false);
     react_1.default.useEffect(() => {
         setIsVisible(isOpen);
@@ -39,7 +40,39 @@ const Modal = ({ isOpen, onClose, children }) => {
         onClose();
     };
     return (react_1.default.createElement(react_1.default.Fragment, null, isVisible && (react_1.default.createElement(StyledOverlay_1.default, { onClick: handleClose },
-        react_1.default.createElement(modal_wrapper_1.default, { onClick: (e) => e.stopPropagation(), "data-testid": "modal" }, children)))));
+        react_1.default.createElement(modal_wrapper_1.default, { onClick: (e) => e.stopPropagation(), "data-testid": "modal" },
+            withHeader && react_1.default.createElement(ModalHeader, null,
+                title && react_1.default.createElement(ModalTitle, null, title),
+                react_1.default.createElement(ModalCloseButton, { onClick: handleClose }, "x")),
+            react_1.default.createElement(ModalContent, null, children),
+            footer && withFooter && react_1.default.createElement(ModalFooter, null, footer))))));
 };
+const ModalHeader = styled_components_1.default.div `
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 10px;
+`;
+const ModalTitle = styled_components_1.default.h3 `
+    margin: 0;
+    font-size: 1.5rem;
+    
+`;
+const ModalCloseButton = styled_components_1.default.button `
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0;
+    color: #a3a3a3;
+`;
+const ModalContent = styled_components_1.default.div `
+    padding: 20px;
+`;
+const ModalFooter = styled_components_1.default.div `
+    border-top: 1px solid #e8e8e8;
+    padding: 10px;
+`;
 exports.default = Modal;
 //# sourceMappingURL=modal.js.map

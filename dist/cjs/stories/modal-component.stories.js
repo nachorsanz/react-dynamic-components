@@ -12,7 +12,7 @@ exports.default = {
 };
 const Template = (args) => (react_1.default.createElement(modal_1.default, Object.assign({ "data-testid": "modal" }, args)));
 const style = {
-    width: '300px',
+    width: '500px',
     backgroundColor: '#fff',
     display: 'flex',
     justifyContent: 'center',
@@ -20,11 +20,33 @@ const style = {
     fontSize: '20px',
     fontWeight: 'bold',
 };
+const buttonStyle = {
+    width: '100px',
+    height: '30px',
+    fontWeight: 'bold',
+    backgroundColor: '#00aeff',
+    color: '#fff',
+    border: '1px solid #fff',
+    cursor: 'pointer',
+};
+const footerStyle = {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    gap: '15px'
+};
 exports.ModalStory = Template.bind({});
 exports.ModalStory.args = {
     isOpen: true,
     onClose: () => { },
     children: (react_1.default.createElement("div", { style: style },
         react_1.default.createElement("h1", null, "Modal"))),
+    title: 'Modal',
+    footer: (react_1.default.createElement("div", { style: footerStyle },
+        react_1.default.createElement("button", { style: buttonStyle }, "Cerrar"),
+        react_1.default.createElement("button", { style: buttonStyle }, "Aceptar"))),
+    withHeader: true,
+    withFooter: true,
 };
 //# sourceMappingURL=modal-component.stories.js.map

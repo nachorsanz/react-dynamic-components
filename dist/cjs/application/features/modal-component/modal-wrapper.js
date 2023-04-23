@@ -13,7 +13,7 @@ const ModalWrapper = styled_components_1.default.div `
     max-height: 90%;
     max-width: 90%;
     overflow-y: auto;
-    padding: 20px;
+    padding: 5px;
 `;
 exports.default = ModalWrapper;
 //# sourceMappingURL=modal-wrapper.js.map

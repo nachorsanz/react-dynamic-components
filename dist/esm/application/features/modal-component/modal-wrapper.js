@@ -8,7 +8,7 @@ const ModalWrapper = styled.div `
     max-height: 90%;
     max-width: 90%;
     overflow-y: auto;
-    padding: 20px;
+    padding: 5px;
 `;
 export default ModalWrapper;
 //# sourceMappingURL=modal-wrapper.js.map
